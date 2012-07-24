@@ -330,6 +330,25 @@ input, button, select {
 /* ==main                        */
 /* ----------------------------- */
 @mixin solarized_container($rebase03,$rebase02,$rebase01,$rebase00,$rebase0,$rebase1,$rebase2,$rebase3) {
+    .edit_account {
+        label {
+            float: left;
+            width: 250px;
+        }
+        label.factice {
+            font-weight: bold;
+            clear: both;
+        }
+        input {
+        }
+        .help {
+            color: $cyan;
+            font-style: italic;
+            font-size: 0.8em;
+            display: block;
+        }
+    }
+
     #container {
         width: 734px;
         padding-left: 1em;

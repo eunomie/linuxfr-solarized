@@ -726,6 +726,28 @@ input, button, select {
         .vi { color: $blue } /* Name.Variable.Instance */
         .il { color: $cyan; font-weight: bold } /* Literal.Number.Integer.Long */
     }
+
+    .board .inbox {
+        font-size: 0.8em;
+        p {
+            clear:both;
+        }
+        .board-left {
+            display: block;
+            float: left;
+            width: 180px;
+            time {
+                color: $rebase01;
+            }
+        }
+        .board-right {
+            display: block;
+            margin-left: 180px;
+            time {
+                color: $rebase1;
+            }
+        }
+    }
 }
 
 @mixin rebase($rebase03,$rebase02,$rebase01,$rebase00,$rebase0,$rebase1,$rebase2,$rebase3) 

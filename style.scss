@@ -282,6 +282,8 @@ input, button, select {
                 display: inline-block;
             }
             .new_comments {
+                font-size: 1.2em;
+                font-weight: bold;
                 @include accentize($orange, $rebase02);
                 .visit {
                     color: $orange;

@@ -249,11 +249,19 @@ a img {border: 0;}
         }
     }
     #branding h1 {
-        width: 201px;
-        height: 186px;
+        width: 221px;
+        height: 206px;
         a {
             display: none;
         }
+        -webkit-margin-before: 0;
+        -webkit-margin-after: 0;
+        -webkit-margin-start: 0;
+        -webkit-margin-end: 0;
+        padding: 10px;
+        background: $rebase02;
+        background-position: 10px 10px;
+        background-repeat: no-repeat;
     }
 }
 
@@ -499,6 +507,32 @@ input, button, select {
             @include msg_box($rebase02);
         }
 
+        .content {
+            blockquote {
+                margin-left: 1em;
+                padding-left: 1em;
+                border-left: 3px solid $violet;
+                blockquote {
+                    border-left: 3px solid $cyan;
+                    blockquote {
+                        border-left: 3px solid $magenta;
+                        blockquote {
+                            border-left: 3px solid $green;
+                            blockquote {
+                                border-left: 3px solid $orange;
+                                blockquote {
+                                    border-left: 3px solid $red;
+                                    blockquote {
+                                        border-left: 3px solid $yellow;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
         .threads {
             margin-top: 2em;
             margin-bottom: 1em;
@@ -522,29 +556,6 @@ input, button, select {
                         display: block;
                     }
                     min-height: 64px;
-                    blockquote {
-                        margin-left: 1em;
-                        padding-left: 1em;
-                        border-left: 3px solid $violet;
-                        blockquote {
-                            border-left: 3px solid $cyan;
-                            blockquote {
-                                border-left: 3px solid $magenta;
-                                blockquote {
-                                    border-left: 3px solid $green;
-                                    blockquote {
-                                        border-left: 3px solid $orange;
-                                        blockquote {
-                                            border-left: 3px solid $red;
-                                            blockquote {
-                                                border-left: 3px solid $yellow;
-                                            }
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                    }
                 }
                 li {
                     margin-top: 1em;

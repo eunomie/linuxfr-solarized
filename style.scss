@@ -291,6 +291,29 @@ input, button, select {
         margin-bottom: 1em;
         @include accentize($yellow, $rebase02);
 
+        > h1 {
+            display: none;
+        }
+        .toolbox {
+            background: $rebase02;
+            margin-bottom: 1em;
+            padding: 0.5em;
+        }
+        .follow_feed {
+            display: none;
+        }
+        .new_content {
+            float: right;
+        }
+        .order_navbar {
+            * {
+                display: inline-block;
+            }
+            ul li {
+                font-size: 1em;
+            }
+        }
+
         header {
             padding-left: 80px;
             padding-right: 45px;

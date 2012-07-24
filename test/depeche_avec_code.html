@@ -1,0 +1,1104 @@
+<!DOCTYPE html>
+<!-- saved from url=(0054)https://linuxfr.org/news/sortie-de-rust-en-version-0-3 -->
+<html lang="fr"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<title>Sortie de Rust en version 0.3 - LinuxFr.org</title>
+<link href="./depeche_avec_code_files/style.css" rel="stylesheet" type="text/css">
+<link rel="shortcut icon" type="image/x-icon" href="https://linuxfr.org/favicon.png">
+<meta content="Xavier Claude" name="author">
+<meta content="Sortie de Rust en version 0.3" name="description">
+<meta content="" name="keywords">
+<!--[if IE]><script src="/assets/html5-bdb9f75a50e7f2817fee510aae885bf6.js" type="text/javascript"></script><![endif]-->
+<!--[if lt IE 9]><script src="/assets/IE9-1a018967700c7e4a34a8e36f27e3af87.js" type="text/javascript"></script><![endif]-->
+<link href="https://linuxfr.org/nodes/94839/comments.atom" rel="alternate" title="Flux Atom des commentaires Sortie de Rust en version 0.3" type="application/atom+xml">
+<style type="text/css"></style></head>
+
+<body class="logged visitor" id="news-show">
+<div id="top"></div>
+<nav id="site">
+<div class="go_to_content">
+<a href="https://linuxfr.org/news/sortie-de-rust-en-version-0-3#contents">Aller au contenu</a>
+<a href="https://linuxfr.org/news/sortie-de-rust-en-version-0-3#sidebar">Aller au menu</a>
+</div>
+<ul>
+<li><a href="https://linuxfr.org/">Accueil</a></li>
+<li class="active"><a href="https://linuxfr.org/news">Dépêches</a></li>
+<li><a href="https://linuxfr.org/journaux">Journaux</a></li>
+<li><a href="https://linuxfr.org/forums">Forums</a></li>
+<li><a href="https://linuxfr.org/sondages">Sondages</a></li>
+<li><a href="https://linuxfr.org/wiki">Wiki</a></li>
+<li><a href="https://linuxfr.org/suivi">Suivi</a></li>
+<li><a href="https://linuxfr.org/plan">Plan</a></li>
+</ul>
+<form accept-charset="UTF-8" action="https://linuxfr.org/recherche" method="get"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="✓"></div>
+<label for="query" id="label_query">Recherche :</label>
+<input id="query" name="q" type="search" placeholder="Entrer un mot-clé">
+<input id="search_submit" type="submit" value="Rechercher">
+</form>
+
+</nav>
+
+<aside id="sidebar">
+<header id="branding"><h1 style="background-image: url(&#39;/images/logos/linuxfr2_logo-june2003_ok_255.png&#39;);" title="Le logo de LinuxFr.org"><a href="https://linuxfr.org/">LinuxFr.org</a></h1></header>
+<div class="login box">
+<h1><a href="https://linuxfr.org/users/crev">CrEv</a></h1>
+<script>
+  //<![CDATA[
+    if (location.protocol == 'http:') {
+      document.write('<a class="insecure" href="https://' + location.hostname + location.pathname + '">Accès en clair (http)</a>');
+    } else {
+      document.write('<a class="secure">Accès sécurisé (https)</a>');
+    }
+  //]]>
+</script><a class="secure">Accès sécurisé (https)</a>
+<div class="new_content">
+<a href="https://linuxfr.org/proposer-un-contenu">Proposer un contenu</a>
+</div>
+<p>
+Il vous reste
+<span id="nb_votes">98</span>
+avis
+</p>
+<ul>
+<li>
+<a href="https://linuxfr.org/tableau-de-bord">Mon tableau de bord</a>
+</li>
+<li><a href="https://linuxfr.org/tags">Mes contenus taggés</a></li>
+<li><a href="https://linuxfr.org/readings">Les contenus que j'ai lus</a></li>
+<li><a href="https://linuxfr.org/compte/modifier">Modifier mes préférences</a></li>
+<li><a href="https://linuxfr.org/stylesheet/modifier">Changer de style</a></li>
+<li><form action="https://linuxfr.org/compte/deconnexion" class="button_to" method="post"><div><input id="logout" type="submit" value="Se déconnecter"><input name="authenticity_token" type="hidden" value="ZarExH4lMxL3TjMAGomPDX/KtUbAMtdQFmEQplQpQ/I="></div></form></li>
+</ul>
+</div>
+
+<div class="box" id="redaction_box">
+<h1>Rédaction</h1>
+<a href="https://linuxfr.org/redaction">Tribune de rédaction</a>
+<ul>
+<li><a href="https://linuxfr.org/redaction/news/petite-retrospective-diversite-sexisme-harcelement-et-humour-vaseux">Petite rétrospective diversité, sexisme, harcèlement et humour vaseux</a></li>
+<li><a href="https://linuxfr.org/redaction/news/revue-de-presse-septembre-2012">Revue de presse — septembre 2012</a></li>
+<li><a href="https://linuxfr.org/redaction/news/rekonq-1-0">Rekonq 1.0</a></li>
+<li><a href="https://linuxfr.org/redaction/news/steam-sous-linux-officialise">Steam sous Linux officialisé</a></li>
+<li><a href="https://linuxfr.org/redaction/news/firefox-et-thunderbird-appelez-le-15">Firefox et Thunderbird : appelez le 15</a></li>
+<li><a href="https://linuxfr.org/redaction/news/projet-mango-tears-of-steel">Projet Mango : «&nbsp;Tears of Steel&nbsp;»</a></li>
+<li><a href="https://linuxfr.org/redaction/news/la-bibliotheque-sdl-est-sortie-en-version-2-0">La bibliothèque SDL est sortie en version 2.0</a></li>
+<li><a href="https://linuxfr.org/redaction/news/netbsd-6-0">NetBSD 6.0</a></li>
+<li><a href="https://linuxfr.org/redaction/news/gnome-3-6">GNOME 3.6</a></li>
+<li><a href="https://linuxfr.org/redaction/news/calligra-2-5-est-sortie">Calligra 2.5 est sortie</a></li>
+<li><a href="https://linuxfr.org/redaction/news/sortie-de-roundcube-0-8">Sortie de Roundcube 0.8</a></li>
+<li><a href="https://linuxfr.org/redaction/news/libreoffice-3-6-est-sortie">LibreOffice 3.6 est sortie</a></li>
+<li><a href="https://linuxfr.org/redaction/news/kde-4-9-est-sorti">KDE 4.9 est sorti</a></li>
+<li><a href="https://linuxfr.org/redaction/news/tizen-1-0">Tizen 1.0</a></li>
+<li><a href="https://linuxfr.org/redaction/news/qelectrotech-0-3">QElectroTech 0.3</a></li>
+<li><a href="https://linuxfr.org/redaction/news/ubuntu-12-10-quantal-quetzal">Ubuntu 12.10 : Quantal Quetzal</a></li>
+<li><a href="https://linuxfr.org/redaction/news/sortie-de-qt-5-0">Sortie de Qt 5.0</a></li>
+<li><a href="https://linuxfr.org/redaction/news/a-quand-les-smartphones-et-tablettes-libres">À quand les smartphones et tablettes libres ?</a></li>
+<li><a href="https://linuxfr.org/redaction/news/python-3-3-est-sorti">Python 3.3 est sorti</a></li></ul>
+</div>
+
+</aside>
+
+<section id="container">
+<div id="contents">
+<article class="node hentry score4 news" itemscope="" itemtype="http://schema.org/Article">
+<header>
+<h1 class="entry-title" itemprop="name"><a href="https://linuxfr.org/sections/mozilla" class="topic" itemprop="articleSection">Mozilla</a> <a href="./depeche_avec_code_files/depeche_avec_code.html">Sortie de Rust en version 0.3</a></h1>
+<div class="meta">
+Posté par <a href="https://linuxfr.org/users/claudex" rel="author">Xavier Claude</a> (<a href="http://linuxfr.org/board/">page perso</a>, <a href="xmpp:claudex@jabber.org">jabber id</a>) <time class="updated" datetime="2012-07-23T13:20:11+02:00"><span class="date">le 23/07/12</span> <span class="time">à 13:20</span></time>. Modéré par <a href="https://linuxfr.org/users/oumph">Benoît Sibaud</a>.
+<a href="http://creativecommons.org/licenses/by-sa/3.0/deed.fr" rel="license">Licence CC by-sa</a>
+</div>
+</header>
+<div class="figures">
+<meta content="UserLikes:21" itemprop="interactionCount">
+<figure class="score" title="Note de ce contenu">21</figure>
+<figure class="datePourCss"><div class="jour">23</div><div class="mois">juil.</div><div class="annee">2012</div></figure>
+<figure class="image" itemprop="image"><a href="https://linuxfr.org/sections/mozilla"><img alt="Mozilla" src="./depeche_avec_code_files/33.png" title="Mozilla"></a></figure>
+</div>
+<div class="content entry-content" itemprop="articleBody">
+<p>Rust est un langage développé par la fondation Mozilla qui implémente les paradigmes procédural, orienté objet, concurrent et fonctionnel. C'est un langage compilé plutôt orienté bas-niveau et qui concurrence le C ou le C++. Il est multiplates-formes et tourne sous Linux, Mac OS X et Windows. Pour rappel, Rust est un langage de programmation système fortement typé. L'accent est mis sur la sûreté des accès mémoire et la concurrence.</p>
+
+<p>Vu les orientations de la fondation Mozilla, le but est de pouvoir développer un navigateur Web avec ce langage et les travaux ont déjà commencé, ce navigateur alternatif s'appelle <a href="https://github.com/mozilla/servo">Servo</a>.</p>
+
+<p>
+<img src="./depeche_avec_code_files/200px-Rust_programming_language_black_logo.svg.png" alt="logo" title="Source : http://upload.wikimedia.org/wikipedia/en/thumb/d/d5/Rust_programming_language_black_logo.svg/200px-Rust_programming_language_black_logo.svg.png">
+</p>
+<ul class="links">
+<li class="link" data-url="/redaction/links/82746/modifier" id="link_82746" lang="en">
+<a href="https://linuxfr.org/redirect/82746" class="hit_counter" data-hit="82746" hreflang="en" title="http://www.rust-lang.org/">Site officiel </a>
+(219 clics)
+</li>
+<li class="link" data-url="/redaction/links/82747/modifier" id="link_82747" lang="en">
+<a href="https://linuxfr.org/redirect/82747" class="hit_counter" data-hit="82747" hreflang="en" title="https://github.com/mozilla/rust/blob/release-0.3/RELEASES.txt">Notes de version</a>
+(13 clics)
+</li>
+<li class="link" data-url="/redaction/links/82748/modifier" id="link_82748" lang="fr">
+<a href="https://linuxfr.org/redirect/82748" class="hit_counter" data-hit="82748" hreflang="fr" title="http://linuxfr.org/news/sortie-de-la-version-0-1-de-rust">DLFP : Sortie de la version 0.1 de Rust</a>
+(24 clics)
+</li>
+
+</ul>
+<h2 id="sommaire">Sommaire</h2>
+<ul><li>
+<a href="https://linuxfr.org/news/sortie-de-rust-en-version-0-3#toc_0">Hello World!</a>
+</li>
+<li>
+<a href="https://linuxfr.org/news/sortie-de-rust-en-version-0-3#toc_1">Définition de variable</a>
+</li>
+<li>
+<a href="https://linuxfr.org/news/sortie-de-rust-en-version-0-3#toc_2">Les fonctions</a>
+</li>
+<li>
+<a href="https://linuxfr.org/news/sortie-de-rust-en-version-0-3#toc_3">Les boucles</a>
+</li>
+<li>
+<a href="https://linuxfr.org/news/sortie-de-rust-en-version-0-3#toc_4">Les tâches</a>
+</li>
+<li>
+<a href="https://linuxfr.org/news/sortie-de-rust-en-version-0-3#toc_5">Les pointeurs</a>
+<ul><li>
+<a href="https://linuxfr.org/news/sortie-de-rust-en-version-0-3#toc_6">Les boîtes partagées</a>
+</li>
+<li>
+<a href="https://linuxfr.org/news/sortie-de-rust-en-version-0-3#toc_7">Les boîtes uniques</a>
+</li>
+<li>
+<a href="https://linuxfr.org/news/sortie-de-rust-en-version-0-3#toc_8">Les pointeurs empruntés</a>
+</li>
+<li>
+<a href="https://linuxfr.org/news/sortie-de-rust-en-version-0-3#toc_9">Mutabilité</a>
+</li>
+</ul></li>
+</ul><p>Beaucoup d'exemples ci-dessous sont tirés de la <a href="http://dl.rust-lang.org/doc/rust.html">documentation de Rust</a></p>
+<h2 id="toc_0">Hello World!</h2>
+
+<p>Le traditionnel Hello World&nbsp;:</p>
+<pre><code class="go"><span class="k">import</span> <span class="n">io</span><span class="p">::</span><span class="n">println</span><span class="p">;</span>
+
+<span class="n">fn</span> <span class="n">main</span><span class="p">()</span> <span class="p">{</span>
+    <span class="n">println</span><span class="p">(</span><span class="s">"Hello World&nbsp;!"</span><span class="p">);</span>
+<span class="p">}</span>
+</code>
+</pre><h2 id="toc_1">Définition de variable</h2>
+
+<p>Les variables peuvent être définies localement (avec le mot-clef <code>let</code>) ou globalement. Pour les variables locales, il est possible d'utiliser l'inférence de type. Par défaut les variables locales sont définies immutables mais cela peut être changé grâce au mot-clef <code>mut</code>&nbsp;:</p>
+<pre><code class="go"><span class="n">use</span> <span class="n">std</span><span class="p">;</span>
+<span class="k">const</span> <span class="n">repeat</span><span class="p">:</span> <span class="nb">uint</span> <span class="p">=</span> <span class="mi">5</span><span class="n">u</span><span class="p">;</span>
+<span class="n">fn</span> <span class="n">main</span><span class="p">()</span> <span class="p">{</span>
+    <span class="n">let</span> <span class="n">hi</span> <span class="p">=</span> <span class="s">"Hi!"</span><span class="p">;</span>
+    <span class="n">let</span> <span class="n">mut</span> <span class="n">count</span> <span class="p">=</span> <span class="mi">0</span><span class="n">u</span><span class="p">;</span>
+    <span class="n">while</span> <span class="n">count</span> <span class="p">&lt;</span> <span class="n">repeat</span> <span class="p">{</span>
+        <span class="n">io</span><span class="p">::</span><span class="n">println</span><span class="p">(</span><span class="n">hi</span><span class="p">);</span>
+        <span class="n">count</span> <span class="p">+=</span> <span class="mi">1</span><span class="n">u</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="n">let</span> <span class="n">fl</span><span class="p">:</span> <span class="nb">float</span> <span class="p">=</span> <span class="mf">57.8</span><span class="p">;</span>
+<span class="p">}</span>
+</code>
+</pre>
+<p>Il est aussi possible de définir une assignation conditionnelle&nbsp;:</p>
+<pre><code class="go"><span class="n">let</span> <span class="n">x</span> <span class="p">=</span> <span class="k">if</span> <span class="n">the_stars_align</span><span class="p">()</span> <span class="p">{</span> <span class="mi">4</span> <span class="p">}</span>
+        <span class="k">else</span> <span class="k">if</span> <span class="n">something_else</span><span class="p">()</span> <span class="p">{</span> <span class="mi">3</span> <span class="p">}</span>
+        <span class="k">else</span> <span class="p">{</span> <span class="mi">0</span> <span class="p">};</span>
+</code>
+</pre><h2 id="toc_2">Les fonctions</h2>
+
+<p>Il est possible de définir des fonctions. Un point intéressant est que si vous définissez un type de retour de la fonction, le compilateur vérifiera que tous les chemins d'exécutions retourne bien un type. Une fonction sans type de retour est aussi possible, comme ci-dessus dans le Hello World. </p>
+
+<p>Voici une fonction qui additionne deux entiers et qui renvoie le résultat&nbsp;:</p>
+<pre><code class="go"><span class="n">fn</span> <span class="n">add</span><span class="p">(</span><span class="n">x</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">y</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="p">-&gt;</span> <span class="nb">int</span> <span class="p">{</span>
+    <span class="n">ret</span> <span class="n">x</span> <span class="p">+</span> <span class="n">y</span><span class="p">;</span>
+<span class="p">}</span>
+</code>
+</pre>
+<p>Il est aussi possible de définir des fonctions qui échouent tout le temps, ce sont des fonctions divergentes. L'intérêt est de pouvoir définir une fonction qui exécute une série d'instruction en cas d'erreur et de pouvoir l'utiliser dans une fonction qui a un type de retour sans que le compilateur râle.</p>
+<pre><code class="go"><span class="n">fn</span> <span class="n">my_err</span><span class="p">(</span><span class="n">s</span><span class="p">:</span> <span class="n">str</span><span class="p">)</span> <span class="p">-&gt;</span> <span class="p">!</span> <span class="p">{</span>
+    <span class="n">log</span><span class="p">(</span><span class="n">info</span><span class="p">,</span> <span class="n">s</span><span class="p">);</span>
+    <span class="n">fail</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="n">fn</span> <span class="n">f</span><span class="p">(</span><span class="n">i</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="p">-&gt;</span> <span class="nb">int</span> <span class="p">{</span>
+   <span class="k">if</span> <span class="n">i</span> <span class="p">==</span> <span class="mi">42</span> <span class="p">{</span>
+     <span class="n">ret</span> <span class="mi">42</span><span class="p">;</span>
+   <span class="p">}</span>
+   <span class="k">else</span> <span class="p">{</span>
+     <span class="n">my_err</span><span class="p">(</span><span class="s">"Bad number!"</span><span class="p">);</span>
+   <span class="p">}</span>
+<span class="p">}</span>
+</code>
+</pre>
+<p>Dans l'exemple ci-dessus le compilateur ne râlera pas même si la branche du <code>else</code> ne retourne aucun type. <code>fail</code> est utilisé en cas d'erreur et arrête l'exécution du programme.</p>
+<h2 id="toc_3">Les boucles</h2>
+
+<p>Les boucles <code>while</code> sont très classiques&nbsp;:</p>
+<pre><code class="go"><span class="n">while</span> <span class="n">i</span> <span class="p">&lt;</span> <span class="mi">10</span> <span class="p">{</span>
+    <span class="n">println</span><span class="p">(</span><span class="s">"hello\n"</span><span class="p">);</span>
+    <span class="n">i</span> <span class="p">=</span> <span class="n">i</span> <span class="p">+</span> <span class="mi">1</span><span class="p">;</span>
+<span class="p">}</span>
+</code>
+</pre>
+<p>Par contre, il existe un type de boucle infinie en utilisant le mot-clef <code>loop</code>, par exemple&nbsp;:</p>
+<pre><code class="go"><span class="n">fn</span> <span class="n">count</span><span class="p">()</span> <span class="p">-&gt;</span> <span class="n">bool</span> <span class="p">{</span>
+  <span class="n">let</span> <span class="n">mut</span> <span class="n">i</span> <span class="p">=</span> <span class="mi">0</span><span class="p">;</span>
+  <span class="n">loop</span> <span class="p">{</span>
+    <span class="n">i</span> <span class="p">+=</span> <span class="mi">1</span><span class="p">;</span>
+    <span class="k">if</span> <span class="n">i</span> <span class="p">==</span> <span class="mi">20</span> <span class="p">{</span> <span class="n">ret</span> <span class="n">true</span><span class="p">;</span> <span class="p">}</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code>
+</pre>
+<p>Il existe aussi des boucles <code>for</code> qui sont moins traditionnelles car elle itèrent sur un vecteur ou une chaîne de caractères (semblable à ce qu'on trouve en Ruby ou Python par exemple)&nbsp;:</p>
+<pre><code class="go"><span class="k">for</span> <span class="mf">5.</span><span class="n">times</span> <span class="p">{</span>
+    <span class="n">println</span><span class="p">(</span><span class="s">"Here's some Rust!"</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="n">let</span> <span class="n">v</span><span class="p">:</span> <span class="err">~</span><span class="p">[</span><span class="n">foo</span><span class="p">]</span> <span class="p">=</span> <span class="err">~</span><span class="p">[</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">];</span>
+
+<span class="k">for</span> <span class="n">v</span><span class="p">.</span><span class="n">each</span> <span class="p">|</span><span class="n">e</span><span class="p">|</span> <span class="p">{</span>
+    <span class="n">bar</span><span class="p">(</span><span class="n">e</span><span class="p">);</span>
+<span class="p">}</span>
+</code>
+</pre><h2 id="toc_4">Les tâches</h2>
+
+<p>Rust utilise des tâches légères similaires à ce qu'on retrouve dans Erlang. Les tâches ne partagent pas de mémoire et la communication se fait par passage de message. Il est cependant possible de transmettre des données d'une tâche à l'autre via le tas d'échange, dans ce cas, la tâche qui donne les données ne peut plus y accéder.</p>
+<h2 id="toc_5">Les pointeurs</h2>
+
+<p>Rust fonctionne comme le C/C++ pour l'allocation de mémoire, c'est-à-dire que si vous déclarez une variable, elle sera allouée sur la pile et si vous copiez un enregistrement, tout l'enregistrement est copié, pas uniquement le pointeur. Pour les petits enregistrement, c'est souvent plus performant mais ça peux poser des problèmes de performances si la quantité de données à copier est importante. Heureusement, il est quand même possible d'utiliser les pointeurs, il en existe de différents types&nbsp;:</p>
+<h3 id="toc_6">Les boîtes partagées</h3>
+
+<p>Ce sont des pointeurs alloués sur le tas et gérés avec un ramasse-miettes, il s'écrivent avec un <code>@</code>. La copie d'une boîte partagée ne copie que le pointeur, pas les données&nbsp;:</p>
+<pre><code class="go"><span class="n">let</span> <span class="n">x</span><span class="p">:</span> <span class="err">@</span><span class="nb">int</span> <span class="p">=</span> <span class="err">@</span><span class="mi">10</span><span class="p">;</span> <span class="c1">// Nouvelle boîte, le compteur de référence est à 1</span>
+<span class="n">let</span> <span class="n">y</span> <span class="p">=</span> <span class="n">x</span><span class="p">;</span> <span class="c1">// Copie le pointeur, incrémente le compteur de référence</span>
+<span class="c1">// Quand x et y sont hors de portée, le compteur de référence est à 0 et la boîte est libérée.</span>
+</code>
+</pre><h3 id="toc_7">Les boîtes uniques</h3>
+
+<p>Ce sont des boîtes qui ne peuvent être référencées que par une seule variable. Grâce à cela, elles peuvent être allouées sur un tas d'échange commun à toutes les tâches et peuvent être échangées entre les tâches. Lors de cet échange, la tâche qui donne le pointeur abandonne sa possession de la boîte. À cause de leur unicité, la copie d'une boîte unique ne peut se faire qu'explicitement en copiant toutes les données&nbsp;:</p>
+<pre><code class="go"><span class="n">let</span> <span class="n">x</span> <span class="p">=</span> <span class="err">~</span><span class="mi">10</span><span class="p">;</span>
+<span class="n">let</span> <span class="n">y</span> <span class="p">=</span> <span class="n">x</span><span class="p">;</span> <span class="c1">// erreur, copie implicite d'une boîte unique</span>
+
+<span class="n">let</span> <span class="n">y</span> <span class="p">=</span> <span class="n">copy</span> <span class="n">x</span><span class="p">;</span> <span class="c1">// copie d'une boîte unique</span>
+</code>
+</pre>
+<p>Il est possible de déplacer l’appartenance d'une boîte à l'aide de l'opérateur de déplacement <code>-&gt;</code>, lors de cette opération, la boîte n'est plus accessible par la variable initiale.</p>
+<pre><code class="go"><span class="n">let</span> <span class="n">x</span> <span class="p">=</span> <span class="err">~</span><span class="mi">10</span><span class="p">;</span>
+<span class="n">let</span> <span class="n">y</span> <span class="p">&lt;-</span> <span class="n">x</span><span class="p">;</span>
+</code>
+</pre><h3 id="toc_8">Les pointeurs empruntés</h3>
+
+<p>Ce sont l'équivalent des références en C++ mais avec la garantie de pointer vers une zone mémoire valide. Les pointeurs empruntés n'impliquent jamais la possession du pointeur comme c'est le cas avec les boîtes partagées. L'intérêt de ce type de pointeur est de pouvoir faire du passage d'argument par référence pour les pointeurs&nbsp;:</p>
+<pre><code class="go"><span class="n">let</span> <span class="n">foo</span> <span class="p">=</span> <span class="s">"foo"</span><span class="p">;</span>
+<span class="n">work_with_foo_by_pointer</span><span class="p">(&amp;</span><span class="n">foo</span><span class="p">);</span>
+</code>
+</pre><h3 id="toc_9">Mutabilité</h3>
+
+<p>Comme pour les variables, il existe une version <em>mutable</em> pour les pointeurs, cela permet de modifier les données pointées en déférençant le pointeur.</p>
+<pre><code class="go"><span class="n">fn</span> <span class="n">increase_contents</span><span class="p">(</span><span class="n">pt</span><span class="p">:</span> <span class="err">@</span><span class="n">mut</span> <span class="nb">int</span><span class="p">)</span> <span class="p">{</span>
+    <span class="p">*</span><span class="n">pt</span> <span class="p">+=</span> <span class="mi">1</span><span class="p">;</span>
+<span class="p">}</span>
+</code>
+</pre>
+
+</div>
+<footer class="actions">
+<meta content="UserComments:20" itemprop="interactionCount"><span class="new_comments"> (<span class="nb_comments">20 commentaires</span><span class="visit">, 4 nouveaux !</span>).</span><span class="action"><form action="https://linuxfr.org/readings/94839" class="button_to" data-remote="true" method="post"><div><input name="_method" type="hidden" value="delete"><input class="unread" type="submit" value="Oublier"><input name="authenticity_token" type="hidden" value="ZarExH4lMxL3TjMAGomPDX/KtUbAMtdQFmEQplQpQ/I="></div></form></span>
+
+<div class="tag_in_place" data-url="/nodes/94839/tags/nouveau">
+<a href="https://linuxfr.org/nodes/94839/tags/nouveau" class="action">Tagger</a>
+</div>
+<div class="vote">
+Ce contenu est-il <form action="https://linuxfr.org/nodes/94839/vote/for" class="button_to" data-remote="true" method="post"><div><input class="relevant" type="submit" value="pertinent"><input name="authenticity_token" type="hidden" value="ZarExH4lMxL3TjMAGomPDX/KtUbAMtdQFmEQplQpQ/I="></div></form>
+ou <form action="https://linuxfr.org/nodes/94839/vote/against" class="button_to" data-remote="true" method="post"><div><input class="useless" type="submit" value="inutile"><input name="authenticity_token" type="hidden" value="ZarExH4lMxL3TjMAGomPDX/KtUbAMtdQFmEQplQpQ/I="></div></form> ?
+</div>
+
+</footer>
+</article>
+
+<div id="comments">
+<ul class="threads">
+<li class="comment odd score2" id="comment-1369916">
+<h2>
+
+<a href="https://linuxfr.org/news/sortie-de-rust-en-version-0-3#" class="close" title="Cacher le fil de discussion">[-]</a> <a href="https://linuxfr.org/news/sortie-de-rust-en-version-0-3#comment-1369916" class="anchor" title="Lien direct vers ce commentaire">#</a>
+ 
+<a href="https://linuxfr.org/nodes/94839/comments/1369916" class="title">explications?</a>
+</h2>
+<p class="meta">
+Posté par <a href="https://linuxfr.org/users/octane" rel="author">octane</a> <time class="updated" datetime="2012-07-23T14:23:22+02:00"><span class="date">le 23/07/12</span> <span class="time">à 14:23</span></time>.
+Évalué à&nbsp;<span class="score">2</span>.
+</p>
+<figure class="image"><img alt="" class="avatar" height="64" src="./depeche_avec_code_files/avatar.png" width="64"></figure>
+<div class="content">
+<pre><code class="">let x = if the_stars_align() { 4 }
+        else if something_else() { 3 }
+        else { 0 };
+</code>
+</pre>
+<p>Je trouve pas ça clair. Cela se produit à l'assignation uniquement ou la variable change dynamiquement à chaque appel?</p>
+</div>
+<footer class="actions">
+<a href="https://linuxfr.org/nodes/94839/comments/1369916/answer#new_comment" class="action">Répondre</a>
+<div class="vote">
+Ce commentaire est-il <form action="https://linuxfr.org/nodes/94839/comments/1369916/relevance/for" class="button_to" data-remote="true" method="post"><div><input class="relevant" type="submit" value="pertinent"><input name="authenticity_token" type="hidden" value="ZarExH4lMxL3TjMAGomPDX/KtUbAMtdQFmEQplQpQ/I="></div></form>
+ou <form action="https://linuxfr.org/nodes/94839/comments/1369916/relevance/against" class="button_to" data-remote="true" method="post"><div><input class="useless" type="submit" value="inutile"><input name="authenticity_token" type="hidden" value="ZarExH4lMxL3TjMAGomPDX/KtUbAMtdQFmEQplQpQ/I="></div></form> ?
+</div>
+</footer>
+
+<ul>
+<li class="comment odd score4" id="comment-1369918">
+<h2>
+<a href="https://linuxfr.org/news/sortie-de-rust-en-version-0-3#comment-1369916" class="parent" title="Aller au commentaire parent">[^]</a>
+<a href="https://linuxfr.org/news/sortie-de-rust-en-version-0-3#" class="close" title="Cacher le fil de discussion">[-]</a> <a href="https://linuxfr.org/news/sortie-de-rust-en-version-0-3#comment-1369918" class="anchor" title="Lien direct vers ce commentaire">#</a>
+ 
+<a href="https://linuxfr.org/nodes/94839/comments/1369918" class="title">Re: explications?</a>
+</h2>
+<p class="meta">
+Posté par <a href="https://linuxfr.org/users/claudex" rel="author">Xavier Claude</a> (<a href="http://linuxfr.org/board/">page perso</a>, <a href="xmpp:claudex@jabber.org">jabber id</a>) <time class="updated" datetime="2012-07-23T14:34:30+02:00"><span class="date">le 23/07/12</span> <span class="time">à 14:34</span></time>.
+Évalué à&nbsp;<span class="score">4</span>.
+</p>
+<figure class="image"><img alt="" class="avatar" height="64" src="./depeche_avec_code_files/avatar.jpg" width="64"></figure>
+<div class="content">
+<p>Si je comprend bien, c'est uniquement à l'assignation <a href="http://dl.rust-lang.org/doc/tutorial.html#expression-syntax">http://dl.rust-lang.org/doc/tutorial.html#expression-syntax</a></p>
+<p class="signature">
+« Moi, lorsque je n’ai rien à dire, je veux qu’on le sache. » Raymond Devos
+</p>
+</div>
+<footer class="actions">
+<a href="https://linuxfr.org/nodes/94839/comments/1369918/answer#new_comment" class="action">Répondre</a>
+<div class="vote">
+Ce commentaire est-il <form action="https://linuxfr.org/nodes/94839/comments/1369918/relevance/for" class="button_to" data-remote="true" method="post"><div><input class="relevant" type="submit" value="pertinent"><input name="authenticity_token" type="hidden" value="ZarExH4lMxL3TjMAGomPDX/KtUbAMtdQFmEQplQpQ/I="></div></form>
+ou <form action="https://linuxfr.org/nodes/94839/comments/1369918/relevance/against" class="button_to" data-remote="true" method="post"><div><input class="useless" type="submit" value="inutile"><input name="authenticity_token" type="hidden" value="ZarExH4lMxL3TjMAGomPDX/KtUbAMtdQFmEQplQpQ/I="></div></form> ?
+</div>
+</footer>
+
+</li>
+
+<li class="comment even score2" id="comment-1369936">
+<h2>
+<a href="https://linuxfr.org/news/sortie-de-rust-en-version-0-3#comment-1369916" class="parent" title="Aller au commentaire parent">[^]</a>
+<a href="https://linuxfr.org/news/sortie-de-rust-en-version-0-3#" class="close" title="Cacher le fil de discussion">[-]</a> <a href="https://linuxfr.org/news/sortie-de-rust-en-version-0-3#comment-1369936" class="anchor" title="Lien direct vers ce commentaire">#</a>
+ 
+<a href="https://linuxfr.org/nodes/94839/comments/1369936" class="title">Re: explications?</a>
+</h2>
+<p class="meta">
+Posté par <a href="https://linuxfr.org/users/lupusmic" rel="author">LupusMic</a> (<a href="http://lupusmic.org/">page perso</a>) <time class="updated" datetime="2012-07-23T15:33:22+02:00"><span class="date">le 23/07/12</span> <span class="time">à 15:33</span></time>.
+Évalué à&nbsp;<span class="score">2</span>.
+</p>
+<figure class="image"><img alt="" class="avatar" height="64" src="./depeche_avec_code_files/default-avatar.png" width="64"></figure>
+<div class="content">
+<p>C'est vrai que ça manque de clarté par rapport à une version C++ :-D</p>
+<pre><code class="c++"><span class="k">auto</span> <span class="n">x</span> <span class="o">=</span> <span class="n">the_stars_align</span><span class="p">()</span> <span class="o">?</span> <span class="mi">4</span> <span class="o">:</span> <span class="n">something_else</span><span class="p">()</span> <span class="o">?</span> <span class="mi">3</span> <span class="o">:</span> <span class="mi">0</span> <span class="p">;</span>
+</code>
+</pre>
+</div>
+<footer class="actions">
+<a href="https://linuxfr.org/nodes/94839/comments/1369936/answer#new_comment" class="action">Répondre</a>
+<div class="vote">
+Ce commentaire est-il <form action="https://linuxfr.org/nodes/94839/comments/1369936/relevance/for" class="button_to" data-remote="true" method="post"><div><input class="relevant" type="submit" value="pertinent"><input name="authenticity_token" type="hidden" value="ZarExH4lMxL3TjMAGomPDX/KtUbAMtdQFmEQplQpQ/I="></div></form>
+ou <form action="https://linuxfr.org/nodes/94839/comments/1369936/relevance/against" class="button_to" data-remote="true" method="post"><div><input class="useless" type="submit" value="inutile"><input name="authenticity_token" type="hidden" value="ZarExH4lMxL3TjMAGomPDX/KtUbAMtdQFmEQplQpQ/I="></div></form> ?
+</div>
+</footer>
+
+<ul>
+<li class="comment odd score3" id="comment-1369953">
+<h2>
+<a href="https://linuxfr.org/news/sortie-de-rust-en-version-0-3#comment-1369936" class="parent" title="Aller au commentaire parent">[^]</a>
+<a href="https://linuxfr.org/news/sortie-de-rust-en-version-0-3#" class="close" title="Cacher le fil de discussion">[-]</a> <a href="https://linuxfr.org/news/sortie-de-rust-en-version-0-3#comment-1369953" class="anchor" title="Lien direct vers ce commentaire">#</a>
+ 
+<a href="https://linuxfr.org/nodes/94839/comments/1369953" class="title">Re: explications?</a>
+</h2>
+<p class="meta">
+Posté par <a href="https://linuxfr.org/users/ptifeth" rel="author">feth</a> (<a href="http://blog.tuttu.info/">page perso</a>) <time class="updated" datetime="2012-07-23T16:14:51+02:00"><span class="date">le 23/07/12</span> <span class="time">à 16:14</span></time>.
+Évalué à&nbsp;<span class="score">3</span>.<span class="update">
+Dernière modification : le 23/07/12 à 16:16
+</span></p>
+<figure class="image"><img alt="" class="avatar" height="64" src="./depeche_avec_code_files/default-avatar.png" width="64"></figure>
+<div class="content">
+<p>La bonne manière de faire, qu'on peut ainsi faire lire à un humain, même à un humain qui ne saurait pas quel langage de programmation est utilisé, même un humain qui saurait à peine programmer&nbsp;:</p>
+<pre><code class="python">    <span class="k">if</span> <span class="n">the_stars_align</span><span class="p">():</span>
+        <span class="n">x</span> <span class="o">=</span> <span class="mi">4</span>
+    <span class="k">elif</span> <span class="n">something_else</span><span class="p">():</span>
+        <span class="n">x</span> <span class="o">=</span> <span class="mi">3</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">x</span> <span class="o">=</span> <span class="mi">0</span>
+</code>
+</pre>
+<p>Mais on peut toujours abuser du sucre syntaxique pour minimiser le nombre de lignes, si on veut faire le mal&nbsp;:</p>
+<pre><code class="python">    <span class="n">x</span> <span class="o">=</span> <span class="p">(</span><span class="k">lambda</span> <span class="p">:</span> <span class="mi">4</span> <span class="k">if</span> <span class="n">the_stars_align</span><span class="p">()</span> <span class="k">else</span> <span class="p">(</span><span class="mi">3</span> <span class="k">if</span> <span class="n">something_else</span><span class="p">()</span> <span class="k">else</span> <span class="mi">0</span><span class="p">))()</span>
+</code>
+</pre>
+<p>Quelle horreur.</p>
+</div>
+<footer class="actions">
+<a href="https://linuxfr.org/nodes/94839/comments/1369953/answer#new_comment" class="action">Répondre</a>
+<div class="vote">
+Ce commentaire est-il <form action="https://linuxfr.org/nodes/94839/comments/1369953/relevance/for" class="button_to" data-remote="true" method="post"><div><input class="relevant" type="submit" value="pertinent"><input name="authenticity_token" type="hidden" value="ZarExH4lMxL3TjMAGomPDX/KtUbAMtdQFmEQplQpQ/I="></div></form>
+ou <form action="https://linuxfr.org/nodes/94839/comments/1369953/relevance/against" class="button_to" data-remote="true" method="post"><div><input class="useless" type="submit" value="inutile"><input name="authenticity_token" type="hidden" value="ZarExH4lMxL3TjMAGomPDX/KtUbAMtdQFmEQplQpQ/I="></div></form> ?
+</div>
+</footer>
+
+<ul>
+<li class="comment odd score3" id="comment-1370016">
+<h2>
+<a href="https://linuxfr.org/news/sortie-de-rust-en-version-0-3#comment-1369953" class="parent" title="Aller au commentaire parent">[^]</a>
+<a href="https://linuxfr.org/news/sortie-de-rust-en-version-0-3#" class="close" title="Cacher le fil de discussion">[-]</a> <a href="https://linuxfr.org/news/sortie-de-rust-en-version-0-3#comment-1370016" class="anchor" title="Lien direct vers ce commentaire">#</a>
+ 
+<a href="https://linuxfr.org/nodes/94839/comments/1370016" class="title">Re: explications?</a>
+</h2>
+<p class="meta">
+Posté par <a href="https://linuxfr.org/users/ptifeth" rel="author">feth</a> (<a href="http://blog.tuttu.info/">page perso</a>) <time class="updated" datetime="2012-07-23T19:14:59+02:00"><span class="date">le 23/07/12</span> <span class="time">à 19:14</span></time>.
+Évalué à&nbsp;<span class="score">3</span>.
+</p>
+<figure class="image"><img alt="" class="avatar" height="64" src="./depeche_avec_code_files/default-avatar.png" width="64"></figure>
+<div class="content">
+<p>(mais pourquoi ai-je mis cette lambda&nbsp;?)</p>
+</div>
+<footer class="actions">
+<a href="https://linuxfr.org/nodes/94839/comments/1370016/answer#new_comment" class="action">Répondre</a>
+<div class="vote">
+Ce commentaire est-il <form action="https://linuxfr.org/nodes/94839/comments/1370016/relevance/for" class="button_to" data-remote="true" method="post"><div><input class="relevant" type="submit" value="pertinent"><input name="authenticity_token" type="hidden" value="ZarExH4lMxL3TjMAGomPDX/KtUbAMtdQFmEQplQpQ/I="></div></form>
+ou <form action="https://linuxfr.org/nodes/94839/comments/1370016/relevance/against" class="button_to" data-remote="true" method="post"><div><input class="useless" type="submit" value="inutile"><input name="authenticity_token" type="hidden" value="ZarExH4lMxL3TjMAGomPDX/KtUbAMtdQFmEQplQpQ/I="></div></form> ?
+</div>
+</footer>
+
+</li>
+
+<li class="comment even score7" id="comment-1370038">
+<h2>
+<a href="https://linuxfr.org/news/sortie-de-rust-en-version-0-3#comment-1369953" class="parent" title="Aller au commentaire parent">[^]</a>
+<a href="https://linuxfr.org/news/sortie-de-rust-en-version-0-3#" class="close" title="Cacher le fil de discussion">[-]</a> <a href="https://linuxfr.org/news/sortie-de-rust-en-version-0-3#comment-1370038" class="anchor" title="Lien direct vers ce commentaire">#</a>
+ 
+<a href="https://linuxfr.org/nodes/94839/comments/1370038" class="title">Re: explications?</a>
+</h2>
+<p class="meta">
+Posté par <a href="https://linuxfr.org/users/enjolras" rel="author">Enjolras</a> <time class="updated" datetime="2012-07-23T20:39:38+02:00"><span class="date">le 23/07/12</span> <span class="time">à 20:39</span></time>.
+Évalué à&nbsp;<span class="score">7</span>.
+</p>
+<figure class="image"><img alt="" class="avatar" height="64" src="./depeche_avec_code_files/default-avatar.png" width="64"></figure>
+<div class="content">
+<p>Ce n'est pas du sucre syntaxique. D'ailleurs, le but n'est pas de minimiser le nombre de ligne.</p>
+
+<p>Ce n'est pas du sucre syntaxique, parce que ce n'est pas la syntaxe qui change, mais la sémantique. En C/C++, la conditionnelle est une instruction.<br>
+En Rust, la conditionnelle est une expression. Je ne vois pas en quoi c'est une expression plus complexe que (a &amp;&amp; b) || ( x == 2). <br>
+Vous allez dire qu'en pratique, ça ne change rien. Pourtant, si, ça change que les membres de la conditionnelle doivent s'évaluer vers un même type. L'avantage&nbsp;? On est certain que x a une valeur, quelque soit la branche. </p>
+
+<p>Quant à parler de «Bonne façon» et de «mauvaise façon» il serait temps que les gens comprennent que leur manière de faire n'est pas une vérité unique et qu'il existe divers paradigmes de programmation : impératif et fonctionnel par exemple.</p>
+</div>
+<footer class="actions">
+<a href="https://linuxfr.org/nodes/94839/comments/1370038/answer#new_comment" class="action">Répondre</a>
+<div class="vote">
+Ce commentaire est-il <form action="https://linuxfr.org/nodes/94839/comments/1370038/relevance/for" class="button_to" data-remote="true" method="post"><div><input class="relevant" type="submit" value="pertinent"><input name="authenticity_token" type="hidden" value="ZarExH4lMxL3TjMAGomPDX/KtUbAMtdQFmEQplQpQ/I="></div></form>
+ou <form action="https://linuxfr.org/nodes/94839/comments/1370038/relevance/against" class="button_to" data-remote="true" method="post"><div><input class="useless" type="submit" value="inutile"><input name="authenticity_token" type="hidden" value="ZarExH4lMxL3TjMAGomPDX/KtUbAMtdQFmEQplQpQ/I="></div></form> ?
+</div>
+</footer>
+
+<ul>
+<li class="comment odd score3" id="comment-1370073">
+<h2>
+<a href="https://linuxfr.org/news/sortie-de-rust-en-version-0-3#comment-1370038" class="parent" title="Aller au commentaire parent">[^]</a>
+<a href="https://linuxfr.org/news/sortie-de-rust-en-version-0-3#" class="close" title="Cacher le fil de discussion">[-]</a> <a href="https://linuxfr.org/news/sortie-de-rust-en-version-0-3#comment-1370073" class="anchor" title="Lien direct vers ce commentaire">#</a>
+ 
+<a href="https://linuxfr.org/nodes/94839/comments/1370073" class="title">Re: explications?</a>
+</h2>
+<p class="meta">
+Posté par <a href="https://linuxfr.org/users/stopspam" rel="author">stopspam</a> <time class="updated" datetime="2012-07-23T21:46:07+02:00"><span class="date">le 23/07/12</span> <span class="time">à 21:46</span></time>.
+Évalué à&nbsp;<span class="score">3</span>.
+</p>
+<figure class="image"><img alt="" class="avatar" height="64" src="./depeche_avec_code_files/default-avatar.png" width="64"></figure>
+<div class="content">
+<blockquote>
+<p>Quant à parler de «Bonne façon» et de «mauvaise façon» il serait temps que les gens comprennent que leur manière de faire n'est pas une vérité unique et qu'il existe divers paradigmes de programmation : impératif et fonctionnel par exemple.</p>
+</blockquote>
+
+<p>C'est plus souvent une question de lisibilité, compréhension et courbe d'apprentissage du langage. <br>
+Les gens ne pensent pas détenir l'unique vérité mais plutôt que leur code est meilleur sur l'un ou plusieurs des points ci-dessus.</p>
+</div>
+<footer class="actions">
+<a href="https://linuxfr.org/nodes/94839/comments/1370073/answer#new_comment" class="action">Répondre</a>
+<div class="vote">
+Ce commentaire est-il <form action="https://linuxfr.org/nodes/94839/comments/1370073/relevance/for" class="button_to" data-remote="true" method="post"><div><input class="relevant" type="submit" value="pertinent"><input name="authenticity_token" type="hidden" value="ZarExH4lMxL3TjMAGomPDX/KtUbAMtdQFmEQplQpQ/I="></div></form>
+ou <form action="https://linuxfr.org/nodes/94839/comments/1370073/relevance/against" class="button_to" data-remote="true" method="post"><div><input class="useless" type="submit" value="inutile"><input name="authenticity_token" type="hidden" value="ZarExH4lMxL3TjMAGomPDX/KtUbAMtdQFmEQplQpQ/I="></div></form> ?
+</div>
+</footer>
+
+<ul>
+<li class="comment new-comment odd score3" id="comment-1370127">
+<h2>
+<a href="https://linuxfr.org/news/sortie-de-rust-en-version-0-3#comment-1370073" class="parent" title="Aller au commentaire parent">[^]</a>
+<a href="https://linuxfr.org/news/sortie-de-rust-en-version-0-3#" class="close" title="Cacher le fil de discussion">[-]</a> <a href="https://linuxfr.org/news/sortie-de-rust-en-version-0-3#comment-1370127" class="anchor" title="Lien direct vers ce commentaire">#</a>
+ 
+<a href="https://linuxfr.org/nodes/94839/comments/1370127" class="title">Re: explications?</a>
+</h2>
+<p class="meta">
+Posté par <a href="https://linuxfr.org/users/enjolras" rel="author">Enjolras</a> <time class="updated" datetime="2012-07-23T23:49:19+02:00"><span class="date">le 23/07/12</span> <span class="time">à 23:49</span></time>.
+Évalué à&nbsp;<span class="score">3</span>.
+</p>
+<figure class="image"><img alt="" class="avatar" height="64" src="./depeche_avec_code_files/default-avatar.png" width="64"></figure>
+<div class="content">
+<p>La lisibilité est subjective. Un programmeur ocaml va préférer </p>
+<pre><code class="ocaml"><span class="k">let</span> <span class="n">factorielle</span> <span class="n">n</span> <span class="o">=</span>
+  <span class="k">let</span> <span class="n">tail_fact</span> <span class="n">acc</span> <span class="o">=</span> <span class="k">function</span> 
+    <span class="o">|</span> <span class="mi">0</span> <span class="o">-&gt;</span> <span class="n">acc</span>
+    <span class="o">|</span> <span class="n">k</span> <span class="o">-&gt;</span> <span class="n">fact</span> <span class="o">(</span><span class="n">k</span><span class="o">*</span><span class="n">acc</span><span class="o">)</span> <span class="o">(</span><span class="n">k</span><span class="o">-</span><span class="mi">1</span><span class="o">)</span> <span class="k">in</span> 
+  <span class="n">tail_fact</span> <span class="n">n</span> <span class="o">(</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="o">)</span>
+</code>
+</pre>
+<p>et un programmeur C</p>
+<pre><code class="c"><span class="kt">int</span> <span class="nf">factorielle</span><span class="p">(</span><span class="kt">int</span> <span class="n">n</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">for</span> <span class="p">(</span><span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">);</span> <span class="n">i</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="p">;</span> <span class="o">--</span><span class="n">i</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">n</span> <span class="o">*=</span><span class="n">i</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="k">return</span> <span class="n">acc</span><span class="p">;</span>
+<span class="p">}</span>
+</code>
+</pre>
+<p>Y en a t'il vraiment un de plus lisible&nbsp;?</p>
+</div>
+<footer class="actions">
+<a href="https://linuxfr.org/nodes/94839/comments/1370127/answer#new_comment" class="action">Répondre</a>
+<div class="vote">
+Ce commentaire est-il <form action="https://linuxfr.org/nodes/94839/comments/1370127/relevance/for" class="button_to" data-remote="true" method="post"><div><input class="relevant" type="submit" value="pertinent"><input name="authenticity_token" type="hidden" value="ZarExH4lMxL3TjMAGomPDX/KtUbAMtdQFmEQplQpQ/I="></div></form>
+ou <form action="https://linuxfr.org/nodes/94839/comments/1370127/relevance/against" class="button_to" data-remote="true" method="post"><div><input class="useless" type="submit" value="inutile"><input name="authenticity_token" type="hidden" value="ZarExH4lMxL3TjMAGomPDX/KtUbAMtdQFmEQplQpQ/I="></div></form> ?
+</div>
+</footer>
+
+<ul>
+<li class="comment new-comment odd score1" id="comment-1370166">
+<h2>
+<a href="https://linuxfr.org/news/sortie-de-rust-en-version-0-3#comment-1370127" class="parent" title="Aller au commentaire parent">[^]</a>
+<a href="https://linuxfr.org/news/sortie-de-rust-en-version-0-3#" class="close" title="Cacher le fil de discussion">[-]</a> <a href="https://linuxfr.org/news/sortie-de-rust-en-version-0-3#comment-1370166" class="anchor" title="Lien direct vers ce commentaire">#</a>
+ 
+<a href="https://linuxfr.org/nodes/94839/comments/1370166" class="title">Re: explications?</a>
+</h2>
+<p class="meta">
+Posté par <a href="https://linuxfr.org/users/spider-mario" rel="author">spider-mario</a> <time class="updated" datetime="2012-07-24T01:31:37+02:00"><span class="date">le 24/07/12</span> <span class="time">à 01:31</span></time>.
+Évalué à&nbsp;<span class="score">1</span>.
+</p>
+<figure class="image"><img alt="" class="avatar" height="64" src="./depeche_avec_code_files/default-avatar.png" width="64"></figure>
+<div class="content">
+<p>(Juste pour information.)</p>
+
+<p>Perl 6 :</p>
+<pre><code class="perl"><span class="k">sub </span><span class="nf">factorielle</span><span class="p">(Int $n) returns Int {</span>
+    <span class="k">return</span> <span class="p">[</span><span class="o">*</span><span class="p">]</span> <span class="mi">2</span> <span class="o">..</span> <span class="nv">$n</span><span class="p">;</span>
+<span class="p">}</span>
+</code>
+</pre>
+<p>Haskell :</p>
+<pre><code class="haskell"><span class="nf">factorielle</span> <span class="n">n</span> <span class="ow">=</span> <span class="n">product</span> <span class="p">[</span><span class="mi">2</span> <span class="o">..</span> <span class="n">n</span><span class="p">]</span>
+</code>
+</pre>
+</div>
+<footer class="actions">
+<a href="https://linuxfr.org/nodes/94839/comments/1370166/answer#new_comment" class="action">Répondre</a>
+<div class="vote">
+Ce commentaire est-il <form action="https://linuxfr.org/nodes/94839/comments/1370166/relevance/for" class="button_to" data-remote="true" method="post"><div><input class="relevant" type="submit" value="pertinent"><input name="authenticity_token" type="hidden" value="ZarExH4lMxL3TjMAGomPDX/KtUbAMtdQFmEQplQpQ/I="></div></form>
+ou <form action="https://linuxfr.org/nodes/94839/comments/1370166/relevance/against" class="button_to" data-remote="true" method="post"><div><input class="useless" type="submit" value="inutile"><input name="authenticity_token" type="hidden" value="ZarExH4lMxL3TjMAGomPDX/KtUbAMtdQFmEQplQpQ/I="></div></form> ?
+</div>
+</footer>
+
+</li>
+
+</ul>
+</li>
+
+</ul>
+</li>
+
+</ul>
+</li>
+
+</ul>
+</li>
+
+</ul>
+</li>
+
+</ul>
+</li>
+
+<li class="comment even score9" id="comment-1369930">
+<h2>
+
+<a href="https://linuxfr.org/news/sortie-de-rust-en-version-0-3#" class="close" title="Cacher le fil de discussion">[-]</a> <a href="https://linuxfr.org/news/sortie-de-rust-en-version-0-3#comment-1369930" class="anchor" title="Lien direct vers ce commentaire">#</a>
+ 
+<a href="https://linuxfr.org/nodes/94839/comments/1369930" class="title">avantage ?</a>
+</h2>
+<p class="meta">
+Posté par <a href="https://linuxfr.org/users/niconico" rel="author">Nicolas Boulay</a> <time class="updated" datetime="2012-07-23T15:18:23+02:00"><span class="date">le 23/07/12</span> <span class="time">à 15:18</span></time>.
+Évalué à&nbsp;<span class="score">9</span>.
+</p>
+<figure class="image"><img alt="" class="avatar" height="64" src="./depeche_avec_code_files/default-avatar.png" width="64"></figure>
+<div class="content">
+<p>J'ai du mal à voir l'intérêt d'un tel langage, il faudrait au moins parler de ce que cela apporte de plus à ce qui existe.</p>
+
+<p>Si je compare avec ocaml, Rust ne parait pas terrible. Ocaml utilise un seul mot clef "let" pour les fonctions et les variables, cela allège la syntaxe. Les mutables avec mut semble plus léger que la version ocaml "let plop = Ref 10" qui utilise des opérateurs d'affectation différent.</p>
+
+<p>La gestion par copie est horrible, on dirait revenir les horreurs de java sur le mélange type boxé ou pas. Dans ocaml, tout est boxé, et le compilo unbox quand il veut. Cela évite d'avoir 2 types de données différentes. En plus, cela réintroduit cette merde de pointeur qui n'existe plus sous ocaml.</p>
+
+<p>ocaml utilise un gc générationel bien plus efficace qu'un compteur de référence. </p>
+
+<p>Le typage linéaire utilisé pour le passage de message à l'air par contre très innovant, c'est la première fois que je le vois (à part linearML).</p>
+
+<p>Les complexités des "type" mis en oeuvre est pour simplifier l'écriture du compilateur, ou est-ce qu'il y a vraiment des performances derrières&nbsp;? (ocaml n'arrive pas toujours à unboxer quand il le faudrait)</p>
+</div>
+<footer class="actions">
+<a href="https://linuxfr.org/nodes/94839/comments/1369930/answer#new_comment" class="action">Répondre</a>
+<div class="vote">
+Ce commentaire est-il <form action="https://linuxfr.org/nodes/94839/comments/1369930/relevance/for" class="button_to" data-remote="true" method="post"><div><input class="relevant" type="submit" value="pertinent"><input name="authenticity_token" type="hidden" value="ZarExH4lMxL3TjMAGomPDX/KtUbAMtdQFmEQplQpQ/I="></div></form>
+ou <form action="https://linuxfr.org/nodes/94839/comments/1369930/relevance/against" class="button_to" data-remote="true" method="post"><div><input class="useless" type="submit" value="inutile"><input name="authenticity_token" type="hidden" value="ZarExH4lMxL3TjMAGomPDX/KtUbAMtdQFmEQplQpQ/I="></div></form> ?
+</div>
+</footer>
+
+<ul>
+<li class="comment odd score6" id="comment-1369966">
+<h2>
+<a href="https://linuxfr.org/news/sortie-de-rust-en-version-0-3#comment-1369930" class="parent" title="Aller au commentaire parent">[^]</a>
+<a href="https://linuxfr.org/news/sortie-de-rust-en-version-0-3#" class="close" title="Cacher le fil de discussion">[-]</a> <a href="https://linuxfr.org/news/sortie-de-rust-en-version-0-3#comment-1369966" class="anchor" title="Lien direct vers ce commentaire">#</a>
+ 
+<a href="https://linuxfr.org/nodes/94839/comments/1369966" class="title">Re: avantage ?</a>
+</h2>
+<p class="meta">
+Posté par <a href="https://linuxfr.org/users/reno" rel="author">reno</a> <time class="updated" datetime="2012-07-23T16:50:13+02:00"><span class="date">le 23/07/12</span> <span class="time">à 16:50</span></time>.
+Évalué à&nbsp;<span class="score">6</span>.
+</p>
+<figure class="image"><img alt="" class="avatar" height="64" src="./depeche_avec_code_files/default-avatar.png" width="64"></figure>
+<div class="content">
+<blockquote>
+<p>Si je compare avec ocaml, Rust ne parait pas terrible.</p>
+</blockquote>
+
+<p>D'un point de vue syntaxe/typage, c'est une comparaison valide, mais après tu compare la gestion mémoire et là je ne suis pas d'accord: Rust est un C++-like: pas de GC donc c'est logique que ça ait des conséquences sur la gestion des copies.</p>
+
+<blockquote>
+<p>ocaml utilise un gc générationel bien plus efficace qu'un compteur de référence.</p>
+</blockquote>
+
+<p>Tout les GC sont <em>mauvais</em>, ils le sont juste de manière différente: trouve moi un GC qui soit <br>
+1) précis 2) temps réel 3) ne perturbe pas le swap(*) 4) Free<br>
+et on discute, en "attendant" les langages sans GC gardent leur utilité..</p>
+
+<p>*: pour (3), il faut "juste" patcher le noyau:<br><a href="http://lambda-the-ultimate.org/node/2391">http://lambda-the-ultimate.org/node/2391</a></p>
+</div>
+<footer class="actions">
+<a href="https://linuxfr.org/nodes/94839/comments/1369966/answer#new_comment" class="action">Répondre</a>
+<div class="vote">
+Ce commentaire est-il <form action="https://linuxfr.org/nodes/94839/comments/1369966/relevance/for" class="button_to" data-remote="true" method="post"><div><input class="relevant" type="submit" value="pertinent"><input name="authenticity_token" type="hidden" value="ZarExH4lMxL3TjMAGomPDX/KtUbAMtdQFmEQplQpQ/I="></div></form>
+ou <form action="https://linuxfr.org/nodes/94839/comments/1369966/relevance/against" class="button_to" data-remote="true" method="post"><div><input class="useless" type="submit" value="inutile"><input name="authenticity_token" type="hidden" value="ZarExH4lMxL3TjMAGomPDX/KtUbAMtdQFmEQplQpQ/I="></div></form> ?
+</div>
+</footer>
+
+</li>
+
+<li class="comment even score9" id="comment-1369986">
+<h2>
+<a href="https://linuxfr.org/news/sortie-de-rust-en-version-0-3#comment-1369930" class="parent" title="Aller au commentaire parent">[^]</a>
+<a href="https://linuxfr.org/news/sortie-de-rust-en-version-0-3#" class="close" title="Cacher le fil de discussion">[-]</a> <a href="https://linuxfr.org/news/sortie-de-rust-en-version-0-3#comment-1369986" class="anchor" title="Lien direct vers ce commentaire">#</a>
+ 
+<a href="https://linuxfr.org/nodes/94839/comments/1369986" class="title">Re: avantage ?</a>
+</h2>
+<p class="meta">
+Posté par <a href="https://linuxfr.org/users/rogo" rel="author">rogo</a> <time class="updated" datetime="2012-07-23T17:38:21+02:00"><span class="date">le 23/07/12</span> <span class="time">à 17:38</span></time>.
+Évalué à&nbsp;<span class="score">9</span>.
+</p>
+<figure class="image"><img alt="" class="avatar" height="64" src="./depeche_avec_code_files/default-avatar.png" width="64"></figure>
+<div class="content">
+<p>J'ai moi aussi du mal à comprendre l'intérêt de ce langage, mais pour des raisons indépendantes de sa syntaxe.</p>
+
+<p>Un langage créé par Mozilla pour développer un navigateur de Mozilla, il y a peu de chance qu'il attire une large communauté. Surtout quand l'offre en langages de programmation est déjà pléthorique. J'imagine que ce sera plutôt une barrière à l'entrée de ce nouveau navigateur web : si vous voulez collaborer, il faut d'abord apprendre le langage maison. Ça risque d'en refroidir plus d'un. Moi en tout cas je ne propose des patches que dans les langages que je connais déjà.</p>
+
+<p>Mais surtout, j'ai des doutes sur la pérennité de ce choix. La dépêche met en avant des impératifs de sécurité et de performance. Ce sont des domaines qui requièrent des experts. Est-ce que la fondation Mozilla disposera toujours de plusieurs experts en compilateurs&nbsp;? Quand je vois sa position sur XUL ou Thunderbird, je suis d'autant plus dubitatif.</p>
+
+<p>Je me demande s'il n'aurait pas été possible d'adopter un langage déjà présent, avec une communauté déjà formée et si possible des experts déjà au travail sur l'implémentation. Je pense bien sûr à Go qui a beaucoup de points communs avec Rust, et sur lequel Google apporte une certaine garantie de qualité et de pérennité. Est-ce qu'un fork du compilateur accompagné de quelques bibliothèques n'aurait pas suffit&nbsp;? Idem avec OCaml, D, ou Scala, voire Haskell. Malheureusement, je ne suis pas assez compétent pour répondre à mon interrogation.</p>
+
+<p>Bref, j'ai un peu peur que Mozilla soit victime du syndrome "Not Invented Here".</p>
+</div>
+<footer class="actions">
+<a href="https://linuxfr.org/nodes/94839/comments/1369986/answer#new_comment" class="action">Répondre</a>
+<div class="vote">
+Ce commentaire est-il <form action="https://linuxfr.org/nodes/94839/comments/1369986/relevance/for" class="button_to" data-remote="true" method="post"><div><input class="relevant" type="submit" value="pertinent"><input name="authenticity_token" type="hidden" value="ZarExH4lMxL3TjMAGomPDX/KtUbAMtdQFmEQplQpQ/I="></div></form>
+ou <form action="https://linuxfr.org/nodes/94839/comments/1369986/relevance/against" class="button_to" data-remote="true" method="post"><div><input class="useless" type="submit" value="inutile"><input name="authenticity_token" type="hidden" value="ZarExH4lMxL3TjMAGomPDX/KtUbAMtdQFmEQplQpQ/I="></div></form> ?
+</div>
+</footer>
+
+<ul>
+<li class="comment odd score2" id="comment-1369987">
+<h2>
+<a href="https://linuxfr.org/news/sortie-de-rust-en-version-0-3#comment-1369986" class="parent" title="Aller au commentaire parent">[^]</a>
+<a href="https://linuxfr.org/news/sortie-de-rust-en-version-0-3#" class="close" title="Cacher le fil de discussion">[-]</a> <a href="https://linuxfr.org/news/sortie-de-rust-en-version-0-3#comment-1369987" class="anchor" title="Lien direct vers ce commentaire">#</a>
+ 
+<a href="https://linuxfr.org/nodes/94839/comments/1369987" class="title">Re: avantage ?</a>
+</h2>
+<p class="meta">
+Posté par <a href="https://linuxfr.org/users/barmic" rel="author">Barret Michel</a> (<a href="http://barmic.fr/blog/">page perso</a>, <a href="xmpp:michel.barret@gmail.com">jabber id</a>) <time class="updated" datetime="2012-07-23T17:46:20+02:00"><span class="date">le 23/07/12</span> <span class="time">à 17:46</span></time>.
+Évalué à&nbsp;<span class="score">2</span>.
+</p>
+<figure class="image"><img alt="" class="avatar" height="64" src="./depeche_avec_code_files/avatar(1).png" width="64"></figure>
+<div class="content">
+<blockquote>
+<p>Je pense bien sûr à Go qui a beaucoup de points communs avec Rust</p>
+</blockquote>
+
+<p>Je crois que Go n'est pas aussi typé. Par contre il reste les langages fonctionnels comme Haskel et OCaml. Mais ces derniers n'ont pas des threads léger à la Go. Peut être qu'erlang aurait était un bon choix ou Elixir (mais il n'avait peut être pas encore commencé quand Rust a était lancé).</p>
+</div>
+<footer class="actions">
+<a href="https://linuxfr.org/nodes/94839/comments/1369987/answer#new_comment" class="action">Répondre</a>
+<div class="vote">
+Ce commentaire est-il <form action="https://linuxfr.org/nodes/94839/comments/1369987/relevance/for" class="button_to" data-remote="true" method="post"><div><input class="relevant" type="submit" value="pertinent"><input name="authenticity_token" type="hidden" value="ZarExH4lMxL3TjMAGomPDX/KtUbAMtdQFmEQplQpQ/I="></div></form>
+ou <form action="https://linuxfr.org/nodes/94839/comments/1369987/relevance/against" class="button_to" data-remote="true" method="post"><div><input class="useless" type="submit" value="inutile"><input name="authenticity_token" type="hidden" value="ZarExH4lMxL3TjMAGomPDX/KtUbAMtdQFmEQplQpQ/I="></div></form> ?
+</div>
+</footer>
+
+<ul>
+<li class="comment odd score5" id="comment-1369997">
+<h2>
+<a href="https://linuxfr.org/news/sortie-de-rust-en-version-0-3#comment-1369987" class="parent" title="Aller au commentaire parent">[^]</a>
+<a href="https://linuxfr.org/news/sortie-de-rust-en-version-0-3#" class="close" title="Cacher le fil de discussion">[-]</a> <a href="https://linuxfr.org/news/sortie-de-rust-en-version-0-3#comment-1369997" class="anchor" title="Lien direct vers ce commentaire">#</a>
+ 
+<a href="https://linuxfr.org/nodes/94839/comments/1369997" class="title">Re: avantage ?</a>
+</h2>
+<p class="meta">
+Posté par <a href="https://linuxfr.org/users/jedai" rel="author">Chaddaï Fouché</a> <time class="updated" datetime="2012-07-23T18:05:46+02:00"><span class="date">le 23/07/12</span> <span class="time">à 18:05</span></time>.
+Évalué à&nbsp;<span class="score">5</span>.
+</p>
+<figure class="image"><img alt="" class="avatar" height="64" src="./depeche_avec_code_files/default-avatar.png" width="64"></figure>
+<div class="content">
+<p>Haskell a l'un des modèle de threads léger les plus avancé, ainsi qu'un large choix de librairies de gestion du parallélisme dont les classiques mutex/locks, de la STM (mémoire transactionnelle logicielle), des canaux pour les agents, une modèle de stratégie qui permet de décrire de façon non-invasive et déterministe comment exécuter du code purement fonctionnel en parallèle ainsi qu'une librairie de vectorisations des opérations (DPH data parallel Haskell, voir Repa) à la pointe de la recherche. </p>
+
+<p>Mais clairement Haskell n'a pas du tout le même objectif que Rust : Haskell est bien plus haut niveau et met l'accent sur un cœur purement fonctionnel (discernable par les types). Est-ce un bon choix pour écrire le browser du futur… pourquoi pas, mais cela aurait impliqué un très grand effort des développeurs Mozilla pour changer leur perspective du paradigme impératif au paradigme fonctionnel.</p>
+</div>
+<footer class="actions">
+<a href="https://linuxfr.org/nodes/94839/comments/1369997/answer#new_comment" class="action">Répondre</a>
+<div class="vote">
+Ce commentaire est-il <form action="https://linuxfr.org/nodes/94839/comments/1369997/relevance/for" class="button_to" data-remote="true" method="post"><div><input class="relevant" type="submit" value="pertinent"><input name="authenticity_token" type="hidden" value="ZarExH4lMxL3TjMAGomPDX/KtUbAMtdQFmEQplQpQ/I="></div></form>
+ou <form action="https://linuxfr.org/nodes/94839/comments/1369997/relevance/against" class="button_to" data-remote="true" method="post"><div><input class="useless" type="submit" value="inutile"><input name="authenticity_token" type="hidden" value="ZarExH4lMxL3TjMAGomPDX/KtUbAMtdQFmEQplQpQ/I="></div></form> ?
+</div>
+</footer>
+
+</li>
+
+</ul>
+</li>
+
+<li class="comment even score3" id="comment-1369991">
+<h2>
+<a href="https://linuxfr.org/news/sortie-de-rust-en-version-0-3#comment-1369986" class="parent" title="Aller au commentaire parent">[^]</a>
+<a href="https://linuxfr.org/news/sortie-de-rust-en-version-0-3#" class="close" title="Cacher le fil de discussion">[-]</a> <a href="https://linuxfr.org/news/sortie-de-rust-en-version-0-3#comment-1369991" class="anchor" title="Lien direct vers ce commentaire">#</a>
+ 
+<a href="https://linuxfr.org/nodes/94839/comments/1369991" class="title">Re: avantage ?</a>
+</h2>
+<p class="meta">
+Posté par <a href="https://linuxfr.org/users/claudex" rel="author">Xavier Claude</a> (<a href="http://linuxfr.org/board/">page perso</a>, <a href="xmpp:claudex@jabber.org">jabber id</a>) <time class="updated" datetime="2012-07-23T17:50:46+02:00"><span class="date">le 23/07/12</span> <span class="time">à 17:50</span></time>.
+Évalué à&nbsp;<span class="score">3</span>.
+</p>
+<figure class="image"><img alt="" class="avatar" height="64" src="./depeche_avec_code_files/avatar.jpg" width="64"></figure>
+<div class="content">
+<blockquote>
+<p>Un langage créé par Mozilla pour développer un navigateur de Mozilla, il y a peu de chance qu'il attire une large communauté. </p>
+</blockquote>
+
+<p>Je crois que le but est plus d'avoir un langage C-like, et comme la fondation développe un navigateur qui est un programme très complexe et polyvalent actuellement, ils prennent comme objectif de pouvoir développer un navigateur avec car cela permettra sans doute de faire beaucoup d'autres programmes.</p>
+
+<blockquote>
+<p>Je pense bien sûr à Go qui a beaucoup de points communs avec Rust</p>
+</blockquote>
+
+<p>D'après Wikipédia, Rust a commencé en 2006, Mozilla s'est impliquée en 2009 et est officiellement annoncé en 2010. Pour Go, il a commencé en 2007 et a été officiellement annoncé en 2009. Ils ont donc plutôt été créé parallèlement.</p>
+
+<blockquote>
+<p>Est-ce qu'un fork du compilateur accompagné de quelques bibliothèques n'aurait pas suffit&nbsp;?</p>
+</blockquote>
+
+<p>Je pense que ça aurait créé deux langages semblables mais incompatible avec finalement une incompréhension pour les gens de l'extérieur sur la différence entre les langages. Surtout qu'un fork aurait sans doute frusté la communauté initiale du langage.</p>
+<p class="signature">
+« Moi, lorsque je n’ai rien à dire, je veux qu’on le sache. » Raymond Devos
+</p>
+</div>
+<footer class="actions">
+<a href="https://linuxfr.org/nodes/94839/comments/1369991/answer#new_comment" class="action">Répondre</a>
+<div class="vote">
+Ce commentaire est-il <form action="https://linuxfr.org/nodes/94839/comments/1369991/relevance/for" class="button_to" data-remote="true" method="post"><div><input class="relevant" type="submit" value="pertinent"><input name="authenticity_token" type="hidden" value="ZarExH4lMxL3TjMAGomPDX/KtUbAMtdQFmEQplQpQ/I="></div></form>
+ou <form action="https://linuxfr.org/nodes/94839/comments/1369991/relevance/against" class="button_to" data-remote="true" method="post"><div><input class="useless" type="submit" value="inutile"><input name="authenticity_token" type="hidden" value="ZarExH4lMxL3TjMAGomPDX/KtUbAMtdQFmEQplQpQ/I="></div></form> ?
+</div>
+</footer>
+
+</li>
+
+<li class="comment odd score3" id="comment-1370066">
+<h2>
+<a href="https://linuxfr.org/news/sortie-de-rust-en-version-0-3#comment-1369986" class="parent" title="Aller au commentaire parent">[^]</a>
+<a href="https://linuxfr.org/news/sortie-de-rust-en-version-0-3#" class="close" title="Cacher le fil de discussion">[-]</a> <a href="https://linuxfr.org/news/sortie-de-rust-en-version-0-3#comment-1370066" class="anchor" title="Lien direct vers ce commentaire">#</a>
+ 
+<a href="https://linuxfr.org/nodes/94839/comments/1370066" class="title">Re: avantage ?</a>
+</h2>
+<p class="meta">
+Posté par <a href="https://linuxfr.org/users/montaigne" rel="author">Ontologia</a> (<a href="http://www.youtube.com/watch?v=ZE8xBzcLYRs">page perso</a>) <time class="updated" datetime="2012-07-23T21:40:58+02:00"><span class="date">le 23/07/12</span> <span class="time">à 21:40</span></time>.
+Évalué à&nbsp;<span class="score">3</span>.
+</p>
+<figure class="image"><img alt="" class="avatar" height="64" src="./depeche_avec_code_files/avatar(2).png" width="64"></figure>
+<div class="content">
+<blockquote>
+<p>Est-ce qu'un fork du compilateur accompagné de quelques bibliothèques n'aurait pas suffit&nbsp;?</p>
+</blockquote>
+
+<p>Je complèterai la réponse de Xavier en précisant que C et surtout C++ a un système de type qui relève plus de la passoire que de l'architecture (bien qu'il y ait un effort en C++ si on se restreint aux dernières moutures).</p>
+
+<p>Si l'affirmation de la news </p>
+
+<blockquote>
+<p>le compilateur vérifiera que tous les chemins d'exécutions retourne bien un type.</p>
+</blockquote>
+
+<p>est exacte, cela signifie que le compilateur effectue une analyse de flot. Bref une analyse de type un peu précise.</p>
+
+<p>C ou C++ par design (arithmétique des pointeurs et trop grande complexité pour C++) ne permettent absolument pas cela&nbsp;!<br>
+Et cela te vire 50% des bugs au moins.</p>
+
+<p>De plus, l'immutabilité par défaut est une très bonne idée, bien que ce soit stupide d'utiliser ça dans des boucles. Mais bon, je suppose qu'ils ont des lambda et du map/fold/filter.</p>
+<p class="signature">
+&lt;@joosa&gt; how do you say float in java? just 1.5f?      &lt;@Gliptic&gt; FloatFactoryFactory.getInstance(FloatFactoryFactory.defaultInstanceDescriptionString).getFactory(Locale.getLocale("en-US")).createBuilder().setString("1.5").getResult()
+</p>
+</div>
+<footer class="actions">
+<a href="https://linuxfr.org/nodes/94839/comments/1370066/answer#new_comment" class="action">Répondre</a>
+<div class="vote">
+Ce commentaire est-il <form action="https://linuxfr.org/nodes/94839/comments/1370066/relevance/for" class="button_to" data-remote="true" method="post"><div><input class="relevant" type="submit" value="pertinent"><input name="authenticity_token" type="hidden" value="ZarExH4lMxL3TjMAGomPDX/KtUbAMtdQFmEQplQpQ/I="></div></form>
+ou <form action="https://linuxfr.org/nodes/94839/comments/1370066/relevance/against" class="button_to" data-remote="true" method="post"><div><input class="useless" type="submit" value="inutile"><input name="authenticity_token" type="hidden" value="ZarExH4lMxL3TjMAGomPDX/KtUbAMtdQFmEQplQpQ/I="></div></form> ?
+</div>
+</footer>
+
+<ul>
+<li class="comment new-comment odd score2" id="comment-1370156">
+<h2>
+<a href="https://linuxfr.org/news/sortie-de-rust-en-version-0-3#comment-1370066" class="parent" title="Aller au commentaire parent">[^]</a>
+<a href="https://linuxfr.org/news/sortie-de-rust-en-version-0-3#" class="close" title="Cacher le fil de discussion">[-]</a> <a href="https://linuxfr.org/news/sortie-de-rust-en-version-0-3#comment-1370156" class="anchor" title="Lien direct vers ce commentaire">#</a>
+ 
+<a href="https://linuxfr.org/nodes/94839/comments/1370156" class="title">map</a>
+</h2>
+<p class="meta">
+Posté par <a href="https://linuxfr.org/users/montaigne" rel="author">Ontologia</a> (<a href="http://www.youtube.com/watch?v=ZE8xBzcLYRs">page perso</a>) <time class="updated" datetime="2012-07-24T00:44:46+02:00"><span class="date">le 24/07/12</span> <span class="time">à 00:44</span></time>.
+Évalué à&nbsp;<span class="score">2</span>.
+</p>
+<figure class="image"><img alt="" class="avatar" height="64" src="./depeche_avec_code_files/avatar(2).png" width="64"></figure>
+<div class="content">
+<p>Ils ont&nbsp;;-)</p>
+<pre><code class="java"><span class="n">fn</span> <span class="n">map</span><span class="o">&lt;</span><span class="n">T</span><span class="o">,</span> <span class="n">U</span><span class="o">&gt;(</span><span class="nl">vector:</span> <span class="o">~[</span><span class="n">T</span><span class="o">],</span> <span class="nl">function:</span> <span class="n">fn</span><span class="o">(</span><span class="n">T</span><span class="o">)</span> <span class="o">-&gt;</span> <span class="n">U</span><span class="o">)</span> <span class="o">-&gt;</span> <span class="o">~[</span><span class="n">U</span><span class="o">]</span> <span class="o">{</span>
+    <span class="n">let</span> <span class="n">mut</span> <span class="n">accumulator</span> <span class="o">=</span> <span class="o">~[];</span>
+    <span class="k">for</span> <span class="n">vector</span><span class="o">.</span><span class="na">each</span> <span class="o">|</span><span class="n">element</span><span class="o">|</span> <span class="o">{</span>
+        <span class="nl">vec:</span><span class="o">:</span><span class="n">push</span><span class="o">(</span><span class="n">accumulator</span><span class="o">,</span> <span class="n">function</span><span class="o">(</span><span class="n">element</span><span class="o">));</span>
+    <span class="o">}</span>
+    <span class="n">ret</span> <span class="n">accumulator</span><span class="o">;</span>
+<span class="o">}</span>
+</code>
+</pre>
+<p class="signature">
+&lt;@joosa&gt; how do you say float in java? just 1.5f?      &lt;@Gliptic&gt; FloatFactoryFactory.getInstance(FloatFactoryFactory.defaultInstanceDescriptionString).getFactory(Locale.getLocale("en-US")).createBuilder().setString("1.5").getResult()
+</p>
+</div>
+<footer class="actions">
+<a href="https://linuxfr.org/nodes/94839/comments/1370156/answer#new_comment" class="action">Répondre</a>
+<div class="vote">
+Ce commentaire est-il <form action="https://linuxfr.org/nodes/94839/comments/1370156/relevance/for" class="button_to" data-remote="true" method="post"><div><input class="relevant" type="submit" value="pertinent"><input name="authenticity_token" type="hidden" value="ZarExH4lMxL3TjMAGomPDX/KtUbAMtdQFmEQplQpQ/I="></div></form>
+ou <form action="https://linuxfr.org/nodes/94839/comments/1370156/relevance/against" class="button_to" data-remote="true" method="post"><div><input class="useless" type="submit" value="inutile"><input name="authenticity_token" type="hidden" value="ZarExH4lMxL3TjMAGomPDX/KtUbAMtdQFmEQplQpQ/I="></div></form> ?
+</div>
+</footer>
+
+</li>
+
+</ul>
+</li>
+
+</ul>
+</li>
+
+<li class="comment odd score2" id="comment-1370007">
+<h2>
+<a href="https://linuxfr.org/news/sortie-de-rust-en-version-0-3#comment-1369930" class="parent" title="Aller au commentaire parent">[^]</a>
+<a href="https://linuxfr.org/news/sortie-de-rust-en-version-0-3#" class="close" title="Cacher le fil de discussion">[-]</a> <a href="https://linuxfr.org/news/sortie-de-rust-en-version-0-3#comment-1370007" class="anchor" title="Lien direct vers ce commentaire">#</a>
+ 
+<a href="https://linuxfr.org/nodes/94839/comments/1370007" class="title">Re: avantage ?</a>
+</h2>
+<p class="meta">
+Posté par <a href="https://linuxfr.org/users/jux" rel="author">Jux</a> <time class="updated" datetime="2012-07-23T18:52:42+02:00"><span class="date">le 23/07/12</span> <span class="time">à 18:52</span></time>.
+Évalué à&nbsp;<span class="score">2</span>.
+</p>
+<figure class="image"><img alt="" class="avatar" height="64" src="./depeche_avec_code_files/avatar(3).png" width="64"></figure>
+<div class="content">
+<p>Je me pose aussi des questions de l'intérêt de Rust par rapport a C++11 (qui a rendu C++ vraiment plus utilisable dans un style moderne avec les lambda, auto, le foreach, le multithreading). </p>
+</div>
+<footer class="actions">
+<a href="https://linuxfr.org/nodes/94839/comments/1370007/answer#new_comment" class="action">Répondre</a>
+<div class="vote">
+Ce commentaire est-il <form action="https://linuxfr.org/nodes/94839/comments/1370007/relevance/for" class="button_to" data-remote="true" method="post"><div><input class="relevant" type="submit" value="pertinent"><input name="authenticity_token" type="hidden" value="ZarExH4lMxL3TjMAGomPDX/KtUbAMtdQFmEQplQpQ/I="></div></form>
+ou <form action="https://linuxfr.org/nodes/94839/comments/1370007/relevance/against" class="button_to" data-remote="true" method="post"><div><input class="useless" type="submit" value="inutile"><input name="authenticity_token" type="hidden" value="ZarExH4lMxL3TjMAGomPDX/KtUbAMtdQFmEQplQpQ/I="></div></form> ?
+</div>
+</footer>
+
+</li>
+
+</ul>
+</li>
+
+<li class="comment odd score5" id="comment-1370048">
+<h2>
+
+<a href="https://linuxfr.org/news/sortie-de-rust-en-version-0-3#" class="close" title="Cacher le fil de discussion">[-]</a> <a href="https://linuxfr.org/news/sortie-de-rust-en-version-0-3#comment-1370048" class="anchor" title="Lien direct vers ce commentaire">#</a>
+ 
+<a href="https://linuxfr.org/nodes/94839/comments/1370048" class="title">Une stratégie bizarre.</a>
+</h2>
+<p class="meta">
+Posté par <a href="https://linuxfr.org/users/davidg--2" rel="author">david.g</a> <time class="updated" datetime="2012-07-23T21:12:44+02:00"><span class="date">le 23/07/12</span> <span class="time">à 21:12</span></time>.
+Évalué à&nbsp;<span class="score">5</span>.
+</p>
+<figure class="image"><img alt="" class="avatar" height="64" src="./depeche_avec_code_files/default-avatar.png" width="64"></figure>
+<div class="content">
+<p>J'ai un peu de mal à comprendre la stratégie de Mozilla, d'un coté elle dit, se recentrer sur ses activités Mobile/OS. Elle se décharge au passage des évolutions sur Thunderbird.</p>
+
+<p>De l'autre on développe son propre langage.</p>
+
+<p>Personnellement je trouve que l'on manque plus de client de messagerie de qualité que de langage de programmation, mais pourquoi pas.</p>
+</div>
+<footer class="actions">
+<a href="https://linuxfr.org/nodes/94839/comments/1370048/answer#new_comment" class="action">Répondre</a>
+<div class="vote">
+Ce commentaire est-il <form action="https://linuxfr.org/nodes/94839/comments/1370048/relevance/for" class="button_to" data-remote="true" method="post"><div><input class="relevant" type="submit" value="pertinent"><input name="authenticity_token" type="hidden" value="ZarExH4lMxL3TjMAGomPDX/KtUbAMtdQFmEQplQpQ/I="></div></form>
+ou <form action="https://linuxfr.org/nodes/94839/comments/1370048/relevance/against" class="button_to" data-remote="true" method="post"><div><input class="useless" type="submit" value="inutile"><input name="authenticity_token" type="hidden" value="ZarExH4lMxL3TjMAGomPDX/KtUbAMtdQFmEQplQpQ/I="></div></form> ?
+</div>
+</footer>
+
+<ul>
+<li class="comment new-comment odd score3" id="comment-1370132">
+<h2>
+<a href="https://linuxfr.org/news/sortie-de-rust-en-version-0-3#comment-1370048" class="parent" title="Aller au commentaire parent">[^]</a>
+<a href="https://linuxfr.org/news/sortie-de-rust-en-version-0-3#" class="close" title="Cacher le fil de discussion">[-]</a> <a href="https://linuxfr.org/news/sortie-de-rust-en-version-0-3#comment-1370132" class="anchor" title="Lien direct vers ce commentaire">#</a>
+ 
+<a href="https://linuxfr.org/nodes/94839/comments/1370132" class="title">Re: Une stratégie bizarre.</a>
+</h2>
+<p class="meta">
+Posté par <a href="https://linuxfr.org/users/claudex" rel="author">Xavier Claude</a> (<a href="http://linuxfr.org/board/">page perso</a>, <a href="xmpp:claudex@jabber.org">jabber id</a>) <time class="updated" datetime="2012-07-23T23:58:52+02:00"><span class="date">le 23/07/12</span> <span class="time">à 23:58</span></time>.
+Évalué à&nbsp;<span class="score">3</span>.
+</p>
+<figure class="image"><img alt="" class="avatar" height="64" src="./depeche_avec_code_files/avatar.jpg" width="64"></figure>
+<div class="content">
+<p>Je crois qu'il faut voir la différence entre Thunderbird qui était un projet avec plusieurs personnes à plein temps dessus et Rust qui a l'air de ne pas avoir de personnes officiellement payés pour ça, uniquement une mise à disposition de ressource (mailing list, forge…).</p>
+<p class="signature">
+« Moi, lorsque je n’ai rien à dire, je veux qu’on le sache. » Raymond Devos
+</p>
+</div>
+<footer class="actions">
+<a href="https://linuxfr.org/nodes/94839/comments/1370132/answer#new_comment" class="action">Répondre</a>
+<div class="vote">
+Ce commentaire est-il <form action="https://linuxfr.org/nodes/94839/comments/1370132/relevance/for" class="button_to" data-remote="true" method="post"><div><input class="relevant" type="submit" value="pertinent"><input name="authenticity_token" type="hidden" value="ZarExH4lMxL3TjMAGomPDX/KtUbAMtdQFmEQplQpQ/I="></div></form>
+ou <form action="https://linuxfr.org/nodes/94839/comments/1370132/relevance/against" class="button_to" data-remote="true" method="post"><div><input class="useless" type="submit" value="inutile"><input name="authenticity_token" type="hidden" value="ZarExH4lMxL3TjMAGomPDX/KtUbAMtdQFmEQplQpQ/I="></div></form> ?
+</div>
+</footer>
+
+</li>
+
+</ul>
+</li>
+
+</ul>
+<p id="send-comment">
+<a href="https://linuxfr.org/nodes/94839/comments/nouveau">Envoyer un commentaire</a>
+</p>
+<p id="follow-feed">
+<a href="https://linuxfr.org/nodes/94839/comments.atom">Suivre le flux des commentaires</a>
+</p>
+<p>
+<strong>Note :</strong>
+les commentaires appartiennent à ceux qui les ont postés. Nous n'en sommes pas responsables.
+</p>
+</div>
+
+</div>
+
+<footer>
+<p><a href="https://linuxfr.org/news/sortie-de-rust-en-version-0-3#top" class="scroll">Revenir en haut de page</a></p>
+</footer>
+</section>
+<footer id="bigfooter">
+<nav id="last_comments">
+<h1>Derniers commentaires</h1>
+<ul>
+<li><a href="https://linuxfr.org/users/axone/journaux/b16b00b5-sexisme-dans-le-source-du-kernel#comment-1370192">Re: microsoft</a></li>
+<li><a href="https://linuxfr.org/news/firefox-et-thunderbird-livree-14#comment-1370191">Re: c'est quoi le rapport ?</a></li>
+<li><a href="https://linuxfr.org/users/axone/journaux/b16b00b5-sexisme-dans-le-source-du-kernel#comment-1370190">Re: sexisme ou blague&nbsp;?</a></li>
+<li><a href="https://linuxfr.org/news/sortie-du-noyau-linux-3-5#comment-1370189">Re: empeche ou permet</a></li>
+<li><a href="https://linuxfr.org/news/firefox-et-thunderbird-livree-14#comment-1370188">Re: riche ennouveautés?</a></li>
+<li><a href="https://linuxfr.org/users/guolang/journaux/pourquoi-je-quitte-kde-desole-c-est-dimanche#comment-1370187">Re: Normal quoi</a></li>
+<li><a href="https://linuxfr.org/forums/g%C3%A9n%C3%A9ralhors-sujets/posts/la-taxe-unique#comment-1370186">Re: TVA ?</a></li>
+<li><a href="https://linuxfr.org/forums/g%C3%A9n%C3%A9ralg%C3%A9n%C3%A9ral/posts/formats-video#comment-1370185">Re: Pour les images c'est difficile</a></li>
+<li><a href="https://linuxfr.org/users/axone/journaux/b16b00b5-sexisme-dans-le-source-du-kernel#comment-1370184">Re: microsoft</a></li>
+<li><a href="https://linuxfr.org/news/firefox-et-thunderbird-livree-14#comment-1370183">Re: riche en nouveautés ?</a></li>
+<li><a href="https://linuxfr.org/news/presentation-d-ipxe-un-chargeur-d-amorcage-en-pxe#comment-1370182">petitboot</a></li>
+<li><a href="https://linuxfr.org/news/presentation-d-ipxe-un-chargeur-d-amorcage-en-pxe#comment-1370181">Re: Préhistoire</a></li>
+</ul>
+</nav>
+<nav id="popular_tags">
+<h1>Tags populaires</h1>
+<ul class="tag_cloud">
+<li><a href="https://linuxfr.org/tags/spatial/public">spatial</a></li>
+<li><a href="https://linuxfr.org/tags/vala/public">vala</a></li>
+<li><a href="https://linuxfr.org/tags/jeux_linux/public">jeux_linux</a></li>
+<li><a href="https://linuxfr.org/tags/franglais/public">franglais</a></li>
+<li><a href="https://linuxfr.org/tags/amd/public">amd</a></li>
+<li><a href="https://linuxfr.org/tags/gpu/public">gpu</a></li>
+<li><a href="https://linuxfr.org/tags/acta/public">acta</a></li>
+<li><a href="https://linuxfr.org/tags/s%C3%A9curit%C3%A9/public">sécurité</a></li>
+<li><a href="https://linuxfr.org/tags/ati/public">ati</a></li>
+<li><a href="https://linuxfr.org/tags/openbsd/public">openbsd</a></li>
+<li><a href="https://linuxfr.org/tags/theo_de_raadt/public">theo_de_raadt</a></li>
+<li><a href="https://linuxfr.org/tags/musique/public">musique</a></li>
+</ul>
+</nav>
+<section id="friends">
+<h1>Sites amis</h1>
+<ul>
+<li><a href="http://www.april.org/">April</a></li>
+<li><a href="http://www.agendadulibre.org/">Agenda du libre</a></li>
+<li><a href="http://www.framasoft.net/">Framasoft</a></li>
+<li><a href="http://lea-linux.org/">Léa-Linux</a></li>
+<li><a href="http://fr.lolix.org/">Lolix</a></li>
+<li><a href="http://www.jesuislibre.org/">JeSuisLibre</a></li>
+<li><a href="http://www.editions-eyrolles.com/Recherche/?q=linux">Eyrolles</a></li>
+<li><a href="http://www.gnulinuxmag.com/">LinuxMag</a></li>
+<li><a href="http://www.venividilibri.org/">Veni, Vedi, Libri</a></li>
+<li><a href="http://www.inlibroveritas.net/linuxfr.html">InLibroVeritas</a></li>
+<li><a href="http://www.linuxgraphic.org/">LinuxGraphic</a></li>
+<li><a href="http://www.editions-eni.fr/livres/open-source/.12659ab71294b44082200c97a40710bc.html">Éditions ENI</a></li>
+<li><a href="http://www.laquadrature.net/">La Quadrature du Net</a></li>
+<li><a href="http://www.gp3.fr/">Grafik Plus</a></li>
+</ul>
+</section>
+<nav id="about_us">
+<h1>À propos de LinuxFr.org</h1>
+<ul>
+<li><a href="https://linuxfr.org/mentions_legales">Mentions légales</a></li>
+<li><a href="https://linuxfr.org/faire_un_don">Faire un don</a></li>
+<li><a href="https://linuxfr.org/team">Team LinuxFr.org</a></li>
+<li><a href="https://linuxfr.org/informations">Informations sur le site</a></li>
+<li><a href="https://linuxfr.org/aide">Foire aux questions</a></li>
+<li><a href="https://linuxfr.org/regles_de_moderation">Règles de modération</a></li>
+<li><a href="https://linuxfr.org/statistiques">Statistiques</a></li>
+<li><a href="https://linuxfr.org/developpeur">API pour les développeurs</a></li>
+<li><a href="https://linuxfr.org/code_source_du_site">Code source du site</a></li>
+<li><a href="https://linuxfr.org/plan">Plan du site</a></li>
+</ul>
+</nav>
+</footer>
+
+<script src="./depeche_avec_code_files/application-f967e4cb593637e69469a6cf9843726c.js" type="text/javascript"></script><div id="toolbar"><span id="toolbar_items">Nouveaux commentaires :
+  <span id="toolbar_current_item">0</span> /
+  <span id="toolbar_nb_items">4</span>
+  <a href="https://linuxfr.org/news/sortie-de-rust-en-version-0-3#" accesskey="&lt;" class="prev">&lt;</a> |
+  <a href="https://linuxfr.org/news/sortie-de-rust-en-version-0-3#" accesskey="&gt;" class="next">&gt;</a>
+</span><span id="toolbar_alt_items">Commentaires par ordre chronologique :
+  <span id="toolbar_current_alt_item">0</span> /
+  <span id="toolbar_nb_alt_items">20</span>
+  <a href="https://linuxfr.org/news/sortie-de-rust-en-version-0-3#" accesskey="[" class="prev">[</a> |
+  <a href="https://linuxfr.org/news/sortie-de-rust-en-version-0-3#" accesskey="]" class="next">]</a>
+</span><span id="toolbar_threshold">Seuil :
+  <a href="https://linuxfr.org/news/sortie-de-rust-en-version-0-3#" class="change">-42</a>
+</span></div>
+
+
+</body></html>

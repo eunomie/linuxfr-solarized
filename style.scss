@@ -90,6 +90,32 @@ Licence CC-BY http://creativecommons.org/licenses/by/3.0/fr/
     }
 }
 
+@mixin msg_box($color) {
+    text-align: center;
+    padding-top: 10px;
+    font-size: 2em;
+    font-weight: bold;
+    width: 100%; 
+    height: 60px; 
+    background: $color;
+    position: relative;
+    -moz-border-radius:    10px;
+    -webkit-border-radius: 10px;
+    border-radius:         10px;
+
+    &:before {
+        content:"";
+        position: absolute;
+        right: 100%;
+        top: 16px;
+        width: 0;
+        height: 0;
+        border-top: 13px solid transparent;
+        border-right: 26px solid $color;
+        border-bottom: 13px solid transparent;
+    }
+}
+
 /* ----------------------------- */
 /* ==colors                      */
 /* ----------------------------- */
@@ -307,7 +333,7 @@ input, button, select {
             display: none;
         }
         .toolbox {
-            background: $rebase02;
+            /*background: $rebase02;*/
             margin-bottom: 1em;
             padding: 0.5em;
         }
@@ -315,7 +341,9 @@ input, button, select {
             display: none;
         }
         .new_content {
-            float: right;
+            @include msg_box($rebase02);
+            margin-top: 1em;
+            margin-bottom: 1em;
         }
         .order_navbar {
             * {
@@ -432,6 +460,9 @@ input, button, select {
                 }
             }
         }
+        article + article {
+            margin-top: 1em;
+        }
         footer.actions {
             margin-top: 1em;
             * {
@@ -451,29 +482,7 @@ input, button, select {
         }
 
         #send-comment {
-            text-align: center;
-            padding-top: 10px;
-            font-size: 2em;
-            font-weight: bold;
-            width: 100%; 
-            height: 60px; 
-            background: $rebase02;
-            position: relative;
-            -moz-border-radius:    10px; 
-            -webkit-border-radius: 10px; 
-            border-radius:         10px;
-
-            &:before {
-                content:"";
-                position: absolute;
-                right: 100%;
-                top: 16px;
-                width: 0;
-                height: 0;
-                border-top: 13px solid transparent;
-                border-right: 26px solid $rebase02;
-                border-bottom: 13px solid transparent;
-            }
+            @include msg_box($rebase02);
         }
 
         .threads {

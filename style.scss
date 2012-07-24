@@ -281,6 +281,13 @@ input, button, select {
             * {
                 display: inline-block;
             }
+            input {
+                background: none;
+                color: $yellow;
+                border: none;
+                padding: 0;
+                vertical-align: baseline;
+            }
             .new_comments {
                 font-size: 1.2em;
                 font-weight: bold;
@@ -357,6 +364,7 @@ input, button, select {
                         color: $yellow;
                         border: none;
                         padding: 0;
+                        vertical-align: baseline;
                     }
                     * {
                         display: inline-block;

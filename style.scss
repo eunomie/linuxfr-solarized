@@ -330,7 +330,7 @@ input, button, select {
 /* ==main                        */
 /* ----------------------------- */
 @mixin solarized_container($rebase03,$rebase02,$rebase01,$rebase00,$rebase0,$rebase1,$rebase2,$rebase3) {
-    .edit_account {
+    .edit_account, .new_tracker {
         label {
             float: left;
             width: 250px;
@@ -346,6 +346,21 @@ input, button, select {
             font-style: italic;
             font-size: 0.8em;
             display: block;
+        }
+    }
+
+    table {
+        background: $rebase02;
+        td {
+            background: $rebase03;
+            padding-left: 0.5em;
+            padding-right: 0.5em;
+        }
+        tr.fixed td:nth-child(2) a {
+            color: $blue !important;
+        }
+        tr.invalid td:nth-child(2) a {
+            color: $red !important;
         }
     }
 

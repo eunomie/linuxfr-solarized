@@ -78,6 +78,18 @@ Licence CC-BY http://creativecommons.org/licenses/by/3.0/fr/
   background-clip: padding-box; 
 }
 
+@mixin input_to_link($color, $backcolor) {
+    background: none;
+    color: $color;
+    border: none;
+    padding: 0;
+    vertical-align: baseline;
+    cursor: pointer;
+    &:hover {
+        background: $backcolor;
+    }
+}
+
 /* ----------------------------- */
 /* ==colors                      */
 /* ----------------------------- */
@@ -326,11 +338,7 @@ input, button, select {
                     display: inline-block;
                 }
                 input {
-                    background: none;
-                    color: $yellow;
-                    border: none;
-                    padding: 0;
-                    vertical-align: baseline;
+                    @include input_to_link($yellow, $rebase02);
                 }
                 .tags ul li .add_tag {
                     background: url(/images/icones/tag.png) no-repeat 0 6px;
@@ -430,11 +438,7 @@ input, button, select {
                 display: inline-block;
             }
             input {
-                background: none;
-                color: $yellow;
-                border: none;
-                padding: 0;
-                vertical-align: baseline;
+                @include input_to_link($yellow, $rebase02);
             }
             .new_comments {
                 font-size: 1.2em;
@@ -546,11 +550,7 @@ input, button, select {
                     padding-top: 0.5em;
                     font-size: 0.8em;
                     input {
-                        background: none;
-                        color: $yellow;
-                        border: none;
-                        padding: 0;
-                        vertical-align: baseline;
+                        @include input_to_link($yellow, $rebase02);
                     }
                     * {
                         display: inline-block;

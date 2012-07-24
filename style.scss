@@ -329,6 +329,13 @@ input, button, select {
         margin-bottom: 1em;
         @include accentize($yellow, $rebase02);
 
+        .banner {
+            margin-top: 2em;
+            padding: 1em;
+            background: $rebase02;
+            border: 0.5em solid $rebase01;
+        }
+
         > h1 {
             display: none;
         }
@@ -463,6 +470,12 @@ input, button, select {
         article + article {
             margin-top: 1em;
         }
+
+        #phare article {
+            border: 0.5em solid $rebase01;
+            @include accentize($blue, $rebase02);
+        }
+
         footer.actions {
             margin-top: 1em;
             * {

@@ -350,7 +350,11 @@ input, button, select {
     }
 
     table {
+        max-width: 734px;
         background: $rebase02;
+        th {
+            word-break: break-all;
+        }
         td {
             background: $rebase03;
             padding-left: 0.5em;
@@ -361,6 +365,11 @@ input, button, select {
         }
         tr.invalid td:nth-child(2) a {
             color: $red !important;
+        }
+    }
+    #tracker {
+        td:nth-child(2), td:nth-child(10) {
+            word-break: break-all;
         }
     }
 

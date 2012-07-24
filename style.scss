@@ -8,6 +8,7 @@ Licence CC-BY http://creativecommons.org/licenses/by/3.0/fr/
 /* summary                       */
 /* ----------------------------- */
 /*
+0- mixins
 1- colors
 2- reset
 3- layout and modules
@@ -20,6 +21,51 @@ Licence CC-BY http://creativecommons.org/licenses/by/3.0/fr/
 10- print
 11- mobile
 */
+
+@mixin triangle_topleft($color) {
+    width: 0;
+    height: 0;
+    border-top: 60px solid $color;
+    border-right: 60px solid transparent;
+}
+
+@mixin badge($color, $textcolor) {
+    position: relative;
+    background: $color;
+    color: $textcolor;
+    font-size: 1.6em;
+    font-weight: bold;
+    height: 50px;
+    width: 50px;
+    -moz-border-radius:    25px;
+    -webkit-border-radius: 25px;
+    border-radius:         25px;
+    text-align: center;
+    padding-top: 10px;
+    margin-bottom: 14px;
+
+    &:before, &:after {
+        content: '';            
+        position: absolute;            
+        border-bottom: 35px solid $color;
+        border-left: 20px solid transparent;
+        border-right: 20px solid transparent;
+        top: 35px;
+        left: -5px;
+        -webkit-transform: rotate(-140deg);
+        -moz-transform:    rotate(-140deg);
+        -ms-transform:     rotate(-140deg);
+        -o-transform:      rotate(-140deg); 
+    }
+    &:after {
+        left: auto;
+        right: -5px;
+        -webkit-transform: rotate(140deg);
+        -moz-transform:    rotate(140deg);
+        -ms-transform:     rotate(140deg);
+        -o-transform:      rotate(140deg); 
+    }
+}
 
 @mixin border_radius($radius) {
   -moz-border-radius: $radius;
@@ -74,6 +120,12 @@ article, aside, details, figcaption, figure, footer, header, hgroup, nav, sectio
 /* soft reset */
 html, body, blockquote, ul, ol, form {margin: 0; padding: 0;}
 ul, ol {padding-left: 2em}
+figure {
+    -webkit-margin-before: 0;
+    -webkit-margin-after: 0;
+    -webkit-margin-start: 0;
+    -webkit-margin-end: 0;
+}
 
 /* font-sizing for content */
 p, li, td, th, textarea {font-size: 1.4em;}
@@ -239,49 +291,110 @@ input, button, select {
         margin-bottom: 1em;
         @include accentize($yellow, $rebase02);
 
-        header h1 {
-            margin-bottom: 0.2em;
+        header {
+            padding-left: 80px;
+            padding-right: 45px;
+            h1 {
+                margin-bottom: 0.2em;
+            }
+            padding-bottom: 0.5em;
+            .meta {
+                * {
+                    display: inline-block;
+                }
+                input {
+                    background: none;
+                    color: $yellow;
+                    border: none;
+                    padding: 0;
+                    vertical-align: baseline;
+                }
+                .tags ul li .add_tag {
+                    background: url(/images/icones/tag.png) no-repeat 0 6px;
+                    }
+                    .tags ul li .add_tag, .tags ul li .remove_tag {
+                        display: inline-block;
+                        text-indent: -9998em;
+                        height: 20px;
+                        width: 12px;
+                        padding: 0;
+                        border: none;
+                    }
+            }
         }
         .figures {
             .image {
-                float: right;
+                float: left;
+                margin-right: 0.5em;
             }
             .datePourCss {
-                @include gradient_vertical($rebase2, $rebase3);
-                border: 0.5em solid $rebase2;
-                padding: 0.5em;
-                float: left;
-                margin-left: -2em;
-
+                @include triangle_topleft($rebase01);
+                position: absolute;
+                top: 0em;
+                left: 0em;
                 .jour {
-                    color: $rebase01;
-                    font-size: 2.5em;
+                    color: $rebase02;
+                    position: absolute;
+                    margin-top: -58px;
+                    margin-left: 2px;
+                    font-size: 1.5em;
                     font-weight: bold;
+                    -webkit-transform: rotate(-45deg);
+                    -moz-transform:    rotate(-45deg);
+                    -ms-transform:     rotate(-45deg);
+                    -o-transform:      rotate(-45deg);
                 }
                 .mois {
+                    color: $rebase02;
+                    position: absolute;
+                    margin-top: -47px;
+                    margin-left: 10px;
                     font-size: 1.5em;
-                    text-align: center;
-                    color: $rebase00;
+                    font-weight: bold;
+                    -webkit-transform: rotate(-45deg);
+                    -moz-transform:    rotate(-45deg);
+                    -ms-transform:     rotate(-45deg);
+                    -o-transform:      rotate(-45deg);
                 }
                 .annee {
                     display: none;
                 }
             }
             .score {
-                @include gradient_vertical($rebase2, $rebase3);
-                border: 0.5em solid $rebase2;
-                padding: 0.5em;
-                float: left;
-                margin-left: -2em;
-                font-size: 2.5em;
-                font-weight: bold;
-                color: $rebase01;
+                position: absolute !important;
+                top: 0em;
+                right: 0em;
             }
         }
+        article.new-node h1 {
+            @include accentize_link($orange, $rebase02);
+        }
+        article.score0 .score, article.score1 .score {
+            @include badge($rebase01, $rebase02);
+        }
+        article.score2 .score, article.score3 .score, article.score4 .score, article.score5 .score {
+            @include badge($blue, $rebase02);
+        }
+        article.score6 .score, article.score7 .score, article.score8 .score, article.score9 .score,
+        article.score10 .score {
+            @include badge($cyan, $rebase02);
+        }
+        article.score-1 .score, article.score-2 .score, article.score-3 .score, article.score-4 .score {
+            @include badge($orange, $rebase02);
+        }
+        article.score-5 .score,
+        article.score-6 .score, article.score-7 .score, article.score-8 .score, article.score-9 .score,
+        article.score-10 .score {
+            @include badge($red, $rebase02);
+        }
         article {
+            position: relative;
             padding: 0.5em;
             border: 0.5em solid $rebase02;
             @include gradient_vertical($rebase02, $rebase03);
+            .content {
+                min-height: 2em;
+            }
         }
         footer.actions {
             * {

@@ -159,11 +159,14 @@ html {
     background: #eee8d5;
     padding-left: 1em;
     padding-right: 1em;
-    padding-bottom: 0.5em; }
+    padding-bottom: 0.5em;
+    height: 2.4em; }
     html #site * {
       display: inline-block; }
     html #site .go_to_content {
       display: none; }
+    html #site ul {
+      float: left; }
     html #site form {
       float: right; }
   html #branding h1 {
@@ -201,6 +204,8 @@ html {
     vertical-align: top; }
     html #last_comments h1, html #popular_tags h1, html #friends h1, html #about_us h1 {
       font-size: 1.4em; }
+  html .misspelled {
+    color: #dc322f !important; }
   html .edit_account label, html .new_tracker label {
     float: left;
     width: 250px; }
@@ -228,31 +233,32 @@ html {
   html #tracker td:nth-child(2), html #tracker td:nth-child(10) {
     word-break: break-all; }
   html #container {
-    width: 734px;
     padding-left: 1em;
-    float: right;
+    float: right; }
+  html #container, html #edition {
+    width: 734px;
     margin-bottom: 1em; }
-    html #container a, html #container a:active, html #container a:visited, html #container code.url {
+    html #container a, html #container a:active, html #container a:visited, html #container code.url, html #edition a, html #edition a:active, html #edition a:visited, html #edition code.url {
       color: #b58900; }
-    html #container a:hover {
+    html #container a:hover, html #edition a:hover {
       background: #eee8d5; }
-    html #container h1, html #container h2, html #container h3, html #container h4, html #container h5, html #container h6 {
+    html #container h1, html #container h2, html #container h3, html #container h4, html #container h5, html #container h6, html #edition h1, html #edition h2, html #edition h3, html #edition h4, html #edition h5, html #edition h6 {
       color: #b58900; }
-    html #container .banner {
+    html #container .banner, html #edition .banner {
       margin-top: 2em;
       padding: 1em;
       background: #eee8d5;
       border: 0.5em solid #93a1a1;
       text-align: center; }
-    html #container > h1 {
+    html #container > h1, html #edition > h1 {
       display: none; }
-    html #container .toolbox {
+    html #container .toolbox, html #edition .toolbox {
       /*background: $rebase02;*/
       margin-bottom: 1em;
       padding: 0.5em; }
-    html #container .follow_feed {
+    html #container .follow_feed, html #edition .follow_feed {
       display: none; }
-    html #container .new_content {
+    html #container .new_content, html #edition .new_content {
       text-align: center;
       padding-top: 10px;
       font-size: 2em;
@@ -266,7 +272,7 @@ html {
       border-radius: 10px;
       margin-top: 1em;
       margin-bottom: 1em; }
-      html #container .new_content:before {
+      html #container .new_content:before, html #edition .new_content:before {
         content: "";
         position: absolute;
         right: 100%;
@@ -276,40 +282,46 @@ html {
         border-top: 13px solid transparent;
         border-right: 26px solid #eee8d5;
         border-bottom: 13px solid transparent; }
-    html #container .order_navbar * {
+    html #container .order_navbar *, html #edition .order_navbar * {
       display: inline-block; }
-    html #container .order_navbar ul li {
+    html #container .order_navbar ul li, html #edition .order_navbar ul li {
       font-size: 1em; }
-    html #container header {
+    html #container header, html #edition header {
       padding-left: 80px;
       padding-right: 45px;
       padding-bottom: 0.5em; }
-      html #container header h1 {
+      html #container header h1, html #edition header h1 {
         margin-bottom: 0.2em; }
-      html #container header .meta * {
+      html #container header .topic, html #edition header .topic {
+        font-size: small; }
+        html #container header .topic:before, html #edition header .topic:before {
+          content: "["; }
+        html #container header .topic:after, html #edition header .topic:after {
+          content: "]"; }
+      html #container header .meta *, html #edition header .meta * {
         display: inline-block; }
-      html #container header .meta input {
+      html #container header .meta input, html #edition header .meta input {
         background: none;
         color: #b58900;
         border: none;
         padding: 0;
         vertical-align: baseline;
         cursor: pointer; }
-        html #container header .meta input:hover {
+        html #container header .meta input:hover, html #edition header .meta input:hover {
           background: #eee8d5; }
-      html #container header .meta .tags ul li .add_tag {
+      html #container header .meta .tags ul li .add_tag, html #edition header .meta .tags ul li .add_tag {
         background: url(/images/icones/tag.png) no-repeat 0 6px; }
-      html #container header .meta .tags ul li .add_tag, html #container header .meta .tags ul li .remove_tag {
+      html #container header .meta .tags ul li .add_tag, html #container header .meta .tags ul li .remove_tag, html #edition header .meta .tags ul li .add_tag, html #edition header .meta .tags ul li .remove_tag {
         display: inline-block;
         text-indent: -9998em;
         height: 20px;
         width: 12px;
         padding: 0;
         border: none; }
-    html #container .figures .image {
+    html #container .figures .image, html #edition .figures .image {
       float: left;
       margin-right: 0.5em; }
-    html #container .figures .datePourCss {
+    html #container .figures .datePourCss, html #edition .figures .datePourCss {
       width: 0;
       height: 0;
       border-top: 60px solid #93a1a1;
@@ -317,7 +329,7 @@ html {
       position: absolute;
       top: 0em;
       left: 0em; }
-      html #container .figures .datePourCss .jour {
+      html #container .figures .datePourCss .jour, html #edition .figures .datePourCss .jour {
         color: #eee8d5;
         position: absolute;
         margin-top: -58px;
@@ -328,7 +340,7 @@ html {
         -moz-transform: rotate(-45deg);
         -ms-transform: rotate(-45deg);
         -o-transform: rotate(-45deg); }
-      html #container .figures .datePourCss .mois {
+      html #container .figures .datePourCss .mois, html #edition .figures .datePourCss .mois {
         color: #eee8d5;
         position: absolute;
         margin-top: -47px;
@@ -339,17 +351,17 @@ html {
         -moz-transform: rotate(-45deg);
         -ms-transform: rotate(-45deg);
         -o-transform: rotate(-45deg); }
-      html #container .figures .datePourCss .annee {
+      html #container .figures .datePourCss .annee, html #edition .figures .datePourCss .annee {
         display: none; }
-    html #container .figures .score {
+    html #container .figures .score, html #edition .figures .score {
       position: absolute !important;
       top: 0em;
       right: 0em; }
-    html #container article.new-node h1 a, html #container article.new-node h1 a:active, html #container article.new-node h1 a:visited, html #container article.new-node h1 code.url {
+    html #container article.new-node h1 a, html #container article.new-node h1 a:active, html #container article.new-node h1 a:visited, html #container article.new-node h1 code.url, html #edition article.new-node h1 a, html #edition article.new-node h1 a:active, html #edition article.new-node h1 a:visited, html #edition article.new-node h1 code.url {
       color: #cb4b16; }
-    html #container article.new-node h1 a:hover {
+    html #container article.new-node h1 a:hover, html #edition article.new-node h1 a:hover {
       background: #eee8d5; }
-    html #container article.score0 .score, html #container article.score1 .score {
+    html #container article.score0 .score, html #container article.score1 .score, html #edition article.score0 .score, html #edition article.score1 .score {
       position: relative;
       background: #93a1a1;
       color: #eee8d5;
@@ -363,7 +375,7 @@ html {
       text-align: center;
       padding-top: 10px;
       margin-bottom: 14px; }
-      html #container article.score0 .score:before, html #container article.score0 .score:after, html #container article.score1 .score:before, html #container article.score1 .score:after {
+      html #container article.score0 .score:before, html #container article.score0 .score:after, html #container article.score1 .score:before, html #container article.score1 .score:after, html #edition article.score0 .score:before, html #edition article.score0 .score:after, html #edition article.score1 .score:before, html #edition article.score1 .score:after {
         content: '';
         position: absolute;
         border-bottom: 35px solid #93a1a1;
@@ -375,14 +387,14 @@ html {
         -moz-transform: rotate(-140deg);
         -ms-transform: rotate(-140deg);
         -o-transform: rotate(-140deg); }
-      html #container article.score0 .score:after, html #container article.score1 .score:after {
+      html #container article.score0 .score:after, html #container article.score1 .score:after, html #edition article.score0 .score:after, html #edition article.score1 .score:after {
         left: auto;
         right: -5px;
         -webkit-transform: rotate(140deg);
         -moz-transform: rotate(140deg);
         -ms-transform: rotate(140deg);
         -o-transform: rotate(140deg); }
-    html #container article.score2 .score, html #container article.score3 .score, html #container article.score4 .score, html #container article.score5 .score {
+    html #container article.score2 .score, html #container article.score3 .score, html #container article.score4 .score, html #container article.score5 .score, html #edition article.score2 .score, html #edition article.score3 .score, html #edition article.score4 .score, html #edition article.score5 .score {
       position: relative;
       background: #268bd2;
       color: #eee8d5;
@@ -396,7 +408,7 @@ html {
       text-align: center;
       padding-top: 10px;
       margin-bottom: 14px; }
-      html #container article.score2 .score:before, html #container article.score2 .score:after, html #container article.score3 .score:before, html #container article.score3 .score:after, html #container article.score4 .score:before, html #container article.score4 .score:after, html #container article.score5 .score:before, html #container article.score5 .score:after {
+      html #container article.score2 .score:before, html #container article.score2 .score:after, html #container article.score3 .score:before, html #container article.score3 .score:after, html #container article.score4 .score:before, html #container article.score4 .score:after, html #container article.score5 .score:before, html #container article.score5 .score:after, html #edition article.score2 .score:before, html #edition article.score2 .score:after, html #edition article.score3 .score:before, html #edition article.score3 .score:after, html #edition article.score4 .score:before, html #edition article.score4 .score:after, html #edition article.score5 .score:before, html #edition article.score5 .score:after {
         content: '';
         position: absolute;
         border-bottom: 35px solid #268bd2;
@@ -408,7 +420,7 @@ html {
         -moz-transform: rotate(-140deg);
         -ms-transform: rotate(-140deg);
         -o-transform: rotate(-140deg); }
-      html #container article.score2 .score:after, html #container article.score3 .score:after, html #container article.score4 .score:after, html #container article.score5 .score:after {
+      html #container article.score2 .score:after, html #container article.score3 .score:after, html #container article.score4 .score:after, html #container article.score5 .score:after, html #edition article.score2 .score:after, html #edition article.score3 .score:after, html #edition article.score4 .score:after, html #edition article.score5 .score:after {
         left: auto;
         right: -5px;
         -webkit-transform: rotate(140deg);
@@ -416,7 +428,7 @@ html {
         -ms-transform: rotate(140deg);
         -o-transform: rotate(140deg); }
     html #container article.score6 .score, html #container article.score7 .score, html #container article.score8 .score, html #container article.score9 .score,
-    html #container article.score10 .score {
+    html #container article.score10 .score, html #edition article.score6 .score, html #edition article.score7 .score, html #edition article.score8 .score, html #edition article.score9 .score, html #edition article.score10 .score {
       position: relative;
       background: #2aa198;
       color: #eee8d5;
@@ -432,7 +444,7 @@ html {
       margin-bottom: 14px; }
       html #container article.score6 .score:before, html #container article.score6 .score:after, html #container article.score7 .score:before, html #container article.score7 .score:after, html #container article.score8 .score:before, html #container article.score8 .score:after, html #container article.score9 .score:before, html #container article.score9 .score:after,
       html #container article.score10 .score:before,
-      html #container article.score10 .score:after {
+      html #container article.score10 .score:after, html #edition article.score6 .score:before, html #edition article.score6 .score:after, html #edition article.score7 .score:before, html #edition article.score7 .score:after, html #edition article.score8 .score:before, html #edition article.score8 .score:after, html #edition article.score9 .score:before, html #edition article.score9 .score:after, html #edition article.score10 .score:before, html #edition article.score10 .score:after {
         content: '';
         position: absolute;
         border-bottom: 35px solid #2aa198;
@@ -445,14 +457,14 @@ html {
         -ms-transform: rotate(-140deg);
         -o-transform: rotate(-140deg); }
       html #container article.score6 .score:after, html #container article.score7 .score:after, html #container article.score8 .score:after, html #container article.score9 .score:after,
-      html #container article.score10 .score:after {
+      html #container article.score10 .score:after, html #edition article.score6 .score:after, html #edition article.score7 .score:after, html #edition article.score8 .score:after, html #edition article.score9 .score:after, html #edition article.score10 .score:after {
         left: auto;
         right: -5px;
         -webkit-transform: rotate(140deg);
         -moz-transform: rotate(140deg);
         -ms-transform: rotate(140deg);
         -o-transform: rotate(140deg); }
-    html #container article.score-1 .score, html #container article.score-2 .score, html #container article.score-3 .score, html #container article.score-4 .score {
+    html #container article.score-1 .score, html #container article.score-2 .score, html #container article.score-3 .score, html #container article.score-4 .score, html #edition article.score-1 .score, html #edition article.score-2 .score, html #edition article.score-3 .score, html #edition article.score-4 .score {
       position: relative;
       background: #cb4b16;
       color: #eee8d5;
@@ -466,7 +478,7 @@ html {
       text-align: center;
       padding-top: 10px;
       margin-bottom: 14px; }
-      html #container article.score-1 .score:before, html #container article.score-1 .score:after, html #container article.score-2 .score:before, html #container article.score-2 .score:after, html #container article.score-3 .score:before, html #container article.score-3 .score:after, html #container article.score-4 .score:before, html #container article.score-4 .score:after {
+      html #container article.score-1 .score:before, html #container article.score-1 .score:after, html #container article.score-2 .score:before, html #container article.score-2 .score:after, html #container article.score-3 .score:before, html #container article.score-3 .score:after, html #container article.score-4 .score:before, html #container article.score-4 .score:after, html #edition article.score-1 .score:before, html #edition article.score-1 .score:after, html #edition article.score-2 .score:before, html #edition article.score-2 .score:after, html #edition article.score-3 .score:before, html #edition article.score-3 .score:after, html #edition article.score-4 .score:before, html #edition article.score-4 .score:after {
         content: '';
         position: absolute;
         border-bottom: 35px solid #cb4b16;
@@ -478,7 +490,7 @@ html {
         -moz-transform: rotate(-140deg);
         -ms-transform: rotate(-140deg);
         -o-transform: rotate(-140deg); }
-      html #container article.score-1 .score:after, html #container article.score-2 .score:after, html #container article.score-3 .score:after, html #container article.score-4 .score:after {
+      html #container article.score-1 .score:after, html #container article.score-2 .score:after, html #container article.score-3 .score:after, html #container article.score-4 .score:after, html #edition article.score-1 .score:after, html #edition article.score-2 .score:after, html #edition article.score-3 .score:after, html #edition article.score-4 .score:after {
         left: auto;
         right: -5px;
         -webkit-transform: rotate(140deg);
@@ -487,7 +499,7 @@ html {
         -o-transform: rotate(140deg); }
     html #container article.score-5 .score,
     html #container article.score-6 .score, html #container article.score-7 .score, html #container article.score-8 .score, html #container article.score-9 .score,
-    html #container article.score-10 .score {
+    html #container article.score-10 .score, html #edition article.score-5 .score, html #edition article.score-6 .score, html #edition article.score-7 .score, html #edition article.score-8 .score, html #edition article.score-9 .score, html #edition article.score-10 .score {
       position: relative;
       background: #dc322f;
       color: #eee8d5;
@@ -505,7 +517,7 @@ html {
       html #container article.score-6 .score:before,
       html #container article.score-6 .score:after, html #container article.score-7 .score:before, html #container article.score-7 .score:after, html #container article.score-8 .score:before, html #container article.score-8 .score:after, html #container article.score-9 .score:before, html #container article.score-9 .score:after,
       html #container article.score-10 .score:before,
-      html #container article.score-10 .score:after {
+      html #container article.score-10 .score:after, html #edition article.score-5 .score:before, html #edition article.score-5 .score:after, html #edition article.score-6 .score:before, html #edition article.score-6 .score:after, html #edition article.score-7 .score:before, html #edition article.score-7 .score:after, html #edition article.score-8 .score:before, html #edition article.score-8 .score:after, html #edition article.score-9 .score:before, html #edition article.score-9 .score:after, html #edition article.score-10 .score:before, html #edition article.score-10 .score:after {
         content: '';
         position: absolute;
         border-bottom: 35px solid #dc322f;
@@ -519,14 +531,14 @@ html {
         -o-transform: rotate(-140deg); }
       html #container article.score-5 .score:after,
       html #container article.score-6 .score:after, html #container article.score-7 .score:after, html #container article.score-8 .score:after, html #container article.score-9 .score:after,
-      html #container article.score-10 .score:after {
+      html #container article.score-10 .score:after, html #edition article.score-5 .score:after, html #edition article.score-6 .score:after, html #edition article.score-7 .score:after, html #edition article.score-8 .score:after, html #edition article.score-9 .score:after, html #edition article.score-10 .score:after {
         left: auto;
         right: -5px;
         -webkit-transform: rotate(140deg);
         -moz-transform: rotate(140deg);
         -ms-transform: rotate(140deg);
         -o-transform: rotate(140deg); }
-    html #container article {
+    html #container article, html #edition article {
       position: relative;
       padding: 0.5em;
       border: 0.5em solid #eee8d5;
@@ -546,47 +558,47 @@ html {
       /* The standard */
       filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=$startcolor, endColorstr=$endcolor, GradientType=0);
       /* IE9 and down */ }
-      html #container article .content {
+      html #container article .content, html #edition article .content {
         min-height: 2em; }
-        html #container article .content img {
+        html #container article .content img, html #edition article .content img {
           margin-left: auto;
           margin-right: auto;
           display: block; }
-    html #container article + article {
+    html #container article + article, html #edition article + article {
       margin-top: 1em; }
-    html #container #phare article {
+    html #container #phare article, html #edition #phare article {
       border: 0.5em solid #93a1a1; }
-      html #container #phare article a, html #container #phare article a:active, html #container #phare article a:visited, html #container #phare article code.url {
+      html #container #phare article a, html #container #phare article a:active, html #container #phare article a:visited, html #container #phare article code.url, html #edition #phare article a, html #edition #phare article a:active, html #edition #phare article a:visited, html #edition #phare article code.url {
         color: #268bd2; }
-      html #container #phare article a:hover {
+      html #container #phare article a:hover, html #edition #phare article a:hover {
         background: #eee8d5; }
-      html #container #phare article h1, html #container #phare article h2, html #container #phare article h3, html #container #phare article h4, html #container #phare article h5, html #container #phare article h6 {
+      html #container #phare article h1, html #container #phare article h2, html #container #phare article h3, html #container #phare article h4, html #container #phare article h5, html #container #phare article h6, html #edition #phare article h1, html #edition #phare article h2, html #edition #phare article h3, html #edition #phare article h4, html #edition #phare article h5, html #edition #phare article h6 {
         color: #268bd2; }
-    html #container footer.actions {
+    html #container footer.actions, html #edition footer.actions {
       margin-top: 1em; }
-      html #container footer.actions * {
+      html #container footer.actions *, html #edition footer.actions * {
         display: inline-block; }
-      html #container footer.actions input {
+      html #container footer.actions input, html #edition footer.actions input {
         background: none;
         color: #b58900;
         border: none;
         padding: 0;
         vertical-align: baseline;
         cursor: pointer; }
-        html #container footer.actions input:hover {
+        html #container footer.actions input:hover, html #edition footer.actions input:hover {
           background: #eee8d5; }
-      html #container footer.actions .new_comments {
+      html #container footer.actions .new_comments, html #edition footer.actions .new_comments {
         font-size: 1.2em;
         font-weight: bold; }
-        html #container footer.actions .new_comments a, html #container footer.actions .new_comments a:active, html #container footer.actions .new_comments a:visited, html #container footer.actions .new_comments code.url {
+        html #container footer.actions .new_comments a, html #container footer.actions .new_comments a:active, html #container footer.actions .new_comments a:visited, html #container footer.actions .new_comments code.url, html #edition footer.actions .new_comments a, html #edition footer.actions .new_comments a:active, html #edition footer.actions .new_comments a:visited, html #edition footer.actions .new_comments code.url {
           color: #cb4b16; }
-        html #container footer.actions .new_comments a:hover {
+        html #container footer.actions .new_comments a:hover, html #edition footer.actions .new_comments a:hover {
           background: #eee8d5; }
-        html #container footer.actions .new_comments h1, html #container footer.actions .new_comments h2, html #container footer.actions .new_comments h3, html #container footer.actions .new_comments h4, html #container footer.actions .new_comments h5, html #container footer.actions .new_comments h6 {
+        html #container footer.actions .new_comments h1, html #container footer.actions .new_comments h2, html #container footer.actions .new_comments h3, html #container footer.actions .new_comments h4, html #container footer.actions .new_comments h5, html #container footer.actions .new_comments h6, html #edition footer.actions .new_comments h1, html #edition footer.actions .new_comments h2, html #edition footer.actions .new_comments h3, html #edition footer.actions .new_comments h4, html #edition footer.actions .new_comments h5, html #edition footer.actions .new_comments h6 {
           color: #cb4b16; }
-        html #container footer.actions .new_comments .visit {
+        html #container footer.actions .new_comments .visit, html #edition footer.actions .new_comments .visit {
           color: #cb4b16; }
-    html #container #send-comment {
+    html #container #send-comment, html #edition #send-comment {
       text-align: center;
       padding-top: 10px;
       font-size: 2em;
@@ -598,7 +610,7 @@ html {
       -moz-border-radius: 10px;
       -webkit-border-radius: 10px;
       border-radius: 10px; }
-      html #container #send-comment:before {
+      html #container #send-comment:before, html #edition #send-comment:before {
         content: "";
         position: absolute;
         right: 100%;
@@ -608,27 +620,27 @@ html {
         border-top: 13px solid transparent;
         border-right: 26px solid #eee8d5;
         border-bottom: 13px solid transparent; }
-    html #container .content blockquote {
+    html #container .content blockquote, html #edition .content blockquote {
       margin-left: 1em;
       padding-left: 1em;
       border-left: 3px solid #6c71c4; }
-      html #container .content blockquote blockquote {
+      html #container .content blockquote blockquote, html #edition .content blockquote blockquote {
         border-left: 3px solid #2aa198; }
-        html #container .content blockquote blockquote blockquote {
+        html #container .content blockquote blockquote blockquote, html #edition .content blockquote blockquote blockquote {
           border-left: 3px solid #d33682; }
-          html #container .content blockquote blockquote blockquote blockquote {
+          html #container .content blockquote blockquote blockquote blockquote, html #edition .content blockquote blockquote blockquote blockquote {
             border-left: 3px solid #859900; }
-            html #container .content blockquote blockquote blockquote blockquote blockquote {
+            html #container .content blockquote blockquote blockquote blockquote blockquote, html #edition .content blockquote blockquote blockquote blockquote blockquote {
               border-left: 3px solid #cb4b16; }
-              html #container .content blockquote blockquote blockquote blockquote blockquote blockquote {
+              html #container .content blockquote blockquote blockquote blockquote blockquote blockquote, html #edition .content blockquote blockquote blockquote blockquote blockquote blockquote {
                 border-left: 3px solid #dc322f; }
-                html #container .content blockquote blockquote blockquote blockquote blockquote blockquote blockquote {
+                html #container .content blockquote blockquote blockquote blockquote blockquote blockquote blockquote, html #edition .content blockquote blockquote blockquote blockquote blockquote blockquote blockquote {
                   border-left: 3px solid #b58900; }
-    html #container .threads {
+    html #container .threads, html #edition .threads {
       margin-top: 2em;
       margin-bottom: 1em;
       padding-left: 0px; }
-      html #container .threads > li {
+      html #container .threads > li, html #edition .threads > li {
         border-left: 0.5em solid #eee8d5;
         padding-left: 0.5em;
         background-color: #fdf6e3;
@@ -647,67 +659,82 @@ html {
         /* The standard */
         filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=$startcolor, endColorstr=$endcolor, GradientType=0);
         /* IE9 and down */ }
-      html #container .threads .comment {
+      html #container .threads .comment, html #edition .threads .comment {
         list-style-type: none; }
-        html #container .threads .comment .content {
+        html #container .threads .comment .content, html #edition .threads .comment .content {
           padding: 0.5em;
           min-height: 64px; }
-          html #container .threads .comment .content a, html #container .threads .comment .content a:active, html #container .threads .comment .content a:visited, html #container .threads .comment .content code.url {
+          html #container .threads .comment .content a, html #container .threads .comment .content a:active, html #container .threads .comment .content a:visited, html #container .threads .comment .content code.url, html #edition .threads .comment .content a, html #edition .threads .comment .content a:active, html #edition .threads .comment .content a:visited, html #edition .threads .comment .content code.url {
             color: #268bd2; }
-          html #container .threads .comment .content a:hover {
+          html #container .threads .comment .content a:hover, html #edition .threads .comment .content a:hover {
             background: #eee8d5; }
-          html #container .threads .comment .content h1, html #container .threads .comment .content h2, html #container .threads .comment .content h3, html #container .threads .comment .content h4, html #container .threads .comment .content h5, html #container .threads .comment .content h6 {
+          html #container .threads .comment .content h1, html #container .threads .comment .content h2, html #container .threads .comment .content h3, html #container .threads .comment .content h4, html #container .threads .comment .content h5, html #container .threads .comment .content h6, html #edition .threads .comment .content h1, html #edition .threads .comment .content h2, html #edition .threads .comment .content h3, html #edition .threads .comment .content h4, html #edition .threads .comment .content h5, html #edition .threads .comment .content h6 {
             color: #268bd2; }
-          html #container .threads .comment .content .signature {
+          html #container .threads .comment .content .signature, html #edition .threads .comment .content .signature {
             color: #93a1a1;
             font-style: italic; }
-          html #container .threads .comment .content .signature:before {
+          html #container .threads .comment .content .signature:before, html #edition .threads .comment .content .signature:before {
             content: "--";
             display: block; }
-        html #container .threads .comment li {
+        html #container .threads .comment li, html #edition .threads .comment li {
           margin-top: 1em;
           margin-bottom: 1em; }
-        html #container .threads .comment > h2 {
+        html #container .threads .comment > h2, html #edition .threads .comment > h2 {
           margin-bottom: 0px;
           padding: 0.3em;
           background: #eee8d5; }
-        html #container .threads .comment .meta {
+        html #container .threads .comment .meta, html #edition .threads .comment .meta {
           margin-top: 0px;
           margin-bottom: 0.3em;
           padding-left: 0.5em;
           padding-right: 0.5em;
           color: #93a1a1;
           font-size: 0.8em; }
-        html #container .threads .comment .content {
+        html #container .threads .comment .content, html #edition .threads .comment .content {
           border-left: 1px solid #eee8d5; }
-        html #container .threads .comment .image {
+        html #container .threads .comment .image, html #edition .threads .comment .image {
           float: right; }
-        html #container .threads .comment footer {
+        html #container .threads .comment footer, html #edition .threads .comment footer {
           padding-top: 0.5em;
           font-size: 0.8em; }
-          html #container .threads .comment footer input {
+          html #container .threads .comment footer input, html #edition .threads .comment footer input {
             background: none;
             color: #b58900;
             border: none;
             padding: 0;
             vertical-align: baseline;
             cursor: pointer; }
-            html #container .threads .comment footer input:hover {
+            html #container .threads .comment footer input:hover, html #edition .threads .comment footer input:hover {
               background: #eee8d5; }
-          html #container .threads .comment footer * {
+          html #container .threads .comment footer *, html #edition .threads .comment footer * {
             display: inline-block; }
-          html #container .threads .comment footer .vote {
+          html #container .threads .comment footer .vote, html #edition .threads .comment footer .vote {
             font-style: italic; }
-          html #container .threads .comment footer .vote:before {
+          html #container .threads .comment footer .vote:before, html #edition .threads .comment footer .vote:before {
             content: "("; }
-          html #container .threads .comment footer .vote:after {
+          html #container .threads .comment footer .vote:after, html #edition .threads .comment footer .vote:after {
             content: ")"; }
-      html #container .threads .new-comment h2 a, html #container .threads .new-comment h2 a:active, html #container .threads .new-comment h2 a:visited, html #container .threads .new-comment h2 code.url {
+      html #container .threads .new-comment h2 a, html #container .threads .new-comment h2 a:active, html #container .threads .new-comment h2 a:visited, html #container .threads .new-comment h2 code.url, html #edition .threads .new-comment h2 a, html #edition .threads .new-comment h2 a:active, html #edition .threads .new-comment h2 a:visited, html #edition .threads .new-comment h2 code.url {
         color: #cb4b16; }
-      html #container .threads .new-comment h2 a:hover {
+      html #container .threads .new-comment h2 a:hover, html #edition .threads .new-comment h2 a:hover {
         background: #eee8d5; }
-      html #container .threads .new-comment h2 h1, html #container .threads .new-comment h2 h2, html #container .threads .new-comment h2 h3, html #container .threads .new-comment h2 h4, html #container .threads .new-comment h2 h5, html #container .threads .new-comment h2 h6 {
+      html #container .threads .new-comment h2 h1, html #container .threads .new-comment h2 h2, html #container .threads .new-comment h2 h3, html #container .threads .new-comment h2 h4, html #container .threads .new-comment h2 h5, html #container .threads .new-comment h2 h6, html #edition .threads .new-comment h2 h1, html #edition .threads .new-comment h2 h2, html #edition .threads .new-comment h2 h3, html #edition .threads .new-comment h2 h4, html #edition .threads .new-comment h2 h5, html #edition .threads .new-comment h2 h6 {
         color: #cb4b16; }
+  html #edition {
+    width: 734px;
+    float: left;
+    padding-right: 1em; }
+  html #chat {
+    width: 226px;
+    padding-left: 1em;
+    float: right;
+    color: #93a1a1; }
+    html #chat a, html #chat a:active, html #chat a:visited, html #chat code.url {
+      color: #93a1a1; }
+    html #chat a:hover {
+      background: #eee8d5; }
+    html #chat h1, html #chat h2, html #chat h3, html #chat h4, html #chat h5, html #chat h6 {
+      color: #93a1a1; }
   html #toolbar {
     position: fixed;
     bottom: 0;
@@ -948,6 +975,7 @@ html {
   html .markItUpContainer .markItUpHeader {
     display: none; }
   html .markItUpContainer textarea {
+    font-size: 1em;
     width: 100%; }
 
 body {

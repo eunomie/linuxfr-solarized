@@ -330,6 +330,9 @@ input, button, select {
 /* ==main                        */
 /* ----------------------------- */
 @mixin solarized_container($rebase03,$rebase02,$rebase01,$rebase00,$rebase0,$rebase1,$rebase2,$rebase3) {
+    .misspelled {
+        color: $red !important;
+    }
     .edit_account, .new_tracker {
         label {
             float: left;

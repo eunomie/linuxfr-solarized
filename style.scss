@@ -748,6 +748,16 @@ input, button, select {
             }
         }
     }
+
+    .markItUpContainer {
+        .markItUpHeader {
+            display: none;
+        }
+        textarea {
+            width: 100%;
+        }
+    }
+
 }
 
 @mixin rebase($rebase03,$rebase02,$rebase01,$rebase00,$rebase0,$rebase1,$rebase2,$rebase3) 

@@ -238,11 +238,15 @@ a img {border: 0;}
         padding-left: 1em;
         padding-right: 1em;
         padding-bottom: 0.5em;
+        height: 2.4em;
         * {
             display: inline-block;
         }
         .go_to_content {
             display: none;
+        }
+        ul {
+            float: left;
         }
         form {
             float: right;
@@ -377,9 +381,11 @@ input, button, select {
     }
 
     #container {
-        width: 734px;
         padding-left: 1em;
         float: right;
+    }
+    #container, #edition {
+        width: 734px;
         margin-bottom: 1em;
         @include accentize($yellow, $rebase02);
 
@@ -650,6 +656,18 @@ input, button, select {
                 @include accentize($orange, $rebase02);
             }
         }
+    }
+    #edition {
+        width: 734px;
+        float: left;
+        padding-right: 1em;
+    }
+    #chat {
+        width: 226px;
+        padding-left: 1em;
+        float: right;
+        color: $rebase01;
+        @include accentize($rebase01, $rebase02);
     }
 }
 

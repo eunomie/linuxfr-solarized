@@ -428,6 +428,15 @@ input, button, select {
             h1 {
                 margin-bottom: 0.2em;
             }
+            .topic {
+                font-size: small;
+                &:before {
+                    content: "[";
+                }
+                &:after {
+                    content: "]";
+                }
+            }
             padding-bottom: 0.5em;
             .meta {
                 * {

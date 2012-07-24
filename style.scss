@@ -272,7 +272,7 @@ input, button, select {
                 color: $rebase01;
             }
         }
-        article .content {
+        article {
             padding: 0.5em;
             border: 0.5em solid $rebase02;
             @include gradient_vertical($rebase02, $rebase03);

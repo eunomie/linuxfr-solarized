@@ -830,22 +830,6 @@ input, button, select {
     @include accentize_h($accent);
 }
 
-/* Apply Solarized */
-
-@mixin light() {
-    @include rebase($base3,$base2,$base1,$base0,$base00,$base01,$base02,$base03);
-    @include solarized_code($base03,$base02,$base01,$base00,$base0,$base1,$base2,$base3);
-}
-@mixin dark() {
-    @include rebase($base03,$base02,$base01,$base00,$base0,$base1,$base2,$base3);
-    @include solarized_code($base3,$base2,$base1,$base0,$base00,$base01,$base02,$base03);
-}
-
-html {
-    @include light();
-    /*@include dark();*/
-}
-
 body {
     max-width: 960px;
     margin-left: auto;

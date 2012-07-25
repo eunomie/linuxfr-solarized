@@ -55,10 +55,13 @@ ul, ol {
   padding-left: 2em; }
 
 figure {
+  /* webkit reset */
   -webkit-margin-before: 0;
   -webkit-margin-after: 0;
   -webkit-margin-start: 0;
-  -webkit-margin-end: 0; }
+  -webkit-margin-end: 0;
+  /* firefox reset */
+  margin: 0; }
 
 /* font-sizing for content */
 p, li, td, th, textarea {
@@ -753,7 +756,9 @@ html {
       float: right;
       margin-right: 20px; }
   html article code {
-    font-size: 1.4em; }
+    font-size: 1.6em; }
+  html .threads code {
+    font-size: 1.2em; }
   html pre {
     background: #073642;
     padding: 0.5em;

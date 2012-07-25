@@ -120,6 +120,8 @@ Licence CC-BY http://creativecommons.org/licenses/by/3.0/fr/
     }
 }
 
+@import "markitup.scss";
+
 /* ----------------------------- */
 /* ==colors                      */
 /* ----------------------------- */
@@ -788,16 +790,6 @@ input, button, select {
             }
         }
     }
-
-    .markItUpContainer {
-        .markItUpHeader {
-            display: none;
-        }
-        textarea {
-            font-size: 1em;
-            width: 100%;
-        }
-    }
 }
 
 @mixin solarized_misc($rebase03,$rebase02,$rebase01,$rebase00,$rebase0,$rebase1,$rebase2,$rebase3) {
@@ -826,11 +818,12 @@ input, button, select {
     @include solarized_container($rebase03,$rebase02,$rebase01,$rebase00,$rebase0,$rebase1,$rebase2,$rebase3);
     @include solarized_toolbar($rebase03,$rebase02,$rebase01,$rebase00,$rebase0,$rebase1,$rebase2,$rebase3);
     @include solarized_misc($rebase03,$rebase02,$rebase01,$rebase00,$rebase0,$rebase1,$rebase2,$rebase3);
+    @include solarized_markItUp($rebase03,$rebase02,$rebase01,$rebase00,$rebase0,$rebase1,$rebase2,$rebase3);
 }
 @mixin accentize_link($accent, $back) {
     a, a:active, a:visited, code.url { color: $accent; }
     a:hover {
-        background: $back;
+        background-color: $back;
     }
 }
 @mixin accentize_h($accent) {

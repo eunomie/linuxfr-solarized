@@ -539,15 +539,15 @@ input, button, select {
             @include gradient_vertical($rebase02, $rebase03);
             .content {
                 min-height: 2em;
-                img {
-                    margin-left: auto;
-                    margin-right: auto;
-                    display: block;
-                }
             }
         }
         article + article {
             margin-top: 1em;
+        }
+        img {
+            margin-left: auto;
+            margin-right: auto;
+            display: block;
         }
 
         #phare article {

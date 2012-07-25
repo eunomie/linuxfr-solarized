@@ -24,9 +24,6 @@ Licence CC-BY http://creativecommons.org/licenses/by/3.0/fr/
 6- footer
 7- forms
 8- main
-9- iefix
-10- print
-11- mobile
 */
 
 @mixin triangle_topleft($color) {
@@ -859,36 +856,4 @@ body {
 html * {
     color-profile: sRGB;
     rendering-intent: auto;
-}
-
-
-/* ----------------------------- */
-/* ==iefix                       */
-/* ----------------------------- */
-
-/* ----------------------------- */
-/* ==print                       */
-/* ----------------------------- */
-
-/* quick print reset */
-@media print {
-    p, blockquote {orphans: 2; widows: 2;}
-    blockquote, ul, ol {page-break-inside: avoid;}
-    h1, h2, h3, caption { page-break-after: avoid;}
-}
-
-/* ----------------------------- */
-/* ==mobile                      */
-/* ----------------------------- */
-
-/* quick smartphone reset */
-@media (max-width: 640px) {
-    .phone-hidden {display: none}
-    .mod, .col {
-      display: block  !important;
-      margin: 0 !important;
-      border: 0 !important;
-      float: none !important;
-      width: auto !important;
-    }
 }

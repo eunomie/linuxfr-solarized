@@ -630,8 +630,8 @@ input, button, select {
                     font-style: italic;
                 }
                 .signature:before {
-                    content: "--";
-                    display: block;
+                    white-space: pre-line;
+                    content: "-- \a";
                 }
                 min-height: 64px;
             }

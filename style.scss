@@ -397,8 +397,10 @@ input, button, select {
         padding-left: 1em;
         float: right;
     }
-    #container, #edition {
+    #container {
         width: 734px;
+    }
+    #container, #edition {
         margin-bottom: 1em;
         @include accentize($yellow, $rebase02);
 
@@ -693,12 +695,12 @@ input, button, select {
     }
 
     #edition {
-        width: 734px;
+        width: 593px;
         float: left;
         padding-right: 1em;
     }
     #chat {
-        width: 226px;
+        width: 367px;
         padding-left: 1em;
         float: right;
         color: $rebase01;
@@ -806,6 +808,12 @@ input, button, select {
                 color: $rebase1;
             }
         }
+    }
+    #chat .board-left {
+        width: 125px;
+    }
+    #chat .board-right {
+        margin-left: 125px;
     }
 }
 

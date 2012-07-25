@@ -122,9 +122,6 @@ Licence CC-BY http://creativecommons.org/licenses/by/3.0/fr/
     }
 }
 
-@import "markitup.scss";
-@import "statistics.css.scss";
-
 /* ----------------------------- */
 /* ==colors                      */
 /* ----------------------------- */
@@ -376,8 +373,8 @@ input, button, select {
         }
         td {
             background: $rebase03;
-            padding-left: 0.2em;
-            padding-right: 0.2em;
+            padding-left: 1px;
+            padding-right: 1px;
         }
         tr.fixed td:nth-child(2) a {
             color: $blue !important;
@@ -830,6 +827,7 @@ input, button, select {
     @include solarized_toolbar($rebase03,$rebase02,$rebase01,$rebase00,$rebase0,$rebase1,$rebase2,$rebase3);
     @include solarized_misc($rebase03,$rebase02,$rebase01,$rebase00,$rebase0,$rebase1,$rebase2,$rebase3);
     @include solarized_markItUp($rebase03,$rebase02,$rebase01,$rebase00,$rebase0,$rebase1,$rebase2,$rebase3);
+    @include solarized_statistics($rebase03,$rebase02,$rebase01,$rebase00,$rebase0,$rebase1,$rebase2,$rebase3);
 }
 @mixin accentize_link($accent, $back) {
     a, a:active, a:visited, code.url { color: $accent; }
@@ -844,6 +842,9 @@ input, button, select {
     @include accentize_link($accent, $back);
     @include accentize_h($accent);
 }
+
+@import "markitup.scss";
+@import "statistics.css.scss";
 
 body {
     max-width: 960px;

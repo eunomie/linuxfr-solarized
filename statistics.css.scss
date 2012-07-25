@@ -2,41 +2,45 @@
 Linuxfr default stylesheet for statistics
 https://github.com/nono/linuxfr.org/blob/master/app/assets/stylesheets/common/statistics.css.scss
 */
-.statistics {
-  .stat {
-    border-top: 1px solid #4C575F;
-    border-bottom: 1px solid #4C575F;
-    font-size: x-small;
-    background: #F1ABC5;
-    &.category { background-color: $green; }
-    &.opened { background-color: $red; }
-    &.fixed { background-color: $green; }
-    &.invalid { background-color: $cyan; }
-    &.month_new { background-color: $red; }
-    &.remaining { background-color: $violet; }
-    &.month_fixed { background-color: $green; }
-    &.month_invalid { background-color: $cyan; }
-    &.misc { background-color: $green; }
-    &.account { background-color: $cyan; }
-    &.accountrecent { background-color: $green; }
-    &.accountinactive { background-color: $violet; }
-    &.accountrecentinactive { background-color: $red; }
-    &.contentdiary { background-color: $magenta; }
-    &.contentpost { background-color: orange$red; }
-    &.contentnews { background-color: $green; }
-    &.contenttracker { background-color: $cyan; }
-    &.contentpoll { background-color: $cyan; }
-    &.contentwikipage { background-color: $orange; }
-  }
+@mixin solarized_statistics($rebase03,$rebase02,$rebase01,$rebase00,$rebase0,$rebase1,$rebase2,$rebase3) {
+    .statistics {
+      .stat {
+        border-top: 1px solid $rebase01;
+        border-bottom: 1px solid $rebase01;
+        font-size: x-small;
+        background: $yellow;
+        color: $rebase2;
+        word-wrap: normal;
+        &.category { background-color: $green; }
+        &.opened { background-color: $red; }
+        &.fixed { background-color: $green; }
+        &.invalid { background-color: $cyan; }
+        &.month_new { background-color: $red; }
+        &.remaining { background-color: $violet; }
+        &.month_fixed { background-color: $green; }
+        &.month_invalid { background-color: $cyan; }
+        &.misc { background-color: $green; }
+        &.account { background-color: $cyan; }
+        &.accountrecent { background-color: $green; }
+        &.accountinactive { background-color: $violet; }
+        &.accountrecentinactive { background-color: $red; }
+        &.contentdiary { background-color: $magenta; }
+        &.contentpost { background-color: $yellow; }
+        &.contentnews { background-color: $green; }
+        &.contenttracker { background-color: $cyan; }
+        &.contentpoll { background-color: $cyan; }
+        &.contentwikipage { background-color: $orange; }
+      }
 
-  span.score {
-    color: "#333";
-    &:before { content: " ["; }
-    &:after  { content: "] "; }
-  }
+      span.score {
+        color: "#333";
+        &:before { content: " ["; }
+        &:after  { content: "] "; }
+      }
 
-  .top_or_flop {
-    float: left;
-    width: 48%;
-  }
+      .top_or_flop {
+        float: left;
+        width: 48%;
+      }
+    }
 }

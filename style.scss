@@ -166,10 +166,13 @@ article, aside, details, figcaption, figure, footer, header, hgroup, nav, sectio
 html, body, blockquote, ul, ol, form {margin: 0; padding: 0;}
 ul, ol {padding-left: 2em}
 figure {
+    /* webkit reset */
     -webkit-margin-before: 0;
     -webkit-margin-after: 0;
     -webkit-margin-start: 0;
     -webkit-margin-end: 0;
+    /* firefox reset */
+    margin: 0;
 }
 
 /* font-sizing for content */

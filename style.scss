@@ -575,6 +575,7 @@ input, button, select {
 
         #send-comment {
             @include msg_box($rebase02);
+            margin-top: 1em;
         }
 
         .content {

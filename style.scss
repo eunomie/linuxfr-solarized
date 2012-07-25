@@ -544,6 +544,9 @@ input, button, select {
         article + article {
             margin-top: 1em;
         }
+        article + ul {
+            margin-top: 1em;
+        }
         img {
             margin-left: auto;
             margin-right: auto;
@@ -674,6 +677,10 @@ input, button, select {
                     content: ")";
                 }
             }
+        }
+
+        #comment_new {
+            @include gradient_vertical($rebase02, $rebase03);
         }
     }
     #edition {

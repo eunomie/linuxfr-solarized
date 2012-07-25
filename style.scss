@@ -122,6 +122,13 @@ Licence CC-BY http://creativecommons.org/licenses/by/3.0/fr/
     }
 }
 
+@mixin statistic_bar($barcolor, $color) {
+    word-wrap: normal;
+    border: 1px solid $barcolor;
+    color: $color;
+    @include gradient_vertical($barcolor, lighten($barcolor, 30%));
+}
+
 /* ----------------------------- */
 /* ==colors                      */
 /* ----------------------------- */
@@ -680,6 +687,11 @@ input, button, select {
             @include gradient_vertical($rebase02, $rebase03);
         }
     }
+
+    .poll .result {
+        @include statistic_bar($green, $rebase2);
+    }
+
     #edition {
         width: 734px;
         float: left;

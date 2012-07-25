@@ -693,7 +693,10 @@ input, button, select {
 @mixin solarized_code($rebase03,$rebase02,$rebase01,$rebase00,$rebase0,$rebase1,$rebase2,$rebase3) {
     /* */
     article code {
-        font-size: 1.4em;
+        font-size: 1.6em;
+    }
+    .threads code {
+        font-size: 1.2em;
     }
     pre {
         background: $rebase02;

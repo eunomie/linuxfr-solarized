@@ -612,66 +612,66 @@ input, button, select {
                 padding-left: 0.5em;
                 @include gradient_vertical($rebase02, $rebase03);
             }
-            .comment {
-                list-style-type: none;
-                .content {
-                    padding: 0.5em;
-                    @include accentize($blue, $rebase02);
-                    .signature {
-                        color: $rebase01;
-                        font-style: italic;
-                    }
-                    .signature:before {
-                        content: "--";
-                        display: block;
-                    }
-                    min-height: 64px;
-                }
-                li {
-                    margin-top: 1em;
-                    margin-bottom: 1em;
-                }
-                > h2 {
-                    margin-bottom: 0px;
-                    padding: 0.3em;
-                    background: $rebase02;
-                }
-                .meta {
-                    margin-top: 0px;
-                    margin-bottom: 0.3em;
-                    padding-left: 0.5em;
-                    padding-right: 0.5em;
-                    color: $rebase01;
-                    font-size: 0.8em;
-                }
-                .content {
-                    border-left: 1px solid $rebase02;
-                }
-                .image {
-                    float: right;
-                }
-                footer {
-                    padding-top: 0.5em;
-                    font-size: 0.8em;
-                    input {
-                        @include input_to_link($yellow, $rebase02);
-                    }
-                    * {
-                        display: inline-block;
-                    }
-                    .vote {
-                        font-style: italic;
-                    }
-                    .vote:before {
-                        content: "(";
-                    }
-                    .vote:after {
-                        content: ")";
-                    }
-                }
-            }
             .new-comment h2 {
                 @include accentize($orange, $rebase02);
+            }
+        }
+        .comment {
+            list-style-type: none;
+            .content {
+                padding: 0.5em;
+                @include accentize($blue, $rebase02);
+                .signature {
+                    color: $rebase01;
+                    font-style: italic;
+                }
+                .signature:before {
+                    content: "--";
+                    display: block;
+                }
+                min-height: 64px;
+            }
+            li {
+                margin-top: 1em;
+                margin-bottom: 1em;
+            }
+            > h2 {
+                margin-bottom: 0px;
+                padding: 0.3em;
+                background: $rebase02;
+            }
+            .meta {
+                margin-top: 0px;
+                margin-bottom: 0.3em;
+                padding-left: 0.5em;
+                padding-right: 0.5em;
+                color: $rebase01;
+                font-size: 0.8em;
+            }
+            .content {
+                border-left: 1px solid $rebase02;
+            }
+            .image {
+                float: right;
+            }
+            footer {
+                padding-top: 0.5em;
+                font-size: 0.8em;
+                input {
+                    @include input_to_link($yellow, $rebase02);
+                }
+                * {
+                    display: inline-block;
+                }
+                .vote {
+                    font-style: italic;
+                }
+                .vote:before {
+                    content: "(";
+                }
+                .vote:after {
+                    content: ")";
+                }
             }
         }
     }

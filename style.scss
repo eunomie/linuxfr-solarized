@@ -792,18 +792,25 @@ input, button, select {
         font-size: 0.8em;
         p {
             clear:both;
+            -webkit-margin-after: 0;
+            -webkit-margin-before: 0;
+            margin-top: 0.2em;
+            margin-bottom: 0;
+        }
+        .highlighted {
+            background: lighten($blue, 30%);
         }
         .board-left {
             display: block;
             float: left;
-            width: 180px;
+            width: 170px;
             time {
                 color: $rebase01;
             }
         }
         .board-right {
             display: block;
-            margin-left: 180px;
+            margin-left: 170px;
             time {
                 color: $rebase1;
             }

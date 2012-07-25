@@ -26,6 +26,8 @@ Licence CC-BY http://creativecommons.org/licenses/by/3.0/fr/
 8- main
 */
 
+@import "langs.css.scss";
+
 @mixin triangle_topleft($color) {
     width: 0;
     height: 0;

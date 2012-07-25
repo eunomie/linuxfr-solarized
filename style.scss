@@ -251,9 +251,6 @@ a img {border: 0;}
         * {
             display: inline-block;
         }
-        .go_to_content {
-            display: none;
-        }
         ul {
             float: left;
         }
@@ -856,4 +853,16 @@ body {
 html * {
     color-profile: sRGB;
     rendering-intent: auto;
+}
+
+.factice, .go_to_content {
+    float: left;
+    text-indent: -9998em;
+    overflow: hidden;
+    text-align: left;
+    width: 100px;
+}
+
+.pot_de_miel {
+    display: none;
 }

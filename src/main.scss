@@ -321,6 +321,17 @@ a img {border: 0;}
         li {
             font-size: 1.2em;
         }
+        .new_content {
+            font-size: 1.4em;
+            a {
+                color: $rebase1;
+                &:before {
+                    font-size: 2em;
+                    content: '\270E ';
+                    color: $cyan;
+                }
+            }
+        }
     }
     .secure, .insecure {
         font-size: 1.4em;

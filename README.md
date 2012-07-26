@@ -1,7 +1,52 @@
 linuxfr-solarized
 =================
 
-Just a little theme for [LinuxFR.org](http://www.linuxfr.org) based on :
+
+_linuxfr-solarized_ is a stylesheet for the essential reference of technological watch in French, [LinuxFR.org](http://www.linuxfr.org)!
+
+The stylesheet is based on :
 
 * [Solarized](http://ethanschoonover.com/solarized) colors
 * [Knacss](http://www.knacss.com/) for the default stylesheet
+* [sass](http://sass-lang.com) for the stylesheet preprocessor
+
+Four versions of the stylesheet exists :
+
+* light background and light code : <http://ybr.phpnet.org/linuxfr/light_light_code.css>
+* light background and dark code : <http://ybr.phpnet.org/linuxfr/light_dark_code.css>
+* dark background and dark code : <http://ybr.phpnet.org/linuxfr/dark_dark_code.css>
+* dark background and light code : <http://ybr.phpnet.org/linuxfr/dark_light_code.css>
+
+
+Screenshots
+-----------
+
+(the pictures are clickable to have bigger versions)
+
+Logs page with light background :
+
+[![light background](http://ybr.phpnet.org/linuxfr/min/journaux_light.jpg)](http://ybr.phpnet.org/linuxfr/full/journaux_light.jpg)
+
+Logs page with dark background :
+
+[![dark background](http://ybr.phpnet.org/linuxfr/min/journaux_dark.jpg)](http://ybr.phpnet.org/linuxfr/full/journaux_dark.jpg)
+
+Light code with light background :
+
+[![light light](http://ybr.phpnet.org/linuxfr/min/code_light_light.jpg)](http://ybr.phpnet.org/linuxfr/full/code_light_light.jpg)
+
+Dark code with light background :
+
+[![light dark](http://ybr.phpnet.org/linuxfr/min/code_light_dark.jpg)](http://ybr.phpnet.org/linuxfr/full/code_light_dark.jpg)
+
+Dark code with dark background :
+
+[![dark dark](http://ybr.phpnet.org/linuxfr/min/code_dark_dark.jpg)](http://ybr.phpnet.org/linuxfr/full/code_dark_dark.jpg)
+
+Dark code with light background :
+
+[![dark light](http://ybr.phpnet.org/linuxfr/min/code_dark_light.jpg)](http://ybr.phpnet.org/linuxfr/full/code_dark_light.jpg)
+
+
+You can also find some bleeding edge versions at <https://github.com/CrEv/linuxfr-solarized/tree/master/generated>
+

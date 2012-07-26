@@ -35,10 +35,8 @@ Licence CC-BY http://creativecommons.org/licenses/by/3.0/fr/
     border-right: 60px solid transparent;
 }
 
-@mixin badge($color, $textcolor) {
+@mixin badge {
     position: relative;
-    background: $color;
-    color: $textcolor;
     font-size: 1.6em;
     font-weight: bold;
     height: 50px;
@@ -52,8 +50,8 @@ Licence CC-BY http://creativecommons.org/licenses/by/3.0/fr/
 
     &:before, &:after {
         content: '';            
-        position: absolute;            
-        border-bottom: 35px solid $color;
+        position: absolute;
+        border-bottom: 35px solid transparent;
         border-left: 20px solid transparent;
         border-right: 20px solid transparent;
         top: 35px;
@@ -533,23 +531,48 @@ input, button, select {
         article.new-node h1 {
             @include accentize_link($orange, $rebase02);
         }
+
+        article .score {
+            @include badge;
+        }
+
         article.score0 .score, article.score1 .score {
-            @include badge($rebase01, $rebase02);
+            background: $rebase01;
+            color: $rebase02;
+            &:before, &:after {
+                border-bottom-color: $rebase01;
+            }
         }
         article.score2 .score, article.score3 .score, article.score4 .score, article.score5 .score {
-            @include badge($blue, $rebase02);
+            background: $blue;
+            color: $rebase02;
+            &:before, &:after {
+                border-bottom-color: $blue;
+            }
         }
         article.score6 .score, article.score7 .score, article.score8 .score, article.score9 .score,
         article.score10 .score {
-            @include badge($cyan, $rebase02);
+            background: $cyan;
+            color: $rebase02;
+            &:before, &:after {
+                border-bottom-color: $cyan;
+            }
         }
         article.score-1 .score, article.score-2 .score, article.score-3 .score, article.score-4 .score {
-            @include badge($orange, $rebase02);
+            background: $orange;
+            color: $rebase02;
+            &:before, &:after {
+                border-bottom-color: $orange;
+            }
         }
         article.score-5 .score,
         article.score-6 .score, article.score-7 .score, article.score-8 .score, article.score-9 .score,
         article.score-10 .score {
-            @include badge($red, $rebase02);
+            background: $red;
+            color: $rebase02;
+            &:before, &:after {
+                border-bottom-color: $red;
+            }
         }
         article {
             position: relative;

@@ -309,6 +309,15 @@ a img {border: 0;}
         color: $rebase01;
         @include accentize($rebase01, $rebase02);
     }
+    .secure, .insecure {
+        font-size: 1.4em;
+    }
+    .secure {
+        color: $green;
+    }
+    .insecure {
+        color: $orange;
+    }
 }
 
 /* ----------------------------- */

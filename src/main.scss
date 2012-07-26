@@ -285,7 +285,13 @@ a img {border: 0;}
         width: 221px;
         height: 206px;
         a {
-            display: none;
+            display: block;
+            height: 100%;
+            text-indent: -9999em;
+            width: 100%;
+            &:hover {
+                background: transparent;
+            }
         }
         -webkit-margin-before: 0;
         -webkit-margin-after: 0;

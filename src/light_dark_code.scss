@@ -6,7 +6,7 @@ Licence CC-BY http://creativecommons.org/licenses/by/3.0/fr/
 light with dark code version
 */
 
-@import "style.scss";
+@import "main.scss";
 
 html {
     @include rebase($base3,$base2,$base1,$base0,$base00,$base01,$base02,$base03);

@@ -314,6 +314,10 @@ a img {border: 0;}
         float: left;
         color: $rebase01;
         @include accentize($rebase01, $rebase02);
+        h1 {
+            margin-bottom: 0.2em;
+            margin-top: 0.8em;
+        }
     }
     .secure, .insecure {
         font-size: 1.4em;

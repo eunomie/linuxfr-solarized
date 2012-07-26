@@ -349,14 +349,14 @@ input, button, select {
 
 @mixin solarized_forms($rebase03,$rebase02,$rebase01,$rebase00,$rebase0,$rebase1,$rebase2,$rebase3) {
     input[type=text] {
-        background: $rebase0;
-        border: 1px solid $rebase1;
-        color: $rebase03;
+        background: lighten($rebase03, 10%);
+        border: 1px solid darken($rebase02, 10%);
+        color: $rebase0;
     }
     input[type=submit] {
-        @include gradient_vertical($rebase0, gradient_bar_color($rebase0));
-        color: $rebase03;
-        border: 2px solid $rebase1;
+        background: lighten($rebase03, 10%);
+        color: $rebase0;
+        border: 2px solid darken($rebase02, 10%);
     }
 }
 

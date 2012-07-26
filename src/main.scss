@@ -855,6 +855,7 @@ input, button, select {
     @include solarized_misc($rebase03,$rebase02,$rebase01,$rebase00,$rebase0,$rebase1,$rebase2,$rebase3);
     @include solarized_markItUp($rebase03,$rebase02,$rebase01,$rebase00,$rebase0,$rebase1,$rebase2,$rebase3);
     @include solarized_statistics($rebase03,$rebase02,$rebase01,$rebase00,$rebase0,$rebase1,$rebase2,$rebase3);
+    @include solarized_ac($rebase03,$rebase02,$rebase01,$rebase00,$rebase0,$rebase1,$rebase2,$rebase3);
 }
 @mixin accentize_link($accent, $back) {
     a, a:active, a:visited, code.url { color: $accent; }
@@ -872,6 +873,7 @@ input, button, select {
 
 @import "markitup.scss";
 @import "statistics.css.scss";
+@import "ac.css.scss";
 
 body {
     max-width: 960px;

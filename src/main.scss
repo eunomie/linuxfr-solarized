@@ -783,6 +783,18 @@ input, button, select {
             }
         }
 
+        .comment.fold {
+            & > .image {
+                display: none;
+            }
+            & > .content {
+                display: none;
+            }
+            & > .actions {
+                display: none;
+            }
+        }
+
         #comment_new {
             @include gradient_vertical($rebase02, $rebase03);
         }

@@ -167,6 +167,10 @@ body {
     line-height: 1.4; /* adapt to your design */
 }
 
+a, a:link, a:visited, a:active, a:hover {
+    text-decoration: none;
+}
+
 /* HTML5 tags */
 article, aside, details, figcaption, figure, footer, header, hgroup, nav, section {display: block;}
 

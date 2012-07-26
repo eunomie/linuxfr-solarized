@@ -267,6 +267,16 @@ a img {border: 0;}
         ul {
             float: left;
         }
+        li.active a {
+            color: $orange;
+        }
+        li + li {
+            margin-left: 0.5em;
+        }
+        li + li:before {
+            content: '|';
+            margin-right: 0.5em;
+        }
         form {
             float: right;
         }
@@ -934,7 +944,7 @@ html * {
     text-indent: -9998em;
     overflow: hidden;
     text-align: left;
-    width: 100px;
+    width: 0px;
 }
 
 .pot_de_miel {

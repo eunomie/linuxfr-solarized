@@ -376,8 +376,6 @@ input, button, select {
             font-weight: bold;
             clear: both;
         }
-        input {
-        }
         .help {
             color: $cyan;
             font-style: italic;
@@ -389,20 +387,20 @@ input, button, select {
     table {
         max-width: 734px;
         background: $rebase02;
-        th {
-            word-break: break-all;
-        }
-        td {
-            background: $rebase03;
-            padding-left: 1px;
-            padding-right: 1px;
-        }
-        tr.fixed td:nth-child(2) a {
-            color: $blue !important;
-        }
-        tr.invalid td:nth-child(2) a {
-            color: $red !important;
-        }
+    }
+    th {
+        word-break: break-all;
+    }
+    td {
+        background: $rebase03;
+        padding-left: 1px;
+        padding-right: 1px;
+    }
+    tr.fixed td:nth-child(2) a {
+        color: $blue !important;
+    }
+    tr.invalid td:nth-child(2) a {
+        color: $red !important;
     }
     #tracker {
         td:nth-child(2), td:nth-child(10) {
@@ -414,24 +412,24 @@ input, button, select {
         padding-left: 1em;
         float: right;
     }
+
+    .banner {
+        margin-top: 2em;
+        padding: 1em;
+        background: $rebase02;
+        border: 0.5em solid $rebase01;
+        text-align: center;
+    }
+
     #container, #edition {
         width: 734px;
         margin-bottom: 1em;
         @include accentize($yellow, $rebase02);
 
-        .banner {
-            margin-top: 2em;
-            padding: 1em;
-            background: $rebase02;
-            border: 0.5em solid $rebase01;
-            text-align: center;
-        }
-
         > h1 {
             display: none;
         }
         .toolbox {
-            /*background: $rebase02;*/
             margin-bottom: 1em;
             padding: 0.5em;
         }
@@ -493,44 +491,44 @@ input, button, select {
                 float: left;
                 margin-right: 0.5em;
             }
-            .datePourCss {
-                @include triangle_topleft($rebase01);
-                position: absolute;
-                top: 0em;
-                left: 0em;
-                .jour {
-                    color: $rebase02;
-                    position: absolute;
-                    margin-top: -58px;
-                    margin-left: 2px;
-                    font-size: 1.5em;
-                    font-weight: bold;
-                    -webkit-transform: rotate(-45deg);
-                    -moz-transform:    rotate(-45deg);
-                    -ms-transform:     rotate(-45deg);
-                    -o-transform:      rotate(-45deg);
-                }
-                .mois {
-                    color: $rebase02;
-                    position: absolute;
-                    margin-top: -47px;
-                    margin-left: 10px;
-                    font-size: 1.5em;
-                    font-weight: bold;
-                    -webkit-transform: rotate(-45deg);
-                    -moz-transform:    rotate(-45deg);
-                    -ms-transform:     rotate(-45deg);
-                    -o-transform:      rotate(-45deg);
-                }
-                .annee {
-                    display: none;
-                }
-            }
             .score {
                 position: absolute !important;
                 top: 0em;
                 right: 0em;
             }
+        }
+        .datePourCss {
+            @include triangle_topleft($rebase01);
+            position: absolute;
+            top: 0em;
+            left: 0em;
+        }
+        .jour {
+            color: $rebase02;
+            position: absolute;
+            margin-top: -58px;
+            margin-left: 2px;
+            font-size: 1.5em;
+            font-weight: bold;
+            -webkit-transform: rotate(-45deg);
+            -moz-transform:    rotate(-45deg);
+            -ms-transform:     rotate(-45deg);
+            -o-transform:      rotate(-45deg);
+        }
+        .mois {
+            color: $rebase02;
+            position: absolute;
+            margin-top: -47px;
+            margin-left: 10px;
+            font-size: 1.5em;
+            font-weight: bold;
+            -webkit-transform: rotate(-45deg);
+            -moz-transform:    rotate(-45deg);
+            -ms-transform:     rotate(-45deg);
+            -o-transform:      rotate(-45deg);
+        }
+        .annee {
+            display: none;
         }
         article.new-node h1 {
             @include accentize_link($orange, $rebase02);
@@ -839,12 +837,14 @@ input, button, select {
 
 @mixin rebase($rebase03,$rebase02,$rebase01,$rebase00,$rebase0,$rebase1,$rebase2,$rebase3) 
 {
-    /* base colors */
-    background-color:$rebase03;
-    color:$rebase0;
-    * { color:$rebase0; }
-    h1,h2,h3,h4,h5,h6 { color:$rebase1; border-color: $rebase0; }
-    a, a:active, a:visited { color: $rebase1; }
+    html {
+        /* base colors */
+        background-color:$rebase03;
+        color:$rebase0;
+        * { color:$rebase0; }
+        h1,h2,h3,h4,h5,h6 { color:$rebase1; border-color: $rebase0; }
+        a, a:active, a:visited { color: $rebase1; }
+    }
     /* Call all mixins */
     @include solarized_forms($rebase03,$rebase02,$rebase01,$rebase00,$rebase0,$rebase1,$rebase2,$rebase3);
     @include solarized_header($rebase03,$rebase02,$rebase01,$rebase00,$rebase0,$rebase1,$rebase2,$rebase3);

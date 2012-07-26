@@ -8,7 +8,5 @@ light with light code version
 
 @import "main.scss";
 
-html {
-    @include rebase($base3,$base2,$base1,$base0,$base00,$base01,$base02,$base03);
-    @include solarized_code($base3,$base2,$base1,$base0,$base00,$base01,$base02,$base03);
-}
+@include rebase($base3,$base2,$base1,$base0,$base00,$base01,$base02,$base03);
+@include solarized_code($base3,$base2,$base1,$base0,$base00,$base01,$base02,$base03);

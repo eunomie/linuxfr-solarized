@@ -690,6 +690,11 @@ input, button, select {
                     }
                 }
             }
+            h1[id^="toc_"], h2[id^="toc_"], h3[id^="toc_"], h4[id^="toc_"], h5[id^="toc_"], h6[id^="toc_"] {
+                &:hover:after {
+                    content: ' \00A7';
+                }
+            }
         }
 
         .threads {

@@ -347,6 +347,19 @@ input, button, select {
   vertical-align: middle; /* @bugfix alignment */
 }
 
+@mixin solarized_forms($rebase03,$rebase02,$rebase01,$rebase00,$rebase0,$rebase1,$rebase2,$rebase3) {
+    input[type=text] {
+        background: $rebase0;
+        border: 1px solid $rebase1;
+        color: $rebase03;
+    }
+    input[type=submit] {
+        @include gradient_vertical($rebase0, gradient_bar_color($rebase0));
+        color: $rebase03;
+        border: 2px solid $rebase1;
+    }
+}
+
 /* ----------------------------- */
 /* ==main                        */
 /* ----------------------------- */
@@ -833,6 +846,7 @@ input, button, select {
     h1,h2,h3,h4,h5,h6 { color:$rebase1; border-color: $rebase0; }
     a, a:active, a:visited { color: $rebase1; }
     /* Call all mixins */
+    @include solarized_forms($rebase03,$rebase02,$rebase01,$rebase00,$rebase0,$rebase1,$rebase2,$rebase3);
     @include solarized_header($rebase03,$rebase02,$rebase01,$rebase00,$rebase0,$rebase1,$rebase2,$rebase3);
     @include solarized_sidebar($rebase03,$rebase02,$rebase01,$rebase00,$rebase0,$rebase1,$rebase2,$rebase3);
     @include solarized_footer($rebase03,$rebase02,$rebase01,$rebase00,$rebase0,$rebase1,$rebase2,$rebase3);

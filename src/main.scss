@@ -625,6 +625,14 @@ input, button, select {
             @include accentize($blue, $rebase02);
         }
 
+        #sommaire {
+            margin-top: 0.5em;
+            margin-left: 80px;
+        }
+        #sommaire + ul {
+            margin-left: 80px;
+        }
+
         footer.actions {
             margin-top: 1em;
             * {

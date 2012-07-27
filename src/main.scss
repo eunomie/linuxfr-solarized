@@ -831,19 +831,25 @@ input, button, select {
             background: lighten($blue, 30%);
         }
         .board-left {
-            display: block;
-            float: left;
-            width: 170px;
             time {
                 color: $rebase01;
             }
         }
         .board-right {
-            display: block;
-            margin-left: 170px;
             time {
                 color: $rebase1;
             }
+        }
+    }
+    #redaction, #container {
+        .board-left {
+            display: block;
+            float: left;
+            width: 170px;
+        }
+        .board-right {
+            display: block;
+            margin-left: 170px;
         }
     }
     #chat .board-left {

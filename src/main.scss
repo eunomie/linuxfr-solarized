@@ -818,6 +818,40 @@ input, button, select {
         color: $rebase01;
         @include accentize($rebase01, $rebase02);
     }
+    .board .inbox {
+        font-size: 0.8em;
+        p {
+            clear:both;
+            -webkit-margin-after: 0;
+            -webkit-margin-before: 0;
+            margin-top: 0.2em;
+            margin-bottom: 0;
+        }
+        .highlighted {
+            background: lighten($blue, 30%);
+        }
+        .board-left {
+            display: block;
+            float: left;
+            width: 170px;
+            time {
+                color: $rebase01;
+            }
+        }
+        .board-right {
+            display: block;
+            margin-left: 170px;
+            time {
+                color: $rebase1;
+            }
+        }
+    }
+    #chat .board-left {
+        width: 125px;
+    }
+    #chat .board-right {
+        margin-left: 125px;
+    }
 }
 
 @mixin solarized_code($rebase03,$rebase02,$rebase01,$rebase00,$rebase0,$rebase1,$rebase2,$rebase3) {
@@ -898,41 +932,6 @@ input, button, select {
         .vg { color: $blue } /* Name.Variable.Global */
         .vi { color: $blue } /* Name.Variable.Instance */
         .il { color: $cyan; font-weight: bold } /* Literal.Number.Integer.Long */
-    }
-
-    .board .inbox {
-        font-size: 0.8em;
-        p {
-            clear:both;
-            -webkit-margin-after: 0;
-            -webkit-margin-before: 0;
-            margin-top: 0.2em;
-            margin-bottom: 0;
-        }
-        .highlighted {
-            background: lighten($blue, 30%);
-        }
-        .board-left {
-            display: block;
-            float: left;
-            width: 170px;
-            time {
-                color: $rebase01;
-            }
-        }
-        .board-right {
-            display: block;
-            margin-left: 170px;
-            time {
-                color: $rebase1;
-            }
-        }
-    }
-    #chat .board-left {
-        width: 125px;
-    }
-    #chat .board-right {
-        margin-left: 125px;
     }
 }
 

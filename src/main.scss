@@ -260,12 +260,8 @@ a img {border: 0;}
         padding-left: 1em;
         padding-right: 1em;
         padding-bottom: 0.5em;
-        height: 2.4em;
         * {
             display: inline-block;
-        }
-        ul {
-            float: left;
         }
         li.active a {
             color: $orange;
@@ -277,8 +273,22 @@ a img {border: 0;}
             content: '|';
             margin-right: 0.5em;
         }
-        form {
-            float: right;
+    }
+    @media screen and (max-width: 959px) {
+        #branding {
+            background: $rebase02;
+        }
+        #site .go_to_content {
+            text-align: center;
+            a {
+                color: $yellow;
+                background: $rebase02;
+                font-weight: bold;
+                font-size: 1.4em;
+                &+a {
+                    padding-left: 1em;
+                }
+            }
         }
     }
     #branding h1 {
@@ -311,8 +321,6 @@ a img {border: 0;}
 @mixin solarized_sidebar($rebase03,$rebase02,$rebase01,$rebase00,$rebase0,$rebase1,$rebase2,$rebase3) {
     #sidebar {
         width: 226px;
-        padding-right: 1em;
-        float: left;
         color: $rebase01;
         @include accentize($rebase01, $rebase02);
         h1 {
@@ -367,11 +375,8 @@ a img {border: 0;}
 
 @mixin solarized_toolbar($rebase03,$rebase02,$rebase01,$rebase00,$rebase0,$rebase1,$rebase2,$rebase3) {
     #toolbar {
-        position: fixed;
-        bottom: 0;
         padding: 0.5em;
         background: $rebase02;
-        width: 960px;
         #toolbar_items {
             float: right;
         }
@@ -454,11 +459,6 @@ input, button, select {
         }
     }
 
-    #container {
-        padding-left: 1em;
-        float: right;
-    }
-
     .banner {
         margin-top: 2em;
         padding: 1em;
@@ -467,8 +467,9 @@ input, button, select {
         text-align: center;
     }
 
-    #container, #edition {
-        width: 734px;
+    #chat {
+        color: $rebase01;
+        @include accentize($rebase01, $rebase02);
     }
     #container, #edition {
         margin-bottom: 1em;
@@ -805,19 +806,6 @@ input, button, select {
     .poll .result {
         @include statistic_bar($green, $rebase2);
     }
-
-    #edition {
-        width: 593px;
-        float: left;
-        padding-right: 1em;
-    }
-    #chat {
-        width: 367px;
-        padding-left: 1em;
-        float: right;
-        color: $rebase01;
-        @include accentize($rebase01, $rebase02);
-    }
 }
 
 @mixin solarized_code($rebase03,$rebase02,$rebase01,$rebase00,$rebase0,$rebase1,$rebase2,$rebase3) {
@@ -947,6 +935,91 @@ input, button, select {
     }
 }
 
+@mixin positionning_media_queries() {
+    #toolbar {
+        position: fixed;
+        bottom: 0;
+    }
+    @media screen and (min-width: 960px) {
+        .go_to_content {
+            display: none !important;
+        }
+        #sidebar {
+            padding-right: 1em;
+            float: left;
+        }
+        #container, #edition {
+            width: 734px;
+        }
+        #container {
+            padding-left: 1em;
+            float: right;
+        }
+        #edition {
+            width: 593px;
+            float: left;
+            padding-right: 1em;
+        }
+        #chat {
+            width: 367px;
+            padding-left: 1em;
+            float: right;
+        }
+        #toolbar {
+            width: 960px;
+        }
+        #site {
+            height: 2.4em;
+            ul {
+                float: left;
+            }
+            form {
+                float: right;
+            }
+        }
+    }
+    @media screen and (max-width: 959px) {
+        .go_to_content {
+            display: block !important;
+        }
+        #sidebar {
+            clear: both;
+            width: 100%;
+        }
+        #branding {
+            width: 100%;
+            h1 {
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
+        #container {
+            width: 100%;
+            clear: both;
+            float: none;
+        }
+        .box {
+            display:table-cell !important;
+            list-style-position: inside;
+        }
+        .box + .box {
+            margin-left: 4px;
+        }
+        ul {
+            padding-left: 4px !important;
+        }
+        #toolbar {
+            width: 100%;
+        }
+
+    }
+    @media screen and (max-width: 350px) {
+        .box {
+            display:block !important;
+        }
+    }
+}
+
 @mixin rebase($rebase03,$rebase02,$rebase01,$rebase00,$rebase0,$rebase1,$rebase2,$rebase3) 
 {
     html {
@@ -968,6 +1041,8 @@ input, button, select {
     @include solarized_markItUp($rebase03,$rebase02,$rebase01,$rebase00,$rebase0,$rebase1,$rebase2,$rebase3);
     @include solarized_statistics($rebase03,$rebase02,$rebase01,$rebase00,$rebase0,$rebase1,$rebase2,$rebase3);
     @include solarized_ac($rebase03,$rebase02,$rebase01,$rebase00,$rebase0,$rebase1,$rebase2,$rebase3);
+
+    @include positionning_media_queries();
 }
 @mixin accentize_link($accent, $back) {
     a, a:active, a:visited, code.url { color: $accent; }
@@ -999,7 +1074,7 @@ html * {
     rendering-intent: auto;
 }
 
-.factice, .go_to_content {
+.factice {
     float: left;
     text-indent: -9998em;
     overflow: hidden;

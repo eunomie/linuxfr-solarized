@@ -274,15 +274,10 @@ a img {border: 0;}
             margin-right: 0.5em;
         }
     }
-    @media screen and (max-width: 600px) {
-        #branding {
-            background-color: $rebase02;
-        }
-    }
     @media screen and (max-width: 959px) {
-        #branding, #branding h1 {
+        /*#branding, #branding h1 {
             background-color: transparent !important;
-        }
+        }*/
         #site .go_to_content {
             text-align: center;
             a {
@@ -294,6 +289,11 @@ a img {border: 0;}
                     padding-left: 1em;
                 }
             }
+        }
+    }
+    @media screen and (max-width: 650px) {
+        #branding {
+            background-color: $rebase02;
         }
     }
     #branding h1 {
@@ -986,27 +986,25 @@ input, button, select {
             }
         }
     }
-    @media screen and (min-width: 601px) and (max-width: 959px) {
+    @media screen and (min-width: 651px) and (max-width: 959px) {
         .go_to_content {
-            display: block !important;
+            display: none !important;
         }
         #sidebar {
+            float: left;
+            width: 23%;
+        }
+        #sidebar {
+            padding-right: 1em;
+            float: left;
+        }
+        #branding h1 {
+            background-position: center;
             width: 100%;
-        }
-        #branding {
-            float: left;
-        }
-        #sidebar .box {
-            float: left;
-            max-width: 216px;
-            margin-left: 4px;
         }
         #container, #edition {
-            width: 100%;
-            clear: both;
-        }
-        #container {
-            padding-left: 1em;
+            width: 76%;
+            float: left;
         }
         #edition {
             width: 61%;
@@ -1025,7 +1023,7 @@ input, button, select {
             margin-bottom: 1em;
         }
     }
-    @media screen and (max-width: 600px) {
+    @media screen and (max-width: 650px) {
         .go_to_content {
             display: block !important;
         }
@@ -1046,12 +1044,18 @@ input, button, select {
             float: none;
         }
         .box {
-            display:table-cell !important;
+            display: table-cell !important;
             list-style-position: inside;
             max-width: 216px;
         }
         .box + .box {
-            margin-left: 4px;
+            /*margin-left: 4px;*/
+        }
+        .box:first-of-type {
+            clear: left;
+        }
+        .box:last-of-type {
+            clear: right;
         }
         ul {
             padding-left: 4px !important;

@@ -274,9 +274,14 @@ a img {border: 0;}
             margin-right: 0.5em;
         }
     }
-    @media screen and (max-width: 959px) {
+    @media screen and (max-width: 600px) {
         #branding {
-            background: $rebase02;
+            background-color: $rebase02;
+        }
+    }
+    @media screen and (max-width: 959px) {
+        #branding, #branding h1 {
+            background-color: transparent !important;
         }
         #site .go_to_content {
             text-align: center;
@@ -940,7 +945,10 @@ input, button, select {
         position: fixed;
         bottom: 0;
     }
-    @media screen and (min-width: 960px) {
+    /*@media screen and (min-width: 1025px) {
+
+    }*/
+    @media screen and (min-width: 960px) { /*and (max-width: 1024px) {*/
         .go_to_content {
             display: none !important;
         }
@@ -978,7 +986,46 @@ input, button, select {
             }
         }
     }
-    @media screen and (max-width: 959px) {
+    @media screen and (min-width: 601px) and (max-width: 959px) {
+        .go_to_content {
+            display: block !important;
+        }
+        #sidebar {
+            width: 100%;
+        }
+        #branding {
+            float: left;
+        }
+        #sidebar .box {
+            float: left;
+            max-width: 216px;
+            margin-left: 4px;
+        }
+        #container, #edition {
+            width: 100%;
+            clear: both;
+        }
+        #container {
+            padding-left: 1em;
+        }
+        #edition {
+            width: 61%;
+            float: left;
+            padding-right: 1em;
+        }
+        #chat {
+            width: 38%;
+            padding-left: 1em;
+            float: right;
+        }
+        #toolbar {
+            width: 100%;
+        }
+        #branding, #sidebar .box {
+            margin-bottom: 1em;
+        }
+    }
+    @media screen and (max-width: 600px) {
         .go_to_content {
             display: block !important;
         }
@@ -1001,6 +1048,7 @@ input, button, select {
         .box {
             display:table-cell !important;
             list-style-position: inside;
+            max-width: 216px;
         }
         .box + .box {
             margin-left: 4px;
@@ -1011,7 +1059,9 @@ input, button, select {
         #toolbar {
             width: 100%;
         }
-
+        #branding, #sidebar .box {
+            margin-bottom: 1em;
+        }
     }
     @media screen and (max-width: 350px) {
         .box {

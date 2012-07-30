@@ -26,6 +26,10 @@ Licence CC-BY http://creativecommons.org/licenses/by/3.0/fr/
 8- main
 */
 
+@import url(http://fonts.googleapis.com/css?family=Josefin+Sans:700);
+@import url(http://fonts.googleapis.com/css?family=Numans);
+@import url(http://fonts.googleapis.com/css?family=Josefin+Slab:700);
+
 @import "langs.css.scss";
 
 @mixin triangle_topleft($color) {
@@ -163,8 +167,18 @@ html {
     color: #000;
 } 
 body {
-    font-family: "Century Gothic", arial, helvetica, sans-serif;
+    font-family: "Numans", arial, helvetica, sans-serif;
     line-height: 1.4; /* adapt to your design */
+}
+h1, h2, h3, h4, h5, h6, figure.datePourCss, figure.score {
+    font-family: "Josefin Sans", arial, helvetica, sans-serif;
+    font-weight: normal;
+}
+
+.content, .comment {
+    h1, h2, h3, h4, h5, h6 {
+        font-family: "Josefin Slab", arial, helvetica, sans-serif;
+    }
 }
 
 a, a:link, a:visited, a:active, a:hover {
@@ -189,7 +203,8 @@ figure {
 
 /* font-sizing for content */
 p, li, td, th, textarea {font-size: 1.4em;}
-li li, li p, td p, th p, li h1, li h2, li h3, li h4, li h5, li h6, input {font-size: 100%;}
+li li, li p, td p, th p, input {font-size: 100%;}
+li h1, li h2, li h3, li h4, li h5, li h6 {font-size: 140%;}
 h1 {font-size: 2.4em; } /* 24 pixels */
 h2 {font-size: 2.0em; } /* 20 pixels */
 h3 {font-size: 1.8em; } /* 18 pixels */

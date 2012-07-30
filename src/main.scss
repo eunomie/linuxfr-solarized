@@ -1,10 +1,12 @@
-/*
+/*!
 Linuxfr Solarized stylesheet
 @author : Yves Brissaud <yves.brissaud@gmail.com>
 Licence CC-BY http://creativecommons.org/licenses/by/3.0/fr/
+Version 0.2
+https://github.com/CrEv/linuxfr-solarized
 */
 
-/* 
+/*!
 Initial code from:
 KNACSS.com @author : Raphael Goetter, Alsacreations
 Licence CC-BY http://creativecommons.org/licenses/by/3.0/fr/
@@ -25,6 +27,10 @@ Licence CC-BY http://creativecommons.org/licenses/by/3.0/fr/
 7- forms
 8- main
 */
+
+@import url(http://fonts.googleapis.com/css?family=Josefin+Sans:700);
+@import url(http://fonts.googleapis.com/css?family=Numans);
+@import url(http://fonts.googleapis.com/css?family=Josefin+Slab:700);
 
 @import "langs.css.scss";
 
@@ -163,8 +169,18 @@ html {
     color: #000;
 } 
 body {
-    font-family: "Century Gothic", arial, helvetica, sans-serif;
+    font-family: "Numans", arial, helvetica, sans-serif;
     line-height: 1.4; /* adapt to your design */
+}
+h1, h2, h3, h4, h5, h6, figure.datePourCss, figure.score {
+    font-family: "Josefin Sans", arial, helvetica, sans-serif;
+    font-weight: normal;
+}
+
+.content, .comment {
+    h1, h2, h3, h4, h5, h6 {
+        font-family: "Josefin Slab", arial, helvetica, sans-serif;
+    }
 }
 
 a, a:link, a:visited, a:active, a:hover {
@@ -189,7 +205,8 @@ figure {
 
 /* font-sizing for content */
 p, li, td, th, textarea {font-size: 1.4em;}
-li li, li p, td p, th p, li h1, li h2, li h3, li h4, li h5, li h6, input {font-size: 100%;}
+li li, li p, td p, th p, input {font-size: 100%;}
+li h1, li h2, li h3, li h4, li h5, li h6 {font-size: 140%;}
 h1 {font-size: 2.4em; } /* 24 pixels */
 h2 {font-size: 2.0em; } /* 20 pixels */
 h3 {font-size: 1.8em; } /* 18 pixels */
@@ -260,12 +277,8 @@ a img {border: 0;}
         padding-left: 1em;
         padding-right: 1em;
         padding-bottom: 0.5em;
-        height: 2.4em;
         * {
             display: inline-block;
-        }
-        ul {
-            float: left;
         }
         li.active a {
             color: $orange;
@@ -277,8 +290,27 @@ a img {border: 0;}
             content: '|';
             margin-right: 0.5em;
         }
-        form {
-            float: right;
+    }
+    @media screen and (max-width: 959px) {
+        /*#branding, #branding h1 {
+            background-color: transparent !important;
+        }*/
+        #site .go_to_content {
+            text-align: center;
+            a {
+                color: $yellow;
+                background: $rebase02;
+                font-weight: bold;
+                font-size: 1.4em;
+                &+a {
+                    padding-left: 1em;
+                }
+            }
+        }
+    }
+    @media screen and (max-width: 650px) {
+        #branding {
+            background-color: $rebase02;
         }
     }
     #branding h1 {
@@ -311,8 +343,6 @@ a img {border: 0;}
 @mixin solarized_sidebar($rebase03,$rebase02,$rebase01,$rebase00,$rebase0,$rebase1,$rebase2,$rebase3) {
     #sidebar {
         width: 226px;
-        padding-right: 1em;
-        float: left;
         color: $rebase01;
         @include accentize($rebase01, $rebase02);
         h1 {
@@ -367,11 +397,8 @@ a img {border: 0;}
 
 @mixin solarized_toolbar($rebase03,$rebase02,$rebase01,$rebase00,$rebase0,$rebase1,$rebase2,$rebase3) {
     #toolbar {
-        position: fixed;
-        bottom: 0;
         padding: 0.5em;
         background: $rebase02;
-        width: 960px;
         #toolbar_items {
             float: right;
         }
@@ -454,11 +481,6 @@ input, button, select {
         }
     }
 
-    #container {
-        padding-left: 1em;
-        float: right;
-    }
-
     .banner {
         margin-top: 2em;
         padding: 1em;
@@ -467,8 +489,9 @@ input, button, select {
         text-align: center;
     }
 
-    #container, #edition {
-        width: 734px;
+    #chat {
+        color: $rebase01;
+        @include accentize($rebase01, $rebase02);
     }
     #container, #edition {
         margin-bottom: 1em;
@@ -500,7 +523,7 @@ input, button, select {
 
         header {
             padding-left: 80px;
-            padding-right: 45px;
+            padding-right: 49px;
             h1 {
                 margin-bottom: 0.2em;
             }
@@ -542,8 +565,8 @@ input, button, select {
             }
             .score {
                 position: absolute !important;
-                top: 0em;
-                right: 0em;
+                top: 4px;
+                right: 4px;
             }
         }
         .datePourCss {
@@ -628,7 +651,6 @@ input, button, select {
         article {
             position: relative;
             padding: 0.5em;
-            border: 0.5em solid $rebase02;
             @include gradient_vertical($rebase02, $rebase03);
             .content {
                 min-height: 2em;
@@ -805,18 +827,67 @@ input, button, select {
     .poll .result {
         @include statistic_bar($green, $rebase2);
     }
-
-    #edition {
-        width: 593px;
-        float: left;
-        padding-right: 1em;
+    
+    .board .inbox {
+        font-size: 0.8em;
+        p {
+            clear:both;
+            -webkit-margin-after: 0;
+            -webkit-margin-before: 0;
+            margin-top: 0.2em;
+            margin-bottom: 0;
+        }
+        .highlighted {
+            background: lighten($blue, 30%);
+        }
+        .board-left {
+            time {
+                color: $rebase01;
+            }
+        }
+        .board-right {
+            time {
+                color: $rebase1;
+            }
+        }
     }
-    #chat {
-        width: 367px;
-        padding-left: 1em;
-        float: right;
-        color: $rebase01;
-        @include accentize($rebase01, $rebase02);
+    #redaction, #container {
+        .board-left {
+            display: block;
+            float: left;
+            width: 170px;
+        }
+        .board-right {
+            display: block;
+            margin-left: 170px;
+        }
+    }
+    #chat .board-left {
+        width: 125px;
+    }
+    #chat .board-right {
+        margin-left: 125px;
+    }
+
+    .box h1 {
+        margin-left: 1em;
+    }
+    .login h1 {
+        text-align: center;
+        margin-left: 0;
+        margin-bottom: 1em;
+        a:before {
+            content: '\275D';
+            display: inline-block;
+            margin-right: 0.2em;
+            color: $rebase0;
+        }
+        a:after {
+            content: '\275E';
+            display: inline-block;
+            margin-left: 0.2em;
+            color: $rebase0;
+        }
     }
 }
 
@@ -899,41 +970,6 @@ input, button, select {
         .vi { color: $blue } /* Name.Variable.Instance */
         .il { color: $cyan; font-weight: bold } /* Literal.Number.Integer.Long */
     }
-
-    .board .inbox {
-        font-size: 0.8em;
-        p {
-            clear:both;
-            -webkit-margin-after: 0;
-            -webkit-margin-before: 0;
-            margin-top: 0.2em;
-            margin-bottom: 0;
-        }
-        .highlighted {
-            background: lighten($blue, 30%);
-        }
-        .board-left {
-            display: block;
-            float: left;
-            width: 170px;
-            time {
-                color: $rebase01;
-            }
-        }
-        .board-right {
-            display: block;
-            margin-left: 170px;
-            time {
-                color: $rebase1;
-            }
-        }
-    }
-    #chat .board-left {
-        width: 125px;
-    }
-    #chat .board-right {
-        margin-left: 125px;
-    }
 }
 
 @mixin solarized_misc($rebase03,$rebase02,$rebase01,$rebase00,$rebase0,$rebase1,$rebase2,$rebase3) {
@@ -944,6 +980,140 @@ input, button, select {
         color: $rebase1;
         font-weight: bold;
         font-size: 1.4em;
+    }
+}
+
+@mixin positionning_media_queries() {
+    #toolbar {
+        position: fixed;
+        bottom: 0;
+    }
+    /*@media screen and (min-width: 1025px) {
+
+    }*/
+    @media screen and (min-width: 960px) { /*and (max-width: 1024px) {*/
+        .go_to_content {
+            display: none !important;
+        }
+        #sidebar {
+            padding-right: 1em;
+            float: left;
+        }
+        #container, #edition {
+            width: 734px;
+        }
+        #container {
+            padding-left: 1em;
+            float: right;
+        }
+        #edition {
+            width: 593px;
+            float: left;
+            padding-right: 1em;
+        }
+        #chat {
+            width: 367px;
+            padding-left: 1em;
+            float: right;
+        }
+        #toolbar {
+            width: 960px;
+        }
+        #site {
+            height: 2.4em;
+            ul {
+                float: left;
+            }
+            form {
+                float: right;
+            }
+        }
+    }
+    @media screen and (min-width: 651px) and (max-width: 959px) {
+        .go_to_content {
+            display: none !important;
+        }
+        #sidebar {
+            float: left;
+            width: 23%;
+        }
+        #sidebar {
+            padding-right: 1em;
+            float: left;
+        }
+        #branding h1 {
+            background-position: center;
+            width: 100%;
+        }
+        #container, #edition {
+            width: 76%;
+            float: left;
+        }
+        #edition {
+            width: 61%;
+            float: left;
+            padding-right: 1em;
+        }
+        #chat {
+            width: 38%;
+            padding-left: 1em;
+            float: right;
+        }
+        #toolbar {
+            width: 100%;
+        }
+        #branding, #sidebar .box {
+            margin-bottom: 1em;
+        }
+    }
+    @media screen and (max-width: 650px) {
+        .go_to_content {
+            display: block !important;
+        }
+        #sidebar {
+            clear: both;
+            width: 100%;
+        }
+        #branding {
+            width: 100%;
+            h1 {
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
+        #container {
+            width: 100%;
+            clear: both;
+            float: none;
+        }
+        .box {
+            display: table-cell !important;
+            list-style-position: inside;
+            max-width: 216px;
+        }
+        .box + .box {
+            /*margin-left: 4px;*/
+        }
+        .box:first-of-type {
+            clear: left;
+        }
+        .box:last-of-type {
+            clear: right;
+        }
+        ul {
+            padding-left: 4px !important;
+        }
+        #toolbar {
+            width: 100%;
+        }
+        #branding, #sidebar .box {
+            margin-bottom: 1em;
+        }
+    }
+    @media screen and (max-width: 350px) {
+        .box {
+            display:block !important;
+        }
     }
 }
 
@@ -968,6 +1138,8 @@ input, button, select {
     @include solarized_markItUp($rebase03,$rebase02,$rebase01,$rebase00,$rebase0,$rebase1,$rebase2,$rebase3);
     @include solarized_statistics($rebase03,$rebase02,$rebase01,$rebase00,$rebase0,$rebase1,$rebase2,$rebase3);
     @include solarized_ac($rebase03,$rebase02,$rebase01,$rebase00,$rebase0,$rebase1,$rebase2,$rebase3);
+
+    @include positionning_media_queries();
 }
 @mixin accentize_link($accent, $back) {
     a, a:active, a:visited, code.url { color: $accent; }
@@ -999,7 +1171,7 @@ html * {
     rendering-intent: auto;
 }
 
-.factice, .go_to_content {
+.factice {
     float: left;
     text-indent: -9998em;
     overflow: hidden;

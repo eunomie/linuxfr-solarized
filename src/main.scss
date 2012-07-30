@@ -1,10 +1,12 @@
-/*
+/*!
 Linuxfr Solarized stylesheet
 @author : Yves Brissaud <yves.brissaud@gmail.com>
 Licence CC-BY http://creativecommons.org/licenses/by/3.0/fr/
+Version 0.2
+https://github.com/CrEv/linuxfr-solarized
 */
 
-/* 
+/*!
 Initial code from:
 KNACSS.com @author : Raphael Goetter, Alsacreations
 Licence CC-BY http://creativecommons.org/licenses/by/3.0/fr/
@@ -521,7 +523,7 @@ input, button, select {
 
         header {
             padding-left: 80px;
-            padding-right: 45px;
+            padding-right: 49px;
             h1 {
                 margin-bottom: 0.2em;
             }
@@ -534,7 +536,7 @@ input, button, select {
                     content: "]";
                 }
             }
-            padding-bottom: 0.5em;
+            padding-bottom: 1em;
             .meta {
                 * {
                     display: inline-block;
@@ -563,8 +565,8 @@ input, button, select {
             }
             .score {
                 position: absolute !important;
-                top: 0em;
-                right: 0em;
+                top: 4px;
+                right: 4px;
             }
         }
         .datePourCss {

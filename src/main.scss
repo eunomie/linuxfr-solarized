@@ -878,11 +878,13 @@ input, button, select {
             content: '\275D';
             display: inline-block;
             margin-right: 0.2em;
+            color: $rebase0;
         }
         a:after {
             content: '\275E';
             display: inline-block;
             margin-left: 0.2em;
+            color: $rebase0;
         }
     }
 }

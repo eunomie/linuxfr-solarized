@@ -866,6 +866,27 @@ input, button, select {
     #chat .board-right {
         margin-left: 125px;
     }
+
+    .box h1 {
+        margin-left: 1em;
+    }
+    .login h1 {
+        text-align: center;
+        margin-left: 0;
+        margin-bottom: 1em;
+        a:before {
+            content: '\275D';
+            display: inline-block;
+            margin-right: 0.2em;
+            color: $rebase0;
+        }
+        a:after {
+            content: '\275E';
+            display: inline-block;
+            margin-left: 0.2em;
+            color: $rebase0;
+        }
+    }
 }
 
 @mixin solarized_code($rebase03,$rebase02,$rebase01,$rebase00,$rebase0,$rebase1,$rebase2,$rebase3) {

@@ -18,34 +18,10 @@ Four versions of the stylesheet exists :
 * dark background and light code : <http://ybr.phpnet.org/linuxfr/dark_light_code.css>
 
 
-Screenshots (version 1.0)
--------------------------
+Screenshots
+-----------
 
-(the pictures are clickable to have bigger versions)
-
-Logs page with light background :
-
-[![light background](http://ybr.phpnet.org/linuxfr/min/journaux_light.jpg)](http://ybr.phpnet.org/linuxfr/full/journaux_light.jpg)
-
-Logs page with dark background :
-
-[![dark background](http://ybr.phpnet.org/linuxfr/min/journaux_dark.jpg)](http://ybr.phpnet.org/linuxfr/full/journaux_dark.jpg)
-
-Light code with light background :
-
-[![light light](http://ybr.phpnet.org/linuxfr/min/code_light_light.jpg)](http://ybr.phpnet.org/linuxfr/full/code_light_light.jpg)
-
-Dark code with light background :
-
-[![light dark](http://ybr.phpnet.org/linuxfr/min/code_light_dark.jpg)](http://ybr.phpnet.org/linuxfr/full/code_light_dark.jpg)
-
-Dark code with dark background :
-
-[![dark dark](http://ybr.phpnet.org/linuxfr/min/code_dark_dark.jpg)](http://ybr.phpnet.org/linuxfr/full/code_dark_dark.jpg)
-
-Dark code with light background :
-
-[![dark light](http://ybr.phpnet.org/linuxfr/min/code_dark_light.jpg)](http://ybr.phpnet.org/linuxfr/full/code_dark_light.jpg)
+[Screenshots](https://github.com/CrEv/linuxfr-solarized/wiki/Screenshots) of versions 1 and 2.1
 
 
 Development details

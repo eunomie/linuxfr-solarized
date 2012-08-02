@@ -899,6 +899,12 @@ input, button, select {
     .threads code {
         font-size: 1.2em;
     }
+    p code {
+        background-color: $rebase02;
+        border: 1px solid $rebase01;
+        padding-left: 2px;
+        padding-right: 2px;
+    }
     pre {
         background: $rebase02;
         padding: 0.5em;

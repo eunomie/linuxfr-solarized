@@ -894,10 +894,16 @@ input, button, select {
 @mixin solarized_code($rebase03,$rebase02,$rebase01,$rebase00,$rebase0,$rebase1,$rebase2,$rebase3) {
     /* */
     article code {
-        font-size: 1.6em;
+        font-size: 1.2em;
     }
     .threads code {
         font-size: 1.2em;
+    }
+    p code {
+        background-color: $rebase02;
+        border: 1px solid $rebase01;
+        padding-left: 2px;
+        padding-right: 2px;
     }
     pre {
         background: $rebase02;

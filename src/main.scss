@@ -400,6 +400,7 @@ a img {border: 0;}
         padding: 0.5em;
         background: $rebase02;
         @include accentize_link($yellow, $rebase03);
+        box-shadow: 1px 1px 12px #555;
         #toolbar_items {
             float: right;
         }

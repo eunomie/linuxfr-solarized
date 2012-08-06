@@ -384,6 +384,7 @@ a img {border: 0;}
         background: $rebase02;
         padding: 1em;
         margin-top: 1em;
+        margin-bottom: 1.5em;
     }
     #last_comments, #popular_tags, #friends, #about_us {
         display: inline-block;
@@ -399,6 +400,8 @@ a img {border: 0;}
     #toolbar {
         padding: 0.5em;
         background: $rebase02;
+        @include accentize_link($yellow, $rebase03);
+        box-shadow: 1px 1px 12px #555;
         #toolbar_items {
             float: right;
         }
@@ -406,6 +409,15 @@ a img {border: 0;}
             float: right;
             margin-right: 20px;
         }
+    }
+    footer a[href=#top] {
+        position: fixed;
+        bottom: 0.5em;
+        z-index: 1;
+        margin-left: 14em;
+        right: 50%;
+        font-size: 0.8em;
+        text-indent: -10em;
     }
 }
 

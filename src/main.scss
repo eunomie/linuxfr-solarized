@@ -399,6 +399,7 @@ a img {border: 0;}
     #toolbar {
         padding: 0.5em;
         background: $rebase02;
+        @include accentize_link($yellow, $rebase03);
         #toolbar_items {
             float: right;
         }

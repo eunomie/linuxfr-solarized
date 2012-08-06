@@ -408,6 +408,15 @@ a img {border: 0;}
             margin-right: 20px;
         }
     }
+    footer a[href=#top] {
+        position: fixed;
+        bottom: 0.5em;
+        z-index: 1;
+        margin-left: 14em;
+        right: 50%;
+        font-size: 0.8em;
+        text-indent: -10em;
+    }
 }
 
 /* ----------------------------- */

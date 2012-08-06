@@ -733,6 +733,10 @@ input, button, select {
                     content: ' \00A7';
                 }
             }
+
+            ul + ul {
+                margin-top: 1em;
+            }
         }
 
         .threads {

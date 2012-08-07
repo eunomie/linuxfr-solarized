@@ -484,9 +484,7 @@ input, button, select {
         color: $rebase0;
     }
     input[type=submit] {
-        background: lighten($rebase03, 10%);
-        color: $rebase0;
-        border: 2px solid darken($rebase02, 10%);
+        @include input_to_link($yellow, $orange);
     }
 }
 

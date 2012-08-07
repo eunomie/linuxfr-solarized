@@ -88,15 +88,20 @@ Licence CC-BY http://creativecommons.org/licenses/by/3.0/fr/
   background-clip: padding-box; 
 }
 
-@mixin input_to_link($color, $backcolor) {
+@mixin input_to_link($color, $hovercolor) {
     background: none;
     color: $color;
     border: none;
     padding: 0;
     vertical-align: baseline;
     cursor: pointer;
+    -webkit-transition: 0.2s color ease;
+    -moz-transition: 0.2s color ease;
+    -ms-transition: 0.2s color ease;
+    -o-transition: 0.2s color ease;
+    transition: 0.2s color ease;
     &:hover {
-        background: $backcolor;
+        color: $hovercolor;
     }
 }
 
@@ -344,7 +349,7 @@ a img {border: 0;}
     #sidebar {
         width: 226px;
         color: $rebase01;
-        @include accentize($rebase01, $rebase02);
+        @include accentize($rebase01, $yellow);
         h1 {
             margin-bottom: 0.2em;
             margin-top: 0.8em;
@@ -400,7 +405,7 @@ a img {border: 0;}
     #toolbar {
         padding: 0.5em;
         background: $rebase02;
-        @include accentize_link($yellow, $rebase03);
+        @include accentize_link($yellow, $orange);
         box-shadow: 1px 1px 12px #555;
         #toolbar_items {
             float: right;
@@ -503,11 +508,11 @@ input, button, select {
 
     #chat {
         color: $rebase01;
-        @include accentize($rebase01, $rebase02);
+        @include accentize($rebase01, $yellow);
     }
     #container, #edition {
         margin-bottom: 1em;
-        @include accentize($yellow, $rebase02);
+        @include accentize($yellow, $orange);
 
         > h1 {
             display: none;
@@ -554,7 +559,7 @@ input, button, select {
                     display: inline-block;
                 }
                 input {
-                    @include input_to_link($yellow, $rebase02);
+                    @include input_to_link($yellow, $orange);
                 }
                 .tags ul li .add_tag {
                     background: url(//linuxfr.org/images/icones/tag.png) no-repeat 0 6px;
@@ -615,7 +620,7 @@ input, button, select {
             display: none;
         }
         article.new-node h1 {
-            @include accentize_link($orange, $rebase02);
+            @include accentize_link($orange, $yellow);
         }
 
         article .score {
@@ -682,7 +687,7 @@ input, button, select {
 
         #phare article {
             border: 0.5em solid $rebase01;
-            @include accentize($blue, $rebase02);
+            @include accentize($blue, $cyan);
         }
 
         #sommaire {
@@ -699,12 +704,12 @@ input, button, select {
                 display: inline-block;
             }
             input {
-                @include input_to_link($yellow, $rebase02);
+                @include input_to_link($yellow, $orange);
             }
             .new_comments {
                 font-size: 1.2em;
                 font-weight: bold;
-                @include accentize($orange, $rebase02);
+                @include accentize($orange, $yellow);
                 .visit {
                     color: $orange;
                 }
@@ -761,14 +766,14 @@ input, button, select {
                 @include gradient_vertical($rebase02, $rebase03);
             }
             .new-comment h2 {
-                @include accentize($orange, $rebase02);
+                @include accentize($orange, $yellow);
             }
         }
         .comment {
             list-style-type: none;
             .content {
                 padding: 0.5em;
-                @include accentize($blue, $rebase02);
+                @include accentize($blue, $cyan);
                 .signature {
                     color: $rebase01;
                     font-style: italic;
@@ -806,7 +811,7 @@ input, button, select {
                 padding-top: 0.5em;
                 font-size: 0.8em;
                 input {
-                    @include input_to_link($yellow, $rebase02);
+                    @include input_to_link($yellow, $orange);
                 }
                 * {
                     display: inline-block;
@@ -1163,17 +1168,24 @@ input, button, select {
 
     @include positionning_media_queries();
 }
-@mixin accentize_link($accent, $back) {
-    a, a:active, a:visited, code.url { color: $accent; }
+@mixin accentize_link($accent, $hovercolor) {
+    a, a:active, a:visited, code.url {
+        color: $accent;
+        -webkit-transition: 0.2s color ease;
+        -moz-transition: 0.2s color ease;
+        -ms-transition: 0.2s color ease;
+        -o-transition: 0.2s color ease;
+        transition: 0.2s color ease;
+    }
     a:hover {
-        background-color: $back;
+        color: $hovercolor;
     }
 }
 @mixin accentize_h($accent) {
     h1,h2,h3,h4,h5,h6 {color:$accent}
 }
-@mixin accentize($accent, $back) {
-    @include accentize_link($accent, $back);
+@mixin accentize($accent, $hovercolor) {
+    @include accentize_link($accent, $hovercolor);
     @include accentize_h($accent);
 }
 

@@ -489,6 +489,17 @@ input, button, select {
     button.remove {
         @include input_to_link($red, $orange);
     }
+    #form_links {
+        fieldset label {
+            display: inline-block;
+        }
+        #label-link-name, #label-link-url, .link input {
+            width: 30%;
+        }
+        #label-link-lang, .link select {
+            width: 20%;
+        }
+    }
 }
 
 /* ----------------------------- */

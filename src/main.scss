@@ -500,6 +500,10 @@ input, button, select {
             width: 20%;
         }
     }
+    button[name=stylesheet] {
+        display: inline-block;
+        max-width: 49%;
+    }
 }
 
 /* ----------------------------- */

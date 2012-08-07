@@ -408,21 +408,61 @@ a img {border: 0;}
         @include accentize_link($yellow, $orange);
         box-shadow: 1px 1px 12px #555;
         #toolbar_items {
+            margin-left: 0.5em;
             float: right;
+            a.prev {
+                position: fixed;
+                bottom: 0.5em;
+                z-index: 1;
+                right: 60px;
+                font-size: 0.8em;
+                width: 0;
+                height: 0;
+                border-top: 10px solid transparent;
+                border-right: 20px solid $rebase02;
+                border-bottom: 10px solid transparent;
+                overflow: hidden;
+                &:hover {
+                    border-right-color: $rebase2;
+                }
+            }
+            a.next {
+                position: fixed;
+                bottom: 0.5em;
+                z-index: 1;
+                right: 20px;
+                font-size: 0.8em;
+                width: 0;
+                height: 0;
+                border-top: 10px solid transparent;
+                border-left: 20px solid $rebase02;
+                border-bottom: 10px solid transparent;
+                overflow: hidden;
+                &:hover {
+                    border-left-color: $rebase2;
+                }
+            }
         }
         #toolbar_alt_items {
             float: right;
-            margin-right: 20px;
+            margin-left: 0.5em;
         }
     }
     footer a[href="#top"] {
         position: fixed;
-        bottom: 0.5em;
+        bottom: 2.8em;
         z-index: 1;
-        margin-left: 14em;
-        right: 50%;
+        right: 40px;
         font-size: 0.8em;
-        text-indent: -10em;
+        width: 0;
+        height: 0;
+        border-left: 10px solid transparent;
+        border-right: 10px solid transparent;
+        border-bottom: 20px solid $rebase02;
+        overflow: hidden;
+        &:hover {
+            border-bottom-color: $rebase2;
+        }
     }
 }
 
@@ -1044,7 +1084,7 @@ input, button, select {
             float: right;
         }
         #toolbar {
-            width: 960px;
+            /*width: 960px;*/
         }
         #site {
             height: 2.4em;

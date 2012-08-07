@@ -478,13 +478,16 @@ input, button, select {
 }
 
 @mixin solarized_forms($rebase03,$rebase02,$rebase01,$rebase00,$rebase0,$rebase1,$rebase2,$rebase3) {
-    input[type=text] {
+    input[type=text], input[type=url] {
         background: lighten($rebase03, 10%);
         border: 1px solid darken($rebase02, 10%);
         color: $rebase0;
     }
-    input[type=submit] {
+    input[type=submit], button {
         @include input_to_link($yellow, $orange);
+    }
+    button.remove {
+        @include input_to_link($red, $orange);
     }
 }
 

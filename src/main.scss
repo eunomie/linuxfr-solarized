@@ -1125,7 +1125,7 @@ input, button, select {
         color:$rebase0;
         * { color:$rebase0; }
         h1,h2,h3,h4,h5,h6 { color:$rebase1; border-color: $rebase0; }
-        a, a:active, a:visited { color: $rebase1; }
+        a, a:active, a:visited, a * { color: $rebase1; }
     }
     /* Call all mixins */
     @include solarized_forms($rebase03,$rebase02,$rebase01,$rebase00,$rebase0,$rebase1,$rebase2,$rebase3);
@@ -1142,7 +1142,7 @@ input, button, select {
     @include positionning_media_queries();
 }
 @mixin accentize_link($accent, $back) {
-    a, a:active, a:visited, code.url { color: $accent; }
+    a, a:active, a:visited, code.url, a * { color: $accent; }
     a:hover {
         background-color: $back;
     }

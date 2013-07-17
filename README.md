@@ -21,7 +21,7 @@ Four versions of the stylesheet exists :
 Screenshots
 -----------
 
-[Screenshots](https://github.com/CrEv/linuxfr-solarized/wiki/Screenshots) of versions 1 and 2.1
+[Screenshots](https://github.com/eunomie/linuxfr-solarized/wiki/Screenshots) of versions 1 and 2.1
 
 
 Development details
